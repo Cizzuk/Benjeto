@@ -5,7 +5,7 @@ Gem::Specification.new do |spec|
   spec.version       = "0.1"
   spec.authors       = ["Cizzuk"]
 
-  spec.summary       = " Simple Jekyll theme like social media profile."
+  spec.summary       = "Jekyll theme like social media profile."
   spec.homepage      = "https://cizzuk.net/app/benjeto"
   spec.license       = "MIT"
 
