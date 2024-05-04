@@ -1,0 +1,52 @@
+# Website title | Webサイトのタイトル
+title: User
+# Website description | Webサイトの説明
+description: >
+  Here is a description of website.
+
+# Create your profile. Each field can be left blank.
+# プロフィールを作成します。項目は空白にもできます。
+profile:
+  # Your display name | 表示名
+  name: User
+  # URL of your profile icon | プロフィールアイコンのURL
+  icon: ""
+  # If true, round the icon. | trueの場合、アイコンを丸くします。
+  round-icon: true
+  # Your personal introduction | 自己紹介文
+  bio: >
+    Here is a description of you.
+  # Your email address | メールアドレス
+  email: user@example.com
+  # External links (e.g. social media). | 外部リンク (例、SNS)
+  links:
+    - { name: X, icon: "", url: "https://x.com/x" }
+    - { name: YouTube, icon: "", url: "https://x.com/x" }
+    - { name: GitHub, icon: "", url: "https://youtube.com/@YouTube" }
+
+
+# Advanced settings
+head:
+  canonical: 
+  onion-location: 
+  no-robots: false
+  ogp: true
+  # Use profile icon if blank
+  favicon: 
+  apple-touch-icon: 
+copyright: 
+
+
+# Build settings
+# theme: benjeto
+
+plugins:
+  - jekyll-feed
+
+exclude:
+  - LICENSE.txt
+  - README.md
+  - README-ja.md
+  - Gemfile
+  - Gemfile.lock
+  - Benjeto.gemspec
