@@ -38,7 +38,7 @@ copyright:
 
 
 # Build settings
-# theme: benjeto
+theme: benjeto
 
 plugins:
   - jekyll-feed
