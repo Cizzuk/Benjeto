@@ -20,9 +20,15 @@ profile:
   email: user@example.com
   # External links (e.g. social media). | 外部リンク (例、SNS)
   links:
-    - { name: X, icon: "", url: "https://x.com/x" }
-    - { name: YouTube, icon: "", url: "https://x.com/x" }
-    - { name: GitHub, icon: "", url: "https://youtube.com/@YouTube" }
+    - name: X
+      icon: ""
+      url: "https://x.com/x"
+    - name: YouTube
+      icon: ""
+      url: "https://youtube.com/@YouTube"
+    - name: GitHub
+      icon: ""
+      url: "https://github.com/github"
 
 
 # Advanced settings
@@ -38,7 +44,7 @@ copyright:
 
 
 # Build settings
-theme: benjeto
+#theme: benjeto
 
 plugins:
   - jekyll-feed
