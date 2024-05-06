@@ -12,7 +12,7 @@ url: https://example.com
 # blue, red, green
 colorstyle: "blue"
 # allow, true, false
-darkmode: "allow"
+darkmode: "false"
 
 
 # Create your profile. Each field can be left blank.
@@ -61,7 +61,7 @@ head:
 
 date-format: "%Y-%m-%d"
 copyright: 
-allow-image-copy: false
+allow-image-select: false
 
 post:
   hide-profile: false

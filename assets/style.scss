@@ -13,6 +13,16 @@
   $round-icon: 4px;
 {% endif %}
 
+
+{% if site.allow-image-select == false %}
+img {
+  pointer-events: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+{% endif %}
+
 {% if site.colorstyle == "blue" or site.colorstyle == "red" or site.colorstyle == "green" %}
   {% assign color = site.colorstyle %}
 {% else %}
