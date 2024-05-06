@@ -5,6 +5,7 @@ description: >
   Here is a description of website.
 # Language of the website | Webサイトの言語
 lang: en
+direction: ltr
 # Web site protocol and host name | Webサイトのプロトコルとホスト名
 url: https://example.com
 # Select theme color | テーマカラーを選択

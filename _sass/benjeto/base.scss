@@ -1,4 +1,5 @@
 * {
+  direction: $direction;
   font-family: system-ui, sans-serif;
   text-underline-offset: 0.1em;
   box-sizing: border-box;
@@ -35,11 +36,11 @@ i {
 }
 
 ul, ol {
-  margin: 16px 16px 32px 32px;
+  margin: 16px 32px 32px;
   padding: 0;
 }
 li ul, li ol {
-  margin-left: 24px;
+  margin: 16px 24px 32px;
 }
 
 table {

@@ -1,6 +1,12 @@
 ---
 ---
 
+{% if site.direction == "rtl" %}
+  $direction: rtl;
+{% else %}
+  $direction: ltr;
+{% endif %}
+
 {% if site.profile.round-icon == "true" %}
   $round-icon: 50%;
 {% else %}
