@@ -6,7 +6,7 @@
   <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
   
 
-  {% if site.ogp == "true" %}
+  {% if site.head.ogp == "true" %}
 
     <meta name="twitter:card" content="summary">
     <meta property="og:url" content="{{ site.url }}{{ page.url }}">
@@ -20,8 +20,8 @@
 
     {% if page.icon %}
       <meta property="og:image" content="{{ site.url }}{{ page.icon }}">
-    {% elsif site.siteicon %}
-      <meta property="og:image" content="{{ site.url }}{{ site.siteicon }}">
+    {% elsif site.head.siteicon %}
+      <meta property="og:image" content="{{ site.url }}{{ site.head.siteicon }}">
     {% elsif site.profile.icon %}
       <meta property="og:image" content="{{ site.url }}{{ site.profile.icon }}">
     {% endif %}
@@ -38,31 +38,31 @@
 
   {% if page.icon %}
     <link rel="apple-touch-icon" href="{{ page.icon }}">
-  {% elsif site.siteicon %}
-    <link rel="apple-touch-icon" href="{{ site.siteicon }}">
+  {% elsif site.head.siteicon %}
+    <link rel="apple-touch-icon" href="{{ site.head.siteicon }}">
   {% elsif site.profile.icon %}
     <link rel="apple-touch-icon" href="{{ site.profile.icon }}">
   {% endif %}
 
 
-  {% if site.favicon %}
-    <link rel="icon" href="{{ site.favicon }}">
+  {% if site.head.favicon %}
+    <link rel="icon" href="{{ site.head.favicon }}">
   {% elsif site.profile.icon %}
     <link rel="icon" href="{{ site.profile.icon }}">
   {% endif %}
 
   
-  {% if site.canonical %}
-    <link rel="canonical" href="{{ site.canonical }}{{ page.url }}">
+  {% if site.head.canonical %}
+    <link rel="canonical" href="{{ site.head.canonical }}{{ page.url }}">
   {% endif %}
 
 
-  {% if site.onion-location %}
-    <meta http-equiv="onion-location" content="{{ site.onion-location }}{{ page.url }}">
+  {% if site.head.onion-location %}
+    <meta http-equiv="onion-location" content="{{ site.head.onion-location }}{{ page.url }}">
   {% endif %}
 
 
-  {% if site.noindex == "true" %}
+  {% if site.head.noindex == "true" %}
     <meta name="robots" content="noindex">
   {% endif %}
 

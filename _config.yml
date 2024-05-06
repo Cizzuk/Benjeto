@@ -15,7 +15,7 @@ profile:
   # Your display name | 表示名
   name: User
   # URL of your profile icon | プロフィールアイコンのURL
-  icon: 
+  icon: "/assets/icon.png" 
   # If true, round the icon. | trueの場合、アイコンを丸くします。
   round-icon: true
   # Your personal introduction | 自己紹介文
@@ -26,13 +26,13 @@ profile:
   # External links (e.g. social media). | 外部リンク (例、SNS)
   links:
     - name: X
-      icon: ""
+      icon: 
       url: "https://x.com/x"
     - name: YouTube
-      icon: ""
+      icon: 
       url: "https://youtube.com/@YouTube"
     - name: GitHub
-      icon: ""
+      icon: 
       url: "https://github.com/github"
 
 
@@ -42,12 +42,18 @@ head:
   canonical: 
   #https://example.onion
   onion-location: 
-  noindex: false
-  ogp: true
+  noindex: "false"
+  ogp: "true"
   # Use profile icon if blank
   favicon: 
   siteicon: 
+
+date-format: "%Y-%m-%-d"
 copyright: 
+
+post:
+  hide-profile: "false"
+  hide-date: "false"
 
 
 # Build settings
