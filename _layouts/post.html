@@ -16,7 +16,7 @@ layout: base
   <h1>{{ page.title }}</h1>
 {% endif %}
 {% if site.post.hide-date != "true" and page.hide-date != "true" %}
-{%- assign date-format = page.date-format | site.date-format | default: "%Y-%m-%-d" -%}
+{%- assign date-format = page.date-format | site.date-format | default: "%Y-%m-%d" -%}
   <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
     {{ page.date | date: date-format }}
   </time>
