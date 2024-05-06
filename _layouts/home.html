@@ -2,4 +2,28 @@
 layout: base
 ---
 
+<main>
+<header class="home">
+{% if site.profile.icon %}
+<img class="icon" src="{{ site.profile.icon }}">
+{% endif %}
+<h1>{{ site.profile.name }}</h1>
+{% if site.profile.bio %}
+<p class="bio">{{ site.profile.bio }}</p>
+{% endif %}
+<ul class="exlink">
+{%- for entry in site.profile.links -%}
+  {%- include exlink.html item = entry -%}
+{%- endfor -%}
+</ul>
+</header>
+
 {{ content }}
+
+{% if site.paginate %}
+    {% assign posts = paginator.posts %}
+  {% else %}
+    {% assign posts = site.posts %}
+  {% endif %}
+
+</main>

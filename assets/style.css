@@ -39,7 +39,6 @@ h1, h2, h3 {
 
 a {
   color: var(--link);
-  text-decoration: none;
 }
 
 i {
@@ -325,6 +324,47 @@ header.post time {
   color: var(--gray);
   font-size: 0.9em;
   margin: 8px 2px;
+}
+
+header.home {
+  margin: 32px auto;
+  text-align: center;
+  border-bottom: 2px solid var(--border);
+}
+header.home img.icon {
+  width: 100px;
+  border-radius: 50%;
+  vertical-align: middle;
+  text-align: center;
+}
+header.home h1 {
+  font-size: 1.5em;
+  margin: 16px 0;
+}
+header.home p {
+  margin: 8px 0;
+}
+header.home ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+header.home ul li a {
+  color: var(--link);
+  text-decoration: none;
+  padding: 4px 4px;
+  margin: 0 4px;
+}
+header.home ul li a img {
+  width: 1em;
+  vertical-align: middle;
+  margin: 0 0 4px;
+}
+
+header.home ul li a:hover {
+  background: var(--boxbg);
+  border-radius: 4px;
 }
 
 @media only screen and (max-width:800px) {
