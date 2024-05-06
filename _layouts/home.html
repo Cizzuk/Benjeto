@@ -4,18 +4,28 @@ layout: base
 
 <main>
 <header class="home">
-{% if site.profile.icon %}
-<img class="icon" src="{{ site.profile.icon }}">
-{% endif %}
-<h1>{{ site.profile.name }}</h1>
-{% if site.profile.bio %}
-<p class="bio">{{ site.profile.bio }}</p>
-{% endif %}
-<ul class="exlink">
-{%- for entry in site.profile.links -%}
-  {%- include exlink.html item = entry -%}
-{%- endfor -%}
-</ul>
+  {% if site.profile.icon %}
+  <img class="icon" src="{{ site.profile.icon }}">
+  {% endif %}
+  {% if site.profile.name %}
+  <h1>{{ site.profile.name }}</h1>
+  {% else %}
+  <h1>{{ site.title }}</h1>
+  {% endif %}
+  {% if site.profile.bio %}
+  <p class="bio">{{ site.profile.bio }}</p>
+  {% endif %}
+  {% if site.profile.contact.url and site.profile.contact.name %}
+  <a class="contact" href="{{ site.profile.contact.url }}">{{ site.profile.contact.name }}</a>
+  {% endif %}
+  {% if site.profile.pronouns %}
+  <span class="pronouns">{{ site.profile.pronouns }}</span>
+  {% endif %}
+  <ul class="exlink">
+  {%- for entry in site.profile.links -%}
+    {%- include exlink.html item = entry -%}
+  {%- endfor -%}
+  </ul>
 </header>
 
 {{ content }}
