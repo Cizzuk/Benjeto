@@ -6,7 +6,9 @@ layout: base
 <header class="post">
 {% if site.post.hide-profile != "true" and page.hide-profile != "true" %}
   <a href="{% if page.backto %}{{ page.backto }}{% else %}/{% endif %}">
+  {%- if site.profile.icon -%}
   <img src="{{ site.profile.icon }}" alt="" aria-hidden="true">
+  {%- endif -%}
   {{ site.profile.name }}
   </a>
 {% endif %}
