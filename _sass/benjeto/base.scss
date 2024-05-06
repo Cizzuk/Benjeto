@@ -7,17 +7,6 @@
   word-break: auto-phrase;
 }
 
-:root {
-  --bg: #fff;
-  --text: #222;
-  --gray: #666;
-  --head: #0a0a0a;
-  --link: #0060ff;
-  --boxbg: #e8f0ff;
-  --boxbglight: #f5faff;
-  --border: #c5dcff;
-}
-
 body {
   background: var(--bg);
   color: var(--text);
@@ -312,7 +301,7 @@ header.post a {
 }
 header.post img {
   width: 32px;
-  border-radius: 50%;
+  border-radius: $round-icon;
   vertical-align: middle;
   margin: 0 8px;
 }
@@ -336,7 +325,7 @@ header.home img.icon {
   width: 100%;
   max-width: 104px;
   border: 1px solid var(--gray);
-  border-radius: 50%;
+  border-radius: $round-icon;
   vertical-align: middle;
   text-align: center;
 }

@@ -1,0 +1,25 @@
+---
+---
+
+{% if site.profile.round-icon == "true" %}
+  $round-icon: 50%;
+{% else %}
+  $round-icon: 4px;
+{% endif %}
+
+{% if site.darkmode == "true" %}
+    @import "benjeto/{{ site.colorstyle }}-dark.scss";
+{% else %}
+  @import "benjeto/{{ site.colorstyle }}.scss";
+  {% if site.darkmode == "allow" %}
+	@media(prefers-color-scheme:dark) {
+      @import "benjeto/{{ site.colorstyle }}-dark.scss";
+	}
+  {% endif %}
+{% endif %}
+
+@import
+  "benjeto/base.scss",
+  "benjeto/custom.scss"
+;
+

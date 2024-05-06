@@ -7,6 +7,11 @@ description: >
 lang: en
 # Web site protocol and host name | Webサイトのプロトコルとホスト名
 url: https://example.com
+# Select theme color | テーマカラーを選択
+# blue, red, green
+colorstyle: "blue"
+# allow, true, false
+darkmode: "allow"
 
 
 # Create your profile. Each field can be left blank.
@@ -17,7 +22,7 @@ profile:
   # URL of your profile icon | プロフィールアイコンのURL
   icon: "/assets/icon.png" 
   # If true, round the icon. | trueの場合、アイコンを丸くします。
-  round-icon: true
+  round-icon: "true"
   # URL of your header image | ヘッダー画像のURL
   header: 
   # Your personal introduction | 自己紹介文
@@ -62,7 +67,11 @@ post:
 
 
 # Build settings
+
 #theme: benjeto
+
+sass:
+  style: compressed
 
 plugins:
   - jekyll-feed
