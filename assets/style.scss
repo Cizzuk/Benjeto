@@ -7,7 +7,7 @@
   $direction: ltr;
 {% endif %}
 
-{% if site.profile.round-icon == "true" %}
+{% if site.profile.round-icon == true %}
   $round-icon: 50%;
 {% else %}
   $round-icon: 4px;

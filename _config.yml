@@ -5,7 +5,7 @@ description: >
   Here is a description of website.
 # Language of the website | Webサイトの言語
 lang: en
-direction: ltr
+direction: "ltr"
 # Web site protocol and host name | Webサイトのプロトコルとホスト名
 url: https://example.com
 # Select theme color | テーマカラーを選択
@@ -23,7 +23,7 @@ profile:
   # URL of your profile icon | プロフィールアイコンのURL
   icon: "/assets/icon.png" 
   # If true, round the icon. | trueの場合、アイコンを丸くします。
-  round-icon: "true"
+  round-icon: true
   # URL of your header image | ヘッダー画像のURL
   header: 
   # Your personal introduction | 自己紹介文
@@ -53,18 +53,19 @@ head:
   canonical: 
   #https://example.onion
   onion-location: 
-  noindex: "false"
-  ogp: "true"
+  noindex: false
+  ogp: true
   # Use profile icon if blank
   favicon: 
   siteicon: 
 
 date-format: "%Y-%m-%d"
 copyright: 
+allow-image-copy: false
 
 post:
-  hide-profile: "false"
-  hide-date: "false"
+  hide-profile: false
+  hide-date: false
 
 
 # Build settings

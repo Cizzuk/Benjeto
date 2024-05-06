@@ -6,7 +6,7 @@
   <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
   
 
-  {% if site.head.ogp == "true" %}
+  {% if site.head.ogp == true %}
 
     <meta name="twitter:card" content="summary">
     <meta property="og:url" content="{{ site.url }}{{ page.url }}">
@@ -62,7 +62,7 @@
   {% endif %}
 
 
-  {% if site.head.noindex == "true" %}
+  {% if site.head.noindex == true %}
     <meta name="robots" content="noindex">
   {% endif %}
 
