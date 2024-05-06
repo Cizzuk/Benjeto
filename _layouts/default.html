@@ -5,10 +5,7 @@ layout: base
 <main>
 <header class="post">
 {% if site.post.hide-profile != "true" and page.hide-profile != "true" %}
-  <a href="{% if page.backto %}{{ page.backto }}{% else %}/{% endif %}">
-  <img src="{{ site.profile.icon }}" alt="" aria-hidden="true">
-  {{ site.profile.name }}
-  </a>
+  {% include miniprof.html %}
 {% endif %}
 {% if page.untitled != "true" %}
   <h1>{{ page.title }}</h1>

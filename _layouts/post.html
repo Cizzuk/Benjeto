@@ -5,18 +5,17 @@ layout: base
 <article>
 <header class="post">
 {% if site.post.hide-profile != "true" and page.hide-profile != "true" %}
-  <a href="{% if page.backto %}{{ page.backto }}{% else %}/{% endif %}">
-  {%- if site.profile.icon -%}
-  <img src="{{ site.profile.icon }}" alt="" aria-hidden="true">
-  {%- endif -%}
-  {{ site.profile.name }}
-  </a>
+  {% include miniprof.html %}
 {% endif %}
 {% if page.untitled != "true" %}
   <h1>{{ page.title }}</h1>
 {% endif %}
 {% if site.post.hide-date != "true" and page.hide-date != "true" %}
-{%- assign date-format = page.date-format | site.date-format | default: "%Y-%m-%d" -%}
+  {% if page.date-format %}
+    {%- assign date-format = page.date-format -%}
+  {% else %}
+    {%- assign date-format = site.date-format | default: "%Y-%m-%d" -%}
+  {% endif %}
   <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
     {{ page.date | date: date-format }}
   </time>
