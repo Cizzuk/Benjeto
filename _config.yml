@@ -48,7 +48,7 @@ head:
   favicon: 
   siteicon: 
 
-date-format: "%Y-%m-%-d"
+date-format: "%Y-%m-%d"
 copyright: 
 
 post:
