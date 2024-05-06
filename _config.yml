@@ -21,8 +21,11 @@ profile:
   # Your personal introduction | 自己紹介文
   bio: >
     Here is a description of you.
-  # Your email address | メールアドレス
-  email: user@example.com
+  # Your contact info | 連絡先
+  contact: 
+      name: user@example.com
+      url: mailto:user@example.com
+  pronouns: "they/them"
   # External links (e.g. social media). | 外部リンク (例、SNS)
   links:
     - name: X
