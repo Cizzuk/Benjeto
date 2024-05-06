@@ -1,6 +1,6 @@
 <a href="{% if page.backto %}{{ page.backto }}{% else %}/{% endif %}">
   {%- if site.profile.icon -%}
-  <img src="{{ site.profile.icon }}" alt="" aria-hidden="true">
+  <img src="{{ site.profile.icon }}" alt="" aria-hidden>
   {%- endif -%}
   {% if site.profile.name %}
   {{ site.profile.name }}

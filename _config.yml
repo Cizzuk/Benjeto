@@ -18,6 +18,8 @@ profile:
   icon: "/assets/icon.png" 
   # If true, round the icon. | trueの場合、アイコンを丸くします。
   round-icon: true
+  # URL of your header image | ヘッダー画像のURL
+  header: 
   # Your personal introduction | 自己紹介文
   bio: >
     Here is a description of you.

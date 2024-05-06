@@ -334,10 +334,21 @@ header.home {
 }
 header.home img.icon {
   width: 100%;
-  max-width: 100px;
+  max-width: 104px;
+  border: 1px solid var(--gray);
   border-radius: 50%;
   vertical-align: middle;
   text-align: center;
+}
+header.home img.header {
+  position: fixed;
+  object-fit: cover;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  margin: 0;
 }
 header.home h1 {
   font-size: 1.5em;
@@ -367,7 +378,6 @@ header.home ul li a img {
   vertical-align: middle;
   margin: 0 0 4px;
 }
-
 header.home a:hover {
   background: var(--boxbg);
   border-radius: 4px;
