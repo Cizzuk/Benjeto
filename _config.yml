@@ -3,6 +3,11 @@ title: User
 # Website description | Webサイトの説明
 description: >
   Here is a description of website.
+# Language of the website | Webサイトの言語
+lang: en
+# Web site protocol and host name | Webサイトのプロトコルとホスト名
+url: https://example.com
+
 
 # Create your profile. Each field can be left blank.
 # プロフィールを作成します。項目は空白にもできます。
@@ -10,7 +15,7 @@ profile:
   # Your display name | 表示名
   name: User
   # URL of your profile icon | プロフィールアイコンのURL
-  icon: ""
+  icon: 
   # If true, round the icon. | trueの場合、アイコンを丸くします。
   round-icon: true
   # Your personal introduction | 自己紹介文
@@ -33,13 +38,15 @@ profile:
 
 # Advanced settings
 head:
+  #https://example.com
   canonical: 
+  #https://example.onion
   onion-location: 
-  no-robots: false
+  noindex: false
   ogp: true
   # Use profile icon if blank
   favicon: 
-  apple-touch-icon: 
+  siteicon: 
 copyright: 
 
 
