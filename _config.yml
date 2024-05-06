@@ -65,7 +65,6 @@ allow-image-select: false
 
 post:
   hide-profile: false
-  hide-date: false
 
 
 # Build settings
