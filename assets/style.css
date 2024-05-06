@@ -46,11 +46,11 @@ i {
 }
 
 ul, ol {
-  margin: 16px 32px;
+  margin: 16px 16px 32px 32px;
   padding: 0;
 }
 li ul, li ol {
-  margin: 0 24px;
+  margin-left: 24px;
 }
 
 table {
@@ -306,6 +306,7 @@ header.post {
   margin: 32px 0px;
 }
 header.post a {
+  display: inline-block;
   color: var(--text);
   text-decoration: none;
 }
@@ -332,7 +333,8 @@ header.home {
   border-bottom: 2px solid var(--border);
 }
 header.home img.icon {
-  width: 100px;
+  width: 100%;
+  max-width: 100px;
   border-radius: 50%;
   vertical-align: middle;
   text-align: center;
@@ -344,17 +346,21 @@ header.home h1 {
 header.home p {
   margin: 8px 0;
 }
-header.home ul {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  padding: 0;
-}
-header.home ul li a {
+header.home a {
   color: var(--link);
   text-decoration: none;
   padding: 4px 4px;
   margin: 0 4px;
+}
+header.home span {
+  color: var(--gray);
+}
+header.home ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
 }
 header.home ul li a img {
   width: 1em;
@@ -362,7 +368,7 @@ header.home ul li a img {
   margin: 0 0 4px;
 }
 
-header.home ul li a:hover {
+header.home a:hover {
   background: var(--boxbg);
   border-radius: 4px;
 }
@@ -372,3 +378,9 @@ header.home ul li a:hover {
     width: 100%;
   }
 }
+@media only screen and (max-width:200px) {
+  body {
+    width: 200px;
+  }
+}
+
