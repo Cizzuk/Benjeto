@@ -13,13 +13,19 @@
   $round-icon: 4px;
 {% endif %}
 
-{% if site.darkmode == "true" %}
-    @import "benjeto/{{ site.colorstyle }}-dark.scss";
+{% if site.colorstyle == "blue" or site.colorstyle == "red" or site.colorstyle == "green" %}
+  {% assign color = site.colorstyle %}
 {% else %}
-  @import "benjeto/{{ site.colorstyle }}.scss";
+  {% assign color = "blue" %}
+{% endif %}
+
+{% if site.darkmode == "true" %}
+    @import "benjeto/{{ color }}-dark.scss";
+{% else %}
+  @import "benjeto/{{ color }}.scss";
   {% if site.darkmode == "allow" %}
 	@media(prefers-color-scheme:dark) {
-      @import "benjeto/{{ site.colorstyle }}-dark.scss";
+      @import "benjeto/{{ color }}-dark.scss";
 	}
   {% endif %}
 {% endif %}
