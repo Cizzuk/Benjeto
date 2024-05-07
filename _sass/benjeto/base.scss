@@ -324,7 +324,7 @@ header.home img.icon {
   text-align: center;
 }
 header.home img.header {
-  position: fixed;
+  position: absolute;
   object-fit: cover;
   z-index: -1;
   top: 0;
@@ -346,6 +346,10 @@ header.home a {
   padding: 4px 4px;
   margin: 0 4px;
 }
+header.home a:hover {
+  background: var(--boxbg);
+  border-radius: 4px;
+}
 header.home span {
   color: var(--gray);
 }
@@ -361,11 +365,39 @@ header.home ul li a img {
   vertical-align: middle;
   margin: 0 0 4px;
 }
-header.home a:hover {
-  background: var(--boxbg);
-  border-radius: 4px;
+ul.post-list {
+  margin: 16px 8px;
+  list-style: none;
 }
-
+.post-list li.post {
+  display: block;
+  margin: 16px 0;
+  background: var(--boxbg);
+  border-radius: 16px;
+  transition: background 0.2s;
+}
+.post-list li.post h2 {
+  font-size: 1.2em;
+  margin: 6px 0;
+}
+.post-list li.post a {
+  display: block;
+  padding: 16px 32px;
+  color: var(--text);
+  text-decoration: none;
+}
+.post-list li.post p {
+  margin: 8px 0 6px;
+}
+.post-list li.post:hover {
+  background: var(--boxbglight);
+}
+.post-list li.post .post-time {
+  display: block;
+  color: var(--gray);
+  font-size: 0.9em;
+  margin: 6px 0;
+}
 @media only screen and (max-width:800px) {
   body {
     width: 100%;
