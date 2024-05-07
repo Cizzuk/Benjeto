@@ -25,7 +25,7 @@ profile:
   # If true, round the icon. | trueの場合、アイコンを丸くします。
   round-icon: true
   # URL of your header image | ヘッダー画像のURL
-  header: 
+  header: "/assets/header.png" 
   # Your personal introduction | 自己紹介文
   bio: >
     Here is a description of you.
@@ -62,6 +62,7 @@ head:
 date-format: "%Y-%m-%d"
 copyright: 
 allow-image-select: false
+show_excerpts: false
 
 post:
   hide-profile: false
