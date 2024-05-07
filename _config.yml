@@ -4,7 +4,7 @@ title: User
 description: >
   Here is a description of website.
 # Language of the website | Webサイトの言語
-lang: en
+lang: "en"
 direction: "ltr"
 # Web site protocol and host name | Webサイトのプロトコルとホスト名
 url: https://example.com
@@ -62,10 +62,19 @@ head:
 date-format: "%Y-%m-%d"
 copyright: 
 allow-image-select: false
-show_excerpts: false
+
+home:
+  show-excerpts: false
 
 post:
   hide-profile: false
+
+
+# Text settings
+text:
+  paginate-back: "Back" #Back
+  paginate-next: "Next" #Next
+  rss-subscribe: "Subscribe" #Subscribe
 
 
 # Build settings
@@ -77,6 +86,12 @@ sass:
 
 plugins:
   - jekyll-feed
+  - jekyll-paginate
+
+# Paginate settings
+# To use this, jekyll-paginate must be installed.
+paginate: 1
+paginate_path: "/pages/:num/"
 
 exclude:
   - LICENSE.txt
@@ -85,3 +100,4 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - Benjeto.gemspec
+
