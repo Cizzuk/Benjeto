@@ -51,9 +51,7 @@ layout: base
         <li class="post">
           <a class="post-link" href="{{ post.url | relative_url }}">
           {% if post.untitled != true %}
-            <h3>
-              {{ post.title | escape }}
-            </h3>
+            <h2>{{ post.title | escape }}</h2>
           {% endif %}
           {% if post.untitled == true or site.home.show-excerpts == true %}
             <span class="post-excerpt">{{ post.excerpt }}
