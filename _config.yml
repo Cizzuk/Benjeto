@@ -64,6 +64,7 @@ allow-image-select: false
 home:
   show-excerpts: true
   subscribe-button: true
+  subscribe-link: 
 
 post:
   hide-profile: false
