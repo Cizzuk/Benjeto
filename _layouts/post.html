@@ -14,9 +14,17 @@ layout: base
 {%- else -%}
   {%- assign date-format = site.date-format | default: "%Y-%m-%d" -%}
 {%- endif %}
-<time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+<time datetime="{{ page.date | date_to_xmlschema }}">
   {{- page.date | date: date-format -}}
 </time>
+{%- if page.author %}
+<span class="author">
+{%- for author in page.author -%}
+{{ author }}
+{%- if forloop.last == false %}, {% endif -%}
+{%- endfor -%}
+</span>
+{%- endif %}
 </header>
 
 {{ content }}

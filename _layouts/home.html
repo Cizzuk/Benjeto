@@ -63,7 +63,7 @@ layout: base
       <span class="post-excerpt">{{ post.excerpt }}
       </span>
       {%- endif %}
-      <time class="post-time">{{- post.date | date: date-format -}}</time>
+      <time class="post-time" datetime="{{ page.date | date_to_xmlschema }}">{{- post.date | date: date-format -}}</time>
     </a>
   </li>
   {%- endif %}
