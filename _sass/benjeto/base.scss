@@ -19,7 +19,7 @@ body {
 main, article {
   display: block;
   width: 100%;
-  padding: 0 8px 16px;
+  padding: 0 16px 16px;
 }
 
 h1, h2, h3 {
@@ -120,45 +120,46 @@ header.post {
 }
 
 header.home {
-  margin: 24px 8px;
+  margin: 24px 0;
   padding-bottom: 8px;
   border-bottom: 2px solid var(--border);
-  a {
-    color: var(--link);
-    text-decoration: none;
-    padding: 4px 4px;
-    margin: 0 4px;
-    &:hover {
-      background: var(--boxbg);
-      border-radius: 4px;
-    }
-  }
-  ul {
+  ul.exlink {
     display: flex;
     flex-wrap: wrap;
     list-style: none;
-    margin: 8px 0 0;
-    padding: 0;
-    li a img {
-      width: 1em;
-      vertical-align: middle;
-      margin: 0 0 4px;
+    margin: 4px 0 0;
+    padding: 0 4px;
+    li {
+      margin: 4px;
+      a {
+        color: var(--link);
+	    background: var(--boxbglight);
+	    border-radius: 4px;
+        text-decoration: none;
+        padding: 4px 6px;
+        margin: 0;
+	    transition: background 0.1s;
+        &:hover {
+          background: var(--boxbg);
+        }
+      }
     }
   }
   div.headline {
     display: flex;
-	flex-wrap: wrap;
+    flex-wrap: wrap;
     align-items: $headline-align;
     justify-content: space-between;
     margin: $headline-margin-top 0 8px;
-	div.sidebutton {
+    div.sidebutton {
       display: flex;
-	  flex-wrap: wrap-reverse;
-	  flex-direction: row-reverse;
+      flex-wrap: wrap;
+      flex-direction: row-reverse;
       align-items: center;
       margin: 0 0 0 8px;
-	  a {
+      a {
         display: inline-block;
+        text-decoration: none;
         color: var(--text);
         background: var(--boxbg);
         padding: 4px 16px;
@@ -168,21 +169,26 @@ header.home {
         transition: background 0.2s;
         &:hover {
             background: var(--boxbglight);
-	    }
-  }
-
+        }
+      }
     }
   }
-  img.icon {
+  a.icon {
+    display: block;
     width: 108px;
     height: 108px;
-    object-fit: cover;
-    background: var(--boxbg);
-    border: 4px solid var(--bg);
-    border-radius: calc($round-icon + 4px);
-    vertical-align: baseline;
-    text-align: center;
     margin-top: $icon-margin-top;
+    border-radius: calc($round-icon + 4px);
+    img {
+      width: 108px;
+      height: 108px;
+      object-fit: cover;
+      background: var(--boxbg);
+      border: 4px solid var(--bg);
+      border-radius: calc($round-icon + 4px);
+      vertical-align: baseline;
+      text-align: center;
+    }
   }
   img.header {
     position: absolute;
@@ -215,7 +221,7 @@ header.home {
 }
 
 ul.post-list {
-  margin: 16px 8px;
+  margin: 16px 0;
   list-style: none;
   li.post {
     display: block;
@@ -258,6 +264,7 @@ div.paginate {
     border: 1px solid var(--border);
     padding: 8px 16px;
     margin: 0;
+	text-align: center;
     min-width: 64px
   }
   a {

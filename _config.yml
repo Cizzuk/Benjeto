@@ -35,13 +35,10 @@ profile:
   # External links (e.g. social media). | 外部リンク (例、SNS)
   links:
     - name: X
-      icon: 
       url: "https://x.com/x"
     - name: YouTube
-      icon: 
       url: "https://youtube.com/@YouTube"
     - name: GitHub
-      icon: 
       url: "https://github.com/github"
 
 
