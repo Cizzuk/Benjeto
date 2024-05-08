@@ -2,7 +2,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <link rel="stylesheet" href="/assets/style.css">
-  <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <title>{% if page.title != ""%}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
   {% if site.head.ogp == true -%}
   <meta name="twitter:card" content="summary">
   <meta property="og:url" content="{{ site.url }}{{ page.url }}">
