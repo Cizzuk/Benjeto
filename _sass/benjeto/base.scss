@@ -295,6 +295,9 @@ header.post a {
 }
 header.post img {
   width: 32px;
+  height: 32px;
+  object-fit: cover;
+  background: var(--boxbg);
   border-radius: $round-icon;
   vertical-align: middle;
   margin: 0 8px;
