@@ -31,8 +31,8 @@ profile:
     Here is a description of you.
   # Your contact info | 連絡先
   contact: 
-      name: user@example.com
-      url: mailto:user@example.com
+    name: user@example.com
+    url: mailto:user@example.com
   pronouns: "they/them"
   # External links (e.g. social media). | 外部リンク (例、SNS)
   links:
