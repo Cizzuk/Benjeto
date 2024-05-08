@@ -6,7 +6,7 @@ layout: base
 {% if site.post.hide-profile != true and page.hide-profile != true -%}
   {%- include miniprof.html -%}
 {%- endif -%}
-{%- if page.untitled != true -%}
+{%- if page.title != "" -%}
   <h1>{{ page.title }}</h1>
 {%- endif -%}
 {%- if page.date-format -%}

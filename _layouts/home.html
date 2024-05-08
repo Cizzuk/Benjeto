@@ -56,10 +56,10 @@ layout: base
   {%- if post.hidden != true %}
   <li class="post">
     <a class="post-link" href="{{ post.url | relative_url }}">
-      {%- if post.untitled != true %}
+      {%- if post.title != "" %}
       <h2>{{ post.title | escape }}</h2>
       {%- endif %}
-      {%- if post.untitled == true or site.home.show-excerpts == true %}
+      {%- if post.titled == "" or site.home.show-excerpts == true %}
       <span class="post-excerpt">{{ post.excerpt }}
       </span>
       {%- endif %}

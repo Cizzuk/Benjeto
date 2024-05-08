@@ -68,6 +68,13 @@ post:
   backto: "/"
   highlight: true
 
+defaults:
+  - values:
+      title: ""
+
+feed:
+  posts_limit: 20
+
 
 # Text settings
 text:
