@@ -4,14 +4,12 @@ layout: base
 
 <main>
 <header class="home">
-   <div class="headline">
-  {% if site.profile.icon %}
-  <img class="icon" src="{{ site.profile.icon }}" alt="" aria-hidden>
-  {% endif %}
-  <a href="{{ site.feed.path | default: 'feed.xml' | absolute_url }}" class="subscribe">{{ site.text.subscribe }}</a>
+  <div class="headline">
+    <img class="icon" src="{{ site.profile.icon }}" alt="" aria-hidden>
+    <a href="{{ site.feed.path | default: 'feed.xml' | absolute_url }}" class="subscribe">{{ site.text.subscribe }}</a>
   </div>
   {% if site.profile.header %}
-  <img class="header" src="{{ site.profile.header }}" alt="" aria-hidden>
+    <img class="header" src="{{ site.profile.header }}" alt="" aria-hidden>
   {% endif %}
   {% if site.profile.name %}
     <h1>{{ site.profile.name }}</h1>
@@ -21,17 +19,18 @@ layout: base
   {% if site.profile.pronouns %}
     <span class="pronouns">{{ site.profile.pronouns }}</span>
   {% endif %}
-  </div>
   {% if site.profile.bio %}
   <p class="bio">{{ site.profile.bio }}</p>
   {% endif %}
-  {% if site.profile.contact.url and site.profile.contact.name %}
-  <a class="contact" href="{{ site.profile.contact.url }}">{{ site.profile.contact.name }}</a>
-  {% endif %}
   <ul class="exlink">
+  {% if site.profile.contact.url and site.profile.contact.name %}
+  <li><a class="contact" href="{{ site.profile.contact.url }}">{{ site.profile.contact.name }}</a></li>
+  {% endif %}
+  {% if site.profile.links %}
   {%- for entry in site.profile.links -%}
     {%- include exlink.html item = entry -%}
   {%- endfor -%}
+  {% endif %}
   </ul>
 </header>
 

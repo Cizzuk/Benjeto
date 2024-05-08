@@ -311,28 +311,31 @@ header.post time {
 }
 
 header.home {
-  margin: 32px 8px;
+  margin: 24px 8px;
+  padding-bottom: 8px;
   border-bottom: 2px solid var(--border);
 }
 header.home div.headline {
   display: flex;
-  align-items: baseline;
+  align-items: $headline-align;
   justify-content: space-between;
-  margin: 0;
+  margin: $headline-margin-top 0 8px;
 }
 header.home img.icon {
-  width: 100%;
-  max-width: 104px;
+  width: 104px;
+  height: 104px;
+  object-fit: cover;
+  background: var(--boxbg);
   border: 1px solid var(--gray);
   border-radius: $round-icon;
   vertical-align: baseline;
   text-align: center;
+  margin-top: $icon-margin-top;
 }
 header.home a.subscribe {
   display: inline-block;
   color: var(--text);
   background: var(--boxbg);
-  text-decoration: none;
   padding: 4px 8px;
   margin: 0 4px;
   border: 1px solid var(--border);
@@ -345,6 +348,7 @@ header.home a.subscribe:hover {
 header.home img.header {
   position: absolute;
   object-fit: cover;
+  background: var(--boxbg);
   z-index: -1;
   top: 0;
   left: 0;
@@ -363,10 +367,11 @@ header.home h1, header.home p.bio{
 header.home span.pronouns {
   display: inline-block;
   color: var(--gray);
+  font-size: 0.9em;
   margin: 0 8px;
 }
-header.home p {
-  margin: 8px 0;
+header.home p.bio {
+  margin: 8px 0 0;
 }
 header.home a {
   color: var(--link);
@@ -382,7 +387,7 @@ header.home ul {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
-  margin: 8px 0;
+  margin: 8px 0 0;
   padding: 0;
 }
 header.home ul li a img {
