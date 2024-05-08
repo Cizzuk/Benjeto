@@ -92,7 +92,7 @@ plugins:
 
 # Paginate settings
 # To use this, jekyll-paginate must be installed.
-paginate: 1
+paginate: 20
 paginate_path: "/pages/:num/"
 
 exclude:
