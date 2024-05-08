@@ -18,7 +18,7 @@ layout: base
   {{- page.date | date: date-format -}}
 </time>
 {%- if page.author %}
-<span class="author">
+<span class="author" itemprop="name">
 {%- for author in page.author -%}
 {{ author }}
 {%- if forloop.last == false %}, {% endif -%}
