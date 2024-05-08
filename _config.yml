@@ -5,14 +5,12 @@ description: >
   Here is a description of website.
 # Language of the website | Webサイトの言語
 lang: "en"
-direction: "ltr"
+direction: "ltr" #ltr, rtl
 # Web site protocol and host name | Webサイトのプロトコルとホスト名
 url: https://example.com
 # Select theme color | テーマカラーを選択
-# blue, red, green
-colorstyle: "blue"
-# allow, true, false
-darkmode: "false"
+colorstyle: "blue" #blue, red, green
+darkmode: "allow" #allow, true, false
 
 
 # Create your profile. Each field can be left blank.
@@ -64,10 +62,12 @@ copyright:
 allow-image-select: false
 
 home:
-  show-excerpts: false
+  show-excerpts: true
+  subscribe-button: true
 
 post:
   hide-profile: false
+  backto: "/"
 
 
 # Text settings
