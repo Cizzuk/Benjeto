@@ -1,10 +1,14 @@
-<a href="{% if page.backto %}{{ page.backto }}{% else %}/{% endif %}">
-  {%- if site.profile.icon -%}
-  <img src="{{ site.profile.icon }}" alt="" aria-hidden>
-  {%- endif -%}
-  {% if site.profile.name %}
-  {{ site.profile.name }}
+{% assign backto = page.backto | default: site.post.backto %}
+{% assign profile-icon = page.profile.icon | default: site.profile.icon %}
+{% assign profile-name = page.profile.name | default: site.profile.name %}
+
+<a href="{% if backto %}{{ backto }}{% else %}#{% endif %}">
+  {% if profile-icon %}
+    <img src="{{ profile-icon }}" alt="" aria-hidden>
+  {% endif %}
+  {% if profile-name %}
+    {{ profile-name }}
   {% else %}
-  {{ site.title }}
+    {{ site.title }}
   {% endif %}
 </a>
