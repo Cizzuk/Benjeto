@@ -78,6 +78,7 @@ layout: base
   {%- else %}
   <span class="back">{{ site.text.paginate-back }}</span>
   {%- endif %}
+  <span class="current">{{ paginator.page }} / {{ paginator.total_pages }}</span>
   {%- if paginator.next_page %}
   <a href="{{ paginator.next_page_path | relative_url }}" class="next">{{ site.text.paginate-next }}</a>
   {%- else %}
