@@ -6,7 +6,9 @@ layout: base
 <header class="home">
   <div class="headline">
     <img class="icon" src="{{ site.profile.icon }}" alt="" aria-hidden>
-    <a href="{{ site.feed.path | default: 'feed.xml' | absolute_url }}" class="subscribe">{{ site.text.subscribe }}</a>
+	{% if site.home.subscribe-button == true %}
+      <a href="{{ site.feed.path | default: 'feed.xml' | absolute_url }}" class="subscribe">{{ site.text.subscribe }}</a>
+	{% endif %}
   </div>
   {% if site.profile.header %}
     <img class="header" src="{{ site.profile.header }}" alt="" aria-hidden>
@@ -20,11 +22,11 @@ layout: base
     <span class="pronouns">{{ site.profile.pronouns }}</span>
   {% endif %}
   {% if site.profile.bio %}
-  <p class="bio">{{ site.profile.bio }}</p>
+    <p class="bio">{{ site.profile.bio }}</p>
   {% endif %}
   <ul class="exlink">
   {% if site.profile.contact.url and site.profile.contact.name %}
-  <li><a class="contact" href="{{ site.profile.contact.url }}">{{ site.profile.contact.name }}</a></li>
+    <li><a class="contact" href="{{ site.profile.contact.url }}">{{ site.profile.contact.name }}</a></li>
   {% endif %}
   {% if site.profile.links %}
   {%- for entry in site.profile.links -%}
