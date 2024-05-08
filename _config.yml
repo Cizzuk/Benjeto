@@ -68,6 +68,7 @@ home:
 post:
   hide-profile: false
   backto: "/"
+  highlight: true
 
 
 # Text settings
