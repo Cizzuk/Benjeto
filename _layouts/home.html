@@ -7,25 +7,25 @@ layout: base
 <header class="home">
   <div class="headline">
     <a class="icon" href="{{ backto }}"><img src="{{ site.profile.icon }}" alt="{{ site.profile.name }}"></a>
-	<div class="sidebutton">
+	<section class="sidebutton">
 	{%- if site.home.subscribe-button == true %}
       <a href="{{ site.feed.path | default: 'feed.xml' | absolute_url  }}" class="subscribe">{{ site.text.subscribe }}</a>
 	{%- endif %}
 	{%- if site.profile.contact.url %}
       <a class="contact" href="{{ site.profile.contact.url }}" title="{{ site.profile.contact.name | default: Contact}}">{{ site.profile.contact.name }}</a>
     {%- endif -%}
-	</div>
+	</section>
   </div>
   {%- if site.profile.header %}
     <img class="header" src="{{ site.profile.header }}" alt="" aria-hidden>
   {%- endif %}
   {%- if site.profile.name %}
-    <h1>{{ site.profile.name }}</h1>
+    <h1 itemprop="name">{{ site.profile.name }}</h1>
   {%- else %}
-    <h1>{{ site.title }}</h1>
+    <h1 itemprop="name">{{ site.title }}</h1>
   {%- endif %}
   {%- if site.profile.pronouns %}
-    <span class="pronouns">{{ site.profile.pronouns }}</span>
+    <span class="pronouns" itemprop="pronouns">{{ site.profile.pronouns }}</span>
   {%- endif %}
   {%- if site.profile.bio %}
     <p class="bio">{{ site.profile.bio }}</p>
@@ -46,7 +46,7 @@ layout: base
 {%- endif -%}
 
 {%- if posts.size > 0 %}
-<ul class="post-list">
+<section class="post-list" role="feed">
   {%- if page.date-format %}
     {%- assign date-format = page.date-format -%}
   {%- else %}
@@ -54,7 +54,7 @@ layout: base
   {%- endif %}
   {%- for post in posts -%}
   {%- if post.hidden != true %}
-  <li class="post">
+  <article class="post">
     <a class="post-link" href="{{ post.url | relative_url }}">
       {%- if post.title != "" %}
       <h2>{{ post.title | escape }}</h2>
@@ -65,13 +65,13 @@ layout: base
       {%- endif %}
       <time class="post-time" datetime="{{ page.date | date_to_xmlschema }}">{{- post.date | date: date-format -}}</time>
     </a>
-  </li>
+  </article>
   {%- endif %}
 {%- endfor %}
-</ul>
+</section>
 
 {%- if site.paginate %}
-<div class="paginate">
+<section class="paginate">
   {%- if paginator.previous_page %}
   <a href="{{ paginator.previous_page_path | relative_url }}" class="back">{{ site.text.paginate-back }}</a>
   {%- else %}
@@ -83,7 +83,7 @@ layout: base
   {%- else %}
   <span class="next">{{ site.text.paginate-next }}</span>
   {%- endif %}
-</div>
+</section>
 {%- endif %}
 {%- endif -%}
 

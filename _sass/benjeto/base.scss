@@ -157,7 +157,7 @@ header.home {
     align-items: $headline-align;
     justify-content: space-between;
     margin: $headline-margin-top 0 8px;
-    div.sidebutton {
+    section.sidebutton {
       display: flex;
       flex-wrap: wrap;
       flex-direction: row-reverse;
@@ -226,12 +226,13 @@ header.home {
   }
 }
 
-ul.post-list {
+section.post-list {
   margin: 16px 0;
   list-style: none;
-  li.post {
+  article.post {
     display: block;
     margin: 16px 0;
+	padding: 0;
     background: var(--boxbg);
     border-radius: 16px;
     transition: background 0.2s;
@@ -260,7 +261,7 @@ ul.post-list {
   }
 }
 
-div.paginate {
+section.paginate {
   display: flex;
   justify-content: center;
   margin: 16px 0;
