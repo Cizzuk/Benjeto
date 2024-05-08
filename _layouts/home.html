@@ -1,22 +1,53 @@
 ---
 layout: base
 ---
+{%- assign default-subs-link = site.feed.path | default: 'feed.xml' | absolute_url -%}
+{%- if page.subscribe-link -%}
+  {%- assign subs-link = page.subscribe-link | default: default-subs-link -%}
+{%- elsif site.home.subscribe-link -%}
+  {%- assign subs-link = site.home.subscribe-link | default: default-subs-link -%}
+{%- else -%}
+  {%- assign subs-link = default-subs-link -%}
+{%- endif -%}
+
+{%- if page.profile.name -%}
+  {%- assign name = page.profile.name -%}
+{%- elsif site.profile.name -%}
+  {%- assign name = site.profile.name -%}
+{%- else -%}
+  {%- assign name = site.title -%}
+{%- endif -%}
+
+{%- if page.profile.icon -%}
+  {%- assign icon = page.profile.icon -%}
+{%- elsif site.profile.icon -%}
+  {%- assign icon = site.profile.icon -%}
+{%- endif -%}
+
+{%- if page.profile.icon -%}
+  {%- assign icon = page.profile.icon -%}
+{%- elsif site.profile.icon -%}
+  {%- assign icon = site.profile.icon -%}
+{%- endif -%}
+
+
 <main>
 <header class="home">
   <div class="headline">
-    <img class="icon" src="{{ site.profile.icon }}" alt="" aria-hidden>
-      <a href="{{ site.feed.path | default: 'feed.xml' | absolute_url }}" class="subscribe">{{ site.text.subscribe }}</a>
+    <img class="icon" src="{{ icon }}" alt="{{ name }}">
+	<div class="sidebutton">
 	{%- if site.home.subscribe-button == true %}
+      <a href="{{ subs-link }}" class="subscribe">{{ site.text.subscribe }}</a>
 	{%- endif %}
+	{%- if site.profile.contact.url %}
+      <a class="contact" href="{{ site.profile.contact.url }}" title="{{ site.profile.contact.name | default: Contact}}">{{ site.profile.contact.name }}</a>
+    {%- endif -%}
+	</div>
   </div>
   {%- if site.profile.header %}
     <img class="header" src="{{ site.profile.header }}" alt="" aria-hidden>
   {%- endif %}
-  {%- if site.profile.name %}
-    <h1>{{ site.profile.name }}</h1>
-  {%- else %}
-    <h1>{{ site.title }}</h1>
-  {%- endif %}
+    <h1>{{ name }}</h1>
   {%- if site.profile.pronouns %}
     <span class="pronouns">{{ site.profile.pronouns }}</span>
   {%- endif %}
@@ -24,9 +55,6 @@ layout: base
     <p class="bio">{{ site.profile.bio }}</p>
   {%- endif %}
   <ul class="exlink">
-  {%- if site.profile.contact.url and site.profile.contact.name %}
-    <li><a class="contact" href="{{ site.profile.contact.url }}">{{ site.profile.contact.name }}</a></li>
-  {%- endif -%}
   {%- if site.profile.links -%}
   {%- for entry in site.profile.links -%}
     {%- include exlink.html item = entry -%}
@@ -59,7 +87,7 @@ layout: base
       <span class="post-excerpt">{{ post.excerpt }}
       </span>
       {%- endif %}
-      <span class="post-time">{{- post.date | date: date-format -}}</span>
+      <time class="post-time">{{- post.date | date: date-format -}}</time>
     </a>
   </li>
   {%- endif %}

@@ -19,7 +19,7 @@ body {
 main, article {
   display: block;
   width: 100%;
-  padding: 0 16px 16px;
+  padding: 0 8px 16px;
 }
 
 h1, h2, h3 {
@@ -123,11 +123,55 @@ header.home {
   margin: 24px 8px;
   padding-bottom: 8px;
   border-bottom: 2px solid var(--border);
+  a {
+    color: var(--link);
+    text-decoration: none;
+    padding: 4px 4px;
+    margin: 0 4px;
+    &:hover {
+      background: var(--boxbg);
+      border-radius: 4px;
+    }
+  }
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 8px 0 0;
+    padding: 0;
+    li a img {
+      width: 1em;
+      vertical-align: middle;
+      margin: 0 0 4px;
+    }
+  }
   div.headline {
     display: flex;
+	flex-wrap: wrap;
     align-items: $headline-align;
     justify-content: space-between;
     margin: $headline-margin-top 0 8px;
+	div.sidebutton {
+      display: flex;
+	  flex-wrap: wrap-reverse;
+	  flex-direction: row-reverse;
+      align-items: center;
+      margin: 0 0 0 8px;
+	  a {
+        display: inline-block;
+        color: var(--text);
+        background: var(--boxbg);
+        padding: 4px 16px;
+        margin: 2px 4px;
+        border: 1px solid var(--border);
+        border-radius: 100px;
+        transition: background 0.2s;
+        &:hover {
+            background: var(--boxbglight);
+	    }
+  }
+
+    }
   }
   img.icon {
     width: 108px;
@@ -139,19 +183,6 @@ header.home {
     vertical-align: baseline;
     text-align: center;
     margin-top: $icon-margin-top;
-  }
-  a.subscribe {
-    display: inline-block;
-    color: var(--text);
-    background: var(--boxbg);
-    padding: 4px 8px;
-    margin: 0 4px;
-    border: 1px solid var(--border);
-    border-radius: 4px;
-    transition: background 0.2s;
-    &:hover {
-      background: var(--boxbglight);
-	}
   }
   img.header {
     position: absolute;
@@ -181,28 +212,6 @@ header.home {
     font-size: 0.9em;
     margin: 0 8px;
   }
-  a {
-    color: var(--link);
-    text-decoration: none;
-    padding: 4px 4px;
-    margin: 0 4px;
-    &:hover {
-      background: var(--boxbg);
-      border-radius: 4px;
-    }
-  }
-  ul {
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-    margin: 8px 0 0;
-    padding: 0;
-    li a img {
-      width: 1em;
-      vertical-align: middle;
-      margin: 0 0 4px;
-    }
-  }
 }
 
 ul.post-list {
@@ -230,7 +239,7 @@ ul.post-list {
     p {
       margin: 8px 0 6px;
     }
-    .post-time {
+    time {
       display: block;
       color: var(--gray);
       font-size: 0.9em;
