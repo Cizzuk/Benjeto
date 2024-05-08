@@ -1,7 +1,7 @@
 # Website title | Webサイトのタイトル
 title: User
 # Website description | Webサイトの説明
-description: >
+description: >-
   Here is a description of website.
 # Language of the website | Webサイトの言語
 lang: "en"
@@ -25,8 +25,8 @@ profile:
   # URL of your header image | ヘッダー画像のURL
   header: "/assets/header.png" 
   # Your personal introduction | 自己紹介文
-  bio: >
     Here is a description of you.
+  bio: >-
   # Your contact info | 連絡先
   contact: 
     name: user@example.com

@@ -1,87 +1,85 @@
 ---
 layout: base
 ---
-
 <main>
 <header class="home">
   <div class="headline">
     <img class="icon" src="{{ site.profile.icon }}" alt="" aria-hidden>
-	{% if site.home.subscribe-button == true %}
       <a href="{{ site.feed.path | default: 'feed.xml' | absolute_url }}" class="subscribe">{{ site.text.subscribe }}</a>
-	{% endif %}
+	{%- if site.home.subscribe-button == true %}
+	{%- endif %}
   </div>
-  {% if site.profile.header %}
+  {%- if site.profile.header %}
     <img class="header" src="{{ site.profile.header }}" alt="" aria-hidden>
-  {% endif %}
-  {% if site.profile.name %}
+  {%- endif %}
+  {%- if site.profile.name %}
     <h1>{{ site.profile.name }}</h1>
-  {% else %}
+  {%- else %}
     <h1>{{ site.title }}</h1>
-  {% endif %}
-  {% if site.profile.pronouns %}
+  {%- endif %}
+  {%- if site.profile.pronouns %}
     <span class="pronouns">{{ site.profile.pronouns }}</span>
-  {% endif %}
-  {% if site.profile.bio %}
+  {%- endif %}
+  {%- if site.profile.bio %}
     <p class="bio">{{ site.profile.bio }}</p>
-  {% endif %}
+  {%- endif %}
   <ul class="exlink">
-  {% if site.profile.contact.url and site.profile.contact.name %}
+  {%- if site.profile.contact.url and site.profile.contact.name %}
     <li><a class="contact" href="{{ site.profile.contact.url }}">{{ site.profile.contact.name }}</a></li>
-  {% endif %}
-  {% if site.profile.links %}
+  {%- endif -%}
+  {%- if site.profile.links -%}
   {%- for entry in site.profile.links -%}
     {%- include exlink.html item = entry -%}
   {%- endfor -%}
-  {% endif %}
+  {%- endif -%}
   </ul>
 </header>
-
 {{ content }}
+{%- if site.paginate and paginator.posts != nil -%}
+  {%- assign posts = paginator.posts -%}
+{%- else -%}
+  {%- assign posts = site.posts -%}
+{%- endif -%}
 
-{% if site.paginate %}
-  {% assign posts = paginator.posts %}
-{% else %}
-  {% assign posts = site.posts %}
-{% endif %}
-
-{%- if posts.size > 0 -%}
-  <ul class="post-list">
-    {% if page.date-format %}
-      {%- assign date-format = page.date-format -%}
-    {% else %}
-      {%- assign date-format = site.date-format | default: "%Y-%m-%d" -%}
-    {% endif %}
-    {%- for post in posts -%}
-      {% if post.hidden != true %}
-        <li class="post">
-          <a class="post-link" href="{{ post.url | relative_url }}">
-          {% if post.untitled != true %}
-            <h2>{{ post.title | escape }}</h2>
-          {% endif %}
-          {% if post.untitled == true or site.home.show-excerpts == true %}
-            <span class="post-excerpt">{{ post.excerpt }}
-          {% endif %}
-          <span class="post-time">{{ post.date | date: date-format }}</span>
-          </a>
-        </li>
-      {% endif %}
-    {%- endfor -%}
-  </ul>
-
-  {% if site.paginate %}
-    <div class="paginate">
-      {%- if paginator.previous_page %}
-        <a href="{{ paginator.previous_page_path | relative_url }}" class="back">{{ site.text.paginate-back }}</a>
-      {%- else -%}
-        <span class="back">{{ site.text.paginate-back }}</span>
-      {%- endif %}
-      {%- if paginator.next_page %}
-        <a href="{{ paginator.next_page_path | relative_url }}" class="next">{{ site.text.paginate-next }}</a>
-      {%- else -%}
-        <span class="next">{{ site.text.paginate-next }}</span>
-      {%- endif -%}
-    </div>
+{%- if posts.size > 0 %}
+<ul class="post-list">
+  {%- if page.date-format %}
+    {%- assign date-format = page.date-format -%}
+  {%- else %}
+    {%- assign date-format = site.date-format | default: "%Y-%m-%d" -%}
   {%- endif %}
-{% endif %}
+  {%- for post in posts -%}
+  {%- if post.hidden != true %}
+  <li class="post">
+    <a class="post-link" href="{{ post.url | relative_url }}">
+      {%- if post.untitled != true %}
+      <h2>{{ post.title | escape }}</h2>
+      {%- endif %}
+      {%- if post.untitled == true or site.home.show-excerpts == true %}
+      <span class="post-excerpt">{{ post.excerpt }}
+      </span>
+      {%- endif %}
+      <span class="post-time">{{- post.date | date: date-format -}}</span>
+    </a>
+  </li>
+  {%- endif %}
+{%- endfor %}
+</ul>
+
+{%- if site.paginate %}
+<div class="paginate">
+  {%- if paginator.previous_page %}
+  <a href="{{ paginator.previous_page_path | relative_url }}" class="back">{{ site.text.paginate-back }}</a>
+  {%- else %}
+  <span class="back">{{ site.text.paginate-back }}</span>
+  {%- endif %}
+  {%- if paginator.next_page %}
+  <a href="{{ paginator.next_page_path | relative_url }}" class="next">{{ site.text.paginate-next }}</a>
+  {%- else %}
+  <span class="next">{{ site.text.paginate-next }}</span>
+  {%- endif %}
+</div>
+{%- endif %}
+{%- endif -%}
 
 </main>
