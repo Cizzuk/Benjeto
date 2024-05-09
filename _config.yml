@@ -73,6 +73,8 @@ head:
 
 footer: 
   copyright: 
+  # Hide the RSS subscribe button.
+  subscribe-button: true
 
 home:
   # If true, the titled post's excerpt will be displayed on the home page.

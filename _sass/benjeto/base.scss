@@ -164,28 +164,6 @@ header.home {
       flex-direction: row-reverse;
       align-items: center;
       margin: 0 0 0 8px;
-	  font-weight: 600;
-      a {
-        display: inline-block;
-        text-decoration: none;
-        color: var(--text);
-        background: var(--boxbg);
-        padding: 4px 16px;
-        margin: 2px 4px;
-        border: 1px solid var(--border);
-        border-radius: 100px;
-        transition: background 0.2s;
-        &:hover {
-            background: var(--boxbglight);
-            text-decoration: underline;
-        }
-        img {
-          width: 1.5em;
-          height: 1em;
-          vertical-align: middle;
-          margin-bottom: 2px;
-        }
-      }
     }
   }
   a.icon {
@@ -346,6 +324,58 @@ section.paginate {
     :last-child {
       border-left: 0;
     }
+  }
+}
+
+footer {
+  margin: 8px;
+  padding: 24px;
+  border-top: 2px solid var(--border);
+  div.footline {
+    display: flex;
+    justify-content: space-between;
+    a.icon {
+      text-decoration: none;
+      img {
+        width: 48px;
+        height: 48px;
+        object-fit: cover;
+        margin-right: 8px;
+        background: var(--boxbg);
+        border-radius: $round-icon;
+        vertical-align: middle;
+      }
+      span {
+        font-size: 1.5em;
+        font-weight: 500;
+        color: var(--text);
+        vertical-align: middle;
+      }
+    }
+    div.sbbutton {
+      margin: auto 0;
+    }
+  }
+  p.copy {
+    margin: 16px 0;
+    color: var(--gray);
+  }
+}
+
+a.bigbutton {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--text);
+  background: var(--boxbg);
+  padding: 4px 16px;
+  margin: 2px 4px;
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  transition: background 0.2s;
+  &:hover {
+    background: var(--boxbglight);
+    text-decoration: underline;
   }
 }
 
