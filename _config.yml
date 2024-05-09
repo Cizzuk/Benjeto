@@ -13,8 +13,8 @@ colorstyle: "blue" #blue, red, green
 darkmode: "allow" #allow, true, false
 
 
-# Create your profile. Each field can be left blank.
-# プロフィールを作成します。項目は空白にもできます。
+### Create your profile. Each field can be left blank. ###
+### プロフィールを作成します。項目は空白にもできます。 ###
 profile:
   # Your display name | 表示名
   name: User
@@ -42,40 +42,53 @@ profile:
       url: "https://github.com/github"
 
 
-# Advanced settings
+
+##### Advanced settings #####
+
+# Set the date format, default is YYYY-MM-DD
+date-format: "%Y-%m-%d"
+# If true, the images can be saved by right-clicking, etc.
+allow-image-select: true
+
 head:
   #https://example.com
   canonical: 
   #https://example.onion
   onion-location: 
+  # Prevents search engines from indexing your website.
   noindex: false
+  # If true, website previews will be displayed on social media, etc.
   ogp: true
-  # Use profile icon if blank
+  # Use profile icon if blank.
   favicon: 
   siteicon: 
 
-date-format: "%Y-%m-%d"
-copyright: 
-allow-image-select: false
+footer: 
+  copyright: 
 
 home:
+  # If true, the titled post's excerpt will be displayed on the home page.
   show-excerpts: true
+  # Hide the RSS subscribe button.
   subscribe-button: true
-  subscribe-link: 
-  max-posts: 
+  # Maximum number of posts to display on the home when paginate is not used.
+  # If blank, unlimited
+  max-posts: 20
 
 post:
-  hide-profile: false
+  # Set a destination link to navigate to when clicking on the post header.
   backto: "/"
+  # Highlight color to code in the post
   highlight: true
 
-defaults:
-  - values:
-      title: ""
-
 feed:
+  # Maximum number of posts in the feed
   posts_limit: 20
 
+# Maximum number of posts to be displayed on one home page.
+# If blank, disable paginate.
+paginate: 20
+paginate_path: "/pages/:num/"
 
 # Text settings
 text:
@@ -84,9 +97,12 @@ text:
   subscribe: "Subscribe" #Subscribe
 
 
-# Build settings
 
-#theme: benjeto
+##### Build settings #####
+
+defaults:
+  - values:
+      title: ""
 
 sass:
   style: compressed
@@ -95,16 +111,11 @@ plugins:
   - jekyll-feed
   - jekyll-paginate
 
-# Paginate settings
-# To use this, jekyll-paginate must be installed.
-paginate: 20
-paginate_path: "/pages/:num/"
-
 exclude:
   - LICENSE.txt
   - README.md
   - README-ja.md
   - Gemfile
   - Gemfile.lock
-  - Benjeto.gemspec
+  - benjeto-jekyll-theme.gemspec
 
