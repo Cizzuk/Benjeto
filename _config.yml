@@ -72,7 +72,7 @@ head:
   siteicon: 
 
 footer: 
-  copyright: 
+  copyright: "(c) 20XX User"
   # Hide the RSS subscribe button.
   subscribe-button: true
 

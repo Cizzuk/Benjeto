@@ -1,6 +1,11 @@
-<a href="{{ "/" | relative_url }}">
-  {%- if site.profile.icon -%}
-    <img src="{{ site.profile.icon }}" alt="" aria-hidden>
-  {%- endif -%}
-  {{ site.profile.name | default: site.title }}
+<div class="headline">
+<a class="icon" href="{{ "/" | relative_url }}">
+<img src="{{ site.profile.icon }}" alt="{{ site.profile.name }}">
+<span itemprop="name">{{ site.profile.name | default: site.title }}</span>
 </a>
+{%- if site.footer.subscribe-button == true %}
+<div class="sbbutton">
+<a href="{{ site.feed.path | default: 'feed.xml' | absolute_url  }}" class="bigbutton">{{ site.text.subscribe }}</a>
+</div>
+{%- endif %}
+</div>
