@@ -139,14 +139,15 @@ header.home {
       margin: 4px;
       a {
         color: var(--link);
-	    background: var(--boxbglight);
-	    border-radius: 4px;
+        background: var(--boxbglight);
+        border-radius: 4px;
         text-decoration: none;
         padding: 4px 6px;
         margin: 0;
-	    transition: background 0.1s;
+        transition: background 0.1s;
         &:hover {
           background: var(--boxbg);
+          text-decoration: underline;
         }
       }
     }
@@ -176,6 +177,7 @@ header.home {
         transition: background 0.2s;
         &:hover {
             background: var(--boxbglight);
+            text-decoration: underline;
         }
         img {
           width: 1.5em;
@@ -287,6 +289,7 @@ section.paginate {
     transition: background 0.2s;
     &:hover {
       background: var(--boxbglight);
+      text-decoration: underline;
     }
 	@if $direction == rtl {
       &:first-child {
