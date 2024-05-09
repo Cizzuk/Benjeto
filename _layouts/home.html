@@ -39,6 +39,12 @@ layout: base
   {%- endif -%}
   </ul>
 </header>
+{%- if site.profile == nil %}
+  <p style="font-weight:bold">
+  You must create your profile in _config.yml.
+  <br><a href="https://benjeto.tsg0o0.com/2024/05/10/how-to-setup.html">See Benjeto documentation for more information.</a>
+  </p>
+{%- endif -%}
 {{ content }}
 {%- if site.paginate and paginator.posts != nil -%}
   {%- assign posts = paginator.posts -%}

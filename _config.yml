@@ -17,7 +17,7 @@ darkmode: "allow" #allow, true, false
 ### プロフィールを作成します。項目は空白にもできます。 ###
 profile:
   # Your display name | 表示名
-  name: Cizzuk
+  name: User
   # URL of your profile icon | プロフィールアイコンのURL
   icon: "/assets/icon.png" 
   # If true, round the icon. | trueの場合、アイコンを丸くします。
@@ -26,7 +26,7 @@ profile:
   header: "/assets/header.png" 
   # Your personal introduction | 自己紹介文
   bio: >-
-    てすと中だよ
+    You can edit your profile in _config.yml.
   # Your pronouns | 代名詞
   pronouns: 
   # External links (e.g. social media). | 外部リンク (例、SNS)
