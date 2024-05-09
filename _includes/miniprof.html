@@ -1,12 +1,6 @@
-{%- assign profile-icon = page.profile.icon | default: site.profile.icon -%}
-{%- assign profile-name = page.profile.name | default: site.profile.name -%}
 <a href="{{ "/" | relative_url }}">
-  {%- if profile-icon -%}
-    <img src="{{ profile-icon }}" alt="" aria-hidden>
+  {%- if site.profile.icon -%}
+    <img src="{{ site.profile.icon }}" alt="" aria-hidden>
   {%- endif -%}
-  {%- if profile-name -%}
-    {{ profile-name }}
-  {%- else -%}
-    {{ site.title }}
-  {%- endif -%}
+  {{ site.profile.name | default: site.title }}
 </a>
