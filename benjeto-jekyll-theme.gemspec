@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 Gem::Specification.new do |spec|
-  spec.name          = "Benjeto"
+  spec.name          = "benjeto-jekyll-theme"
   spec.version       = "0.1"
   spec.authors       = ["Cizzuk"]
 
