@@ -163,6 +163,7 @@ header.home {
       flex-direction: row-reverse;
       align-items: center;
       margin: 0 0 0 8px;
+	  font-weight: 600;
       a {
         display: inline-block;
         text-decoration: none;
@@ -175,6 +176,12 @@ header.home {
         transition: background 0.2s;
         &:hover {
             background: var(--boxbglight);
+        }
+        img {
+          width: 1.5em;
+          height: 1em;
+          vertical-align: middle;
+          margin-bottom: 2px;
         }
       }
     }

@@ -31,6 +31,13 @@ profile:
   contact: 
     name: Email
     url: mailto:user@example.com
+  # Tip | 寄付
+  # Example, GitHub Sponsor link : https://github.com/sponsors/github
+  #          Patreon link        : https://www.patreon.com/patreon
+  #          Bitcoin address     : bitcoin:1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa
+  tip: 
+    name: Tip
+    url: 
   pronouns: "they/them"
   # External links (e.g. social media). | 外部リンク (例、SNS)
   links:

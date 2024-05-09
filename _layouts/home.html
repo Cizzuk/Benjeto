@@ -12,7 +12,10 @@ layout: base
       <a href="{{ site.feed.path | default: 'feed.xml' | absolute_url  }}" class="subscribe">{{ site.text.subscribe }}</a>
 	{%- endif %}
 	{%- if site.profile.contact.url %}
-      <a class="contact" href="{{ site.profile.contact.url }}" title="{{ site.profile.contact.name | default: Contact}}">{{ site.profile.contact.name }}</a>
+      <a class="contact" href="{{ site.profile.contact.url }}" title="{{ site.profile.contact.name | default: Contact }}">{{ site.profile.contact.name }}</a>
+    {%- endif -%}
+	{%- if site.profile.tip.url %}
+      <a class="contact" href="{{ site.profile.tip.url }}" title="{{ site.profile.tip.name | default: Tip }}">{{ site.profile.tip.name }}</a>
     {%- endif -%}
 	</section>
   </div>
