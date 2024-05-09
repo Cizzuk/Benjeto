@@ -43,16 +43,13 @@ layout: base
   {%- assign posts = paginator.posts -%}
 {%- else -%}
   {%- assign posts = site.posts -%}
+  {%- assign max-posts = site.home.max-posts -%}
 {%- endif -%}
 
 {%- if posts.size > 0 %}
 <section class="post-list" role="feed">
-  {%- if page.date-format %}
-    {%- assign date-format = page.date-format -%}
-  {%- else %}
-    {%- assign date-format = site.date-format | default: "%Y-%m-%d" -%}
-  {%- endif %}
-  {%- for post in posts -%}
+  {%- assign date-format = page.date-format | default: site.date-format | default: "%Y-%m-%d" -%}
+  {%- for post in posts limit:max-posts -%}
   {%- if post.hidden != true %}
   <article class="post">
     <a class="post-link" href="{{ post.url | relative_url }}">

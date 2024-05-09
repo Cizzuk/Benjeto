@@ -62,6 +62,7 @@ home:
   show-excerpts: true
   subscribe-button: true
   subscribe-link: 
+  max-posts: 
 
 post:
   hide-profile: false
