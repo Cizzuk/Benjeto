@@ -1,7 +1,6 @@
-{%- assign backto = page.backto | default: site.post.backto | default: "#" -%}
 {%- assign profile-icon = page.profile.icon | default: site.profile.icon -%}
 {%- assign profile-name = page.profile.name | default: site.profile.name -%}
-<a href="{{ backto }}">
+<a href="{{ "/" | relative_url }}">
   {%- if profile-icon -%}
     <img src="{{ profile-icon }}" alt="" aria-hidden>
   {%- endif -%}

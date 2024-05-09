@@ -1,12 +1,10 @@
 ---
 layout: base
 ---
-{%- assign backto = page.backto | default: site.post.backto | default: "#" -%}
-
 <main>
 <header class="home">
   <div class="headline">
-    <a class="icon" href="{{ backto }}"><img src="{{ site.profile.icon }}" alt="{{ site.profile.name }}"></a>
+    <a class="icon" href="{{ "/" | relative_url }}"><img src="{{ site.profile.icon }}" alt="{{ site.profile.name }}"></a>
 	<section class="sidebutton">
 	{%- if site.home.subscribe-button == true %}
       <a href="{{ site.feed.path | default: 'feed.xml' | absolute_url  }}" class="subscribe">{{ site.text.subscribe }}</a>

@@ -84,8 +84,6 @@ home:
   max-posts: 20
 
 post:
-  # Set a destination link to navigate to when clicking on the post header.
-  backto: "/"
   # Highlight color to code in the post
   highlight: true
 
