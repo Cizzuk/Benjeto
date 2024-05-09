@@ -27,6 +27,16 @@ profile:
   # Your personal introduction | 自己紹介文
   bio: >-
     てすと中だよ
+  # Your pronouns | 代名詞
+  pronouns: 
+  # External links (e.g. social media). | 外部リンク (例、SNS)
+  links:
+    - name: X
+      url: "https://x.com/x"
+    - name: YouTube
+      url: "https://youtube.com/@YouTube"
+    - name: GitHub
+      url: "https://github.com/github"
   # Your contact info | 連絡先
   contact: 
     name: Email
@@ -38,16 +48,6 @@ profile:
   tip: 
     name: Tip
     url: 
-  # Your pronouns | 代名詞
-  pronouns: "they/them"
-  # External links (e.g. social media). | 外部リンク (例、SNS)
-  links:
-    - name: X
-      url: "https://x.com/x"
-    - name: YouTube
-      url: "https://youtube.com/@YouTube"
-    - name: GitHub
-      url: "https://github.com/github"
 
 
 
