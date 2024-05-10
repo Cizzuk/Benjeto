@@ -1,6 +1,8 @@
 <div class="miniprof">
 <a class="icon" href="{{ "/" | relative_url }}">
+{%- if site.profile.icon %}
 <img src="{{ site.profile.icon }}" alt="{{ site.profile.name }}">
+{%- endif %}
 <span itemprop="name">{{ site.profile.name | default: site.title }}</span>
 </a>
 {%- if page.layout == "post" and site.post.subscribe-button == true %}

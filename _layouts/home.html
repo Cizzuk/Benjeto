@@ -4,6 +4,7 @@ layout: base
 <main>
 <header class="home">
   <div class="headline">
+    {%- if site.profile.icon %}
     <a class="icon" href="{{ "/" | relative_url }}"><img src="{{ site.profile.icon }}" alt="{{ site.profile.name }}"></a>
 	<section class="sidebutton">
     {%- if site.profile.contact.url %}
@@ -16,6 +17,7 @@ layout: base
     <a href="{{ site.feed.path | default: 'feed.xml' | absolute_url  }}" class="bigbutton">{{ site.text.subscribe }}</a>
     {%- endif %}
     </section>
+	{%- endif %}
   </div>
   {%- if site.profile.header %}
   <img class="header" src="{{ site.profile.header }}" alt="" aria-hidden>
@@ -34,6 +36,21 @@ layout: base
   {%- endfor -%}
   {%- endif -%}
   </ul>
+  {%- unless site.profile.icon %}
+  <div class="headline">
+  <section class="sidebutton">
+    {%- if site.profile.contact.url %}
+    <a class="bigbutton" href="{{ site.profile.contact.url }}" title="{{ site.profile.contact.name | default: Contact }}">{{ site.profile.contact.name }}</a>
+    {%- endif -%}
+    {%- if site.profile.tip.url %}
+    <a class="bigbutton" href="{{ site.profile.tip.url }}" title="{{ site.profile.tip.name | default: Tip }}">{{ site.profile.tip.name }}</a>
+    {%- endif -%}
+    {%- if site.home.subscribe-button == true %}
+    <a href="{{ site.feed.path | default: 'feed.xml' | absolute_url  }}" class="bigbutton">{{ site.text.subscribe }}</a>
+  {%- endif %}
+  </section>
+  </div>
+  {%- endunless %}
 </header>
 {%- if site.profile == nil %}
   <p style="font-weight:bold">
