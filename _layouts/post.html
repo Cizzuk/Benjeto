@@ -7,11 +7,7 @@ layout: base
 {%- if page.title != "" -%}
   <h1>{{ page.title }}</h1>
 {%- endif -%}
-{%- if page.date-format -%}
-  {%- assign date-format = page.date-format -%}
-{%- else -%}
-  {%- assign date-format = site.date-format | default: "%Y-%m-%d" -%}
-{%- endif %}
+{%- assign date-format = page.date-format | default: site.date-format | default: "%Y-%m-%d" -%}
 <time datetime="{{ page.date | date_to_xmlschema }}">
   {{- page.date | date: date-format -}}
 </time>
