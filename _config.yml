@@ -59,10 +59,6 @@ date_format: "%Y-%m-%d"
 allow_image_select: true
 
 head:
-  #https://example.com
-  canonical: 
-  #https://example.onion
-  onion_location: 
   # Prevents search engines from indexing your website.
   noindex: false
   # If true, website previews will be displayed on social media, etc.
