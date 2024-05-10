@@ -77,8 +77,11 @@ layout: base
       {%- if post.title != "" %}
       <h2>{{ post.title | escape }}</h2>
       {%- endif %}
-      {%- if post.titled == "" or site.home.show-excerpts == true %}
+      {%- if post.title == "" or site.home.show-excerpts == true %}
       {{ post.excerpt }}
+      {%- endif %}
+      {%- if post.title == "" and post.image %}
+      <img src="{{ post.image }}" class="feature">
       {%- endif %}
       <time datetime="{{ page.date | date_to_xmlschema }}">{{- post.date | date: date-format -}}</time>
       {%- if post.tag -%}
