@@ -180,6 +180,10 @@ header.home {
     margin: 0;
     vertical-align: bottom;
   }
+  div.dumheader {
+    height: 76px;
+	margin: 0;
+  }
   h1 {
     font-size: 1.5em;
     margin: 0;
@@ -349,13 +353,20 @@ div.miniprof {
       background: var(--boxbg);
       border-radius: $round-icon;
       vertical-align: middle;
+      @if $direction == rtl {
+        margin-left: 4px;
+      }
+      @else {
+        margin-right: 4px;
+      }
     }
     span {
-      margin: 0 8px;
+      margin: 0;
       font-size: 1.2em;
       font-weight: 500;
       color: var(--text);
       vertical-align: middle;
+	  overflow-wrap: anywhere;
     }
     &:hover {
       span {
@@ -370,6 +381,7 @@ div.miniprof {
 a.bigbutton {
   display: inline-block;
   text-decoration: none;
+  text-align: center;
   font-weight: 600;
   color: var(--text);
   background: var(--boxbg);

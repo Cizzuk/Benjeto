@@ -3,6 +3,10 @@ layout: base
 ---
 <main>
 <header class="home">
+  {%- if site.profile.header %}
+  <img class="header" src="{{ site.profile.header }}" alt="" aria-hidden>
+  <div class="dumheader" role="none"></div>
+  {%- endif %}
   <div class="headline">
     {%- if site.profile.icon %}
     <a class="icon" href="{{ "/" | relative_url }}"><img src="{{ site.profile.icon }}" alt="{{ site.profile.name }}"></a>
@@ -19,9 +23,6 @@ layout: base
     </section>
 	{%- endif %}
   </div>
-  {%- if site.profile.header %}
-  <img class="header" src="{{ site.profile.header }}" alt="" aria-hidden>
-  {%- endif %}
   <h1 itemprop="name">{{ site.profile.name | default: site.title }}</h1>
   {%- if site.profile.pronouns %}
   <span class="pronouns" itemprop="pronouns">{{ site.profile.pronouns }}</span>

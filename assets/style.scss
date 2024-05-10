@@ -13,9 +13,9 @@
   $round-icon: 4px;
 {% endif %}
 
-{% if site.profile.header %}
+{% if site.profile.header and site.profile.icon %}
   $headline-align: flex-end;
-  $headline-margin-top: 108px;
+  $headline-margin-top: 8px;
   $icon-margin-top: -18%;
 {% else %}
   $headline-align: center;
