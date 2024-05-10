@@ -1,7 +1,4 @@
     <li>{%- assign entry = include.item -%}
       <a rel="nofollow" href="{{ entry.url }}" target="_blank" title="{{ entry.name }}">
-      {%- if entry.icon -%}
-        <img src="{{ entry.icon }}" alt="">
-      {%- endif -%}
       {{- entry.name -}}
     </a></li>
