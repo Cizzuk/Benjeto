@@ -15,6 +15,12 @@ layout: base
 <time datetime="{{ page.date | date_to_xmlschema }}">
   {{- page.date | date: date-format -}}
 </time>
+{%- if page.tag -%}
+{%- for entry in page.tag -%}
+<span class="tag">{{ entry }}</span>
+{%- endfor -%}
+{%- endif -%}
+
 {%- if page.author %}
 <span class="author" itemprop="name">
 {%- for author in page.author -%}

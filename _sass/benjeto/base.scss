@@ -91,6 +91,36 @@ hr {
   border:1px solid var(--border);
 }
 
+a.bigbutton {
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 600;
+  color: var(--text);
+  background: var(--boxbg);
+  padding: 4px 16px;
+  margin: 2px 4px;
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  transition: background 0.2s;
+  &:hover {
+    background: var(--boxbglight);
+    text-decoration: underline;
+  }
+}
+
+span.tag {
+  display: inline-block;
+  color: var(--gray);
+  font-size: 0.9em;
+  margin: 6px 4px;
+  padding: 0 8px;
+  border: 1px solid var(--border);
+  border-radius: 32px;
+  min-width: 32px;
+  text-align: center;
+}
+
 header.post {
   margin: 32px 0px;
   h1 {
@@ -98,16 +128,19 @@ header.post {
     margin: 32px 0 8px;
   }
   time {
-    display: block;
+    display: inline-block;
     color: var(--gray);
     font-size: 0.9em;
-    margin: 8px 2px;
+    margin: 2px 4px;
+  }
+  span.tag {
+    margin: 2px 4px;
   }
   span.author {
     display: block;
     color: var(--gray);
     font-size: 0.9em;
-    margin: 8px 2px;
+    margin: 2px 4px;
   }
 }
 
@@ -208,11 +241,11 @@ section.post-list {
   article.post {
     display: block;
     margin: 16px 0;
-	padding: 0;
+    padding: 0;
     background: var(--boxbg);
     border-radius: 16px;
     transition: background 0.2s;
-	&:hover {
+    &:hover {
       background: var(--boxbglight);
     }
     h2 {
@@ -226,13 +259,19 @@ section.post-list {
       text-decoration: none;
     }
     p {
-      margin: 8px 0 6px;
+      margin: 8px 0 4px;
     }
     time {
-      display: block;
+      display: inline-block;
       color: var(--gray);
-      font-size: 0.9em;
+      font-size: 0.95em;
       margin: 6px 0;
+	  @if $direction == rtl {
+        margin-left: 8px;
+      }
+      @else {
+        margin-right: 8px;
+      }
     }
   }
 }
@@ -366,7 +405,7 @@ div.miniprof {
       font-weight: 500;
       color: var(--text);
       vertical-align: middle;
-	  overflow-wrap: anywhere;
+      overflow-wrap: anywhere;
     }
     &:hover {
       span {
@@ -378,23 +417,7 @@ div.miniprof {
     margin: auto 0;
   }
 }
-a.bigbutton {
-  display: inline-block;
-  text-decoration: none;
-  text-align: center;
-  font-weight: 600;
-  color: var(--text);
-  background: var(--boxbg);
-  padding: 4px 16px;
-  margin: 2px 4px;
-  border: 1px solid var(--border);
-  border-radius: 100px;
-  transition: background 0.2s;
-  &:hover {
-    background: var(--boxbglight);
-    text-decoration: underline;
-  }
-}
+
 
 @media only screen and (max-width:800px) {
   body {
