@@ -18,11 +18,11 @@ darkmode: "allow" #allow, true, false
 profile:
   # Your display name | 表示名
   name: User
-  # URL of your profile icon | プロフィールアイコンのURL
+  # Relative URL of your profile icon | プロフィールアイコンの相対URL
   icon: "/assets/icon.png" 
   # If true, round the icon. | trueの場合、アイコンを丸くします。
   round-icon: true
-  # URL of your header image | ヘッダー画像のURL
+  # Relative URL of your header image | ヘッダー画像の相対URL
   header: "/assets/header.png" 
   # Your personal introduction | 自己紹介文
   bio: >-
