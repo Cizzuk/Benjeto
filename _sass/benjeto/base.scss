@@ -185,18 +185,18 @@ header.home {
   a.icon {
     display: block;
     width: 108px;
-    height: 108px;
+    max-width: 25%;
+    min-width: 68px;
     margin-top: $icon-margin-top;
     border-radius: calc($round-icon + 4px);
     img {
-      width: 108px;
-      height: 108px;
+      display: block;
+      width: 100%;
+      aspect-ratio: 1 / 1;
       object-fit: cover;
       background: var(--boxbg);
       border: 4px solid var(--bg);
       border-radius: calc($round-icon + 4px);
-      vertical-align: baseline;
-      text-align: center;
     }
   }
   img.header {
