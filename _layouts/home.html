@@ -9,7 +9,7 @@ layout: base
   {%- endif %}
   <div class="headline">
     {%- if site.profile.icon %}
-    <a class="icon" href="{{ "/" | relative_url }}"><img src="{{ site.profile.icon }}" alt="{{ site.profile.name }}"></a>
+    <a class="icon" href="{{ "/" | relative_url }}"><img src="{{ site.profile.icon | relative_url }}" alt="{{ site.profile.name }}"></a>
 	<section class="sidebutton">
     {%- if site.profile.contact.url %}
     <a class="bigbutton" href="{{ site.profile.contact.url }}" title="{{ site.profile.contact.name | default: Contact }}">{{ site.profile.contact.name }}</a>
@@ -18,7 +18,7 @@ layout: base
     <a class="bigbutton" href="{{ site.profile.tip.url }}" title="{{ site.profile.tip.name | default: Tip }}">{{ site.profile.tip.name }}</a>
     {%- endif -%}
     {%- if site.home.subscribe-button == true %}
-    <a href="{{ site.feed.path | default: 'feed.xml' | absolute_url  }}" class="bigbutton">{{ site.text.subscribe }}</a>
+    <a href="{{ site.feed.path | default: 'feed.xml' | absolute_url }}" class="bigbutton">{{ site.text.subscribe | default: "Subscribe" }}</a>
     {%- endif %}
     </section>
 	{%- endif %}
@@ -47,7 +47,7 @@ layout: base
     <a class="bigbutton" href="{{ site.profile.tip.url }}" title="{{ site.profile.tip.name | default: Tip }}">{{ site.profile.tip.name }}</a>
     {%- endif -%}
     {%- if site.home.subscribe-button == true %}
-    <a href="{{ site.feed.path | default: 'feed.xml' | absolute_url  }}" class="bigbutton">{{ site.text.subscribe }}</a>
+    <a href="{{ site.feed.path | default: 'feed.xml' | absolute_url  }}" class="bigbutton">{{ site.text.subscribe | default: "Subscribe" }}</a>
   {%- endif %}
   </section>
   </div>
@@ -81,7 +81,7 @@ layout: base
       {{ post.excerpt }}
       {%- endif %}
       {%- if post.title == "" and post.image %}
-      <img src="{{ post.image }}" class="feature">
+      <img src="{{ post.image | relative_url }}" class="feature">
       {%- endif %}
       <time datetime="{{ page.date | date_to_xmlschema }}">{{- post.date | date: date-format -}}</time>
       {%- if post.tag -%}

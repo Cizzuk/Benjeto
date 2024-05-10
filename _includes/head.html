@@ -27,15 +27,13 @@
   {% endif -%}
 
   {% if icon -%}
-  <link rel="apple-touch-icon" href="{{ icon }}">
+  <link rel="apple-touch-icon" href="{{ icon | relative_url }}">
   {% endif -%}
-
 
   {% if site.head.favicon or site.profile.icon -%}
-  <link rel="icon" href="{{ site.head.favicon | default: site.profile.icon }}">
+  <link rel="icon" href="{{ site.head.favicon | relative_url | default: site.profile.icon | relative_url }}">
   {% endif -%}
 
-  
   {% if site.head.canonical -%}
   <link rel="canonical" href="{{ site.head.canonical }}{{ page.url }}">
   {% endif -%}
