@@ -1,8 +1,8 @@
 <footer>
-{%- if page.layout == "post" and site.post.footer-profile == "true" %}
+{%- if page.layout == "post" and site.post.footer_profile == "true" %}
   {% assign show = true %}
 {%- endif %}
-{%- if page.layout == "post" and page.title != "" and site.post.footer-profile == "article" %}
+{%- if page.layout == "post" and page.title != "" and site.post.footer_profile == "article" %}
   {% assign show = true %}
 {%- endif %}
 {%- if show %}

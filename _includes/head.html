@@ -38,21 +38,21 @@
   <link rel="canonical" href="{{ site.head.canonical }}{{ page.url }}">
   {% endif -%}
 
-  {% if site.head.onion-location -%}
-  <meta http-equiv="onion-location" content="{{ site.head.onion-location }}{{ page.url }}">
+  {% if site.head.onion_location -%}
+  <meta http-equiv="onion-location" content="{{ site.head.onion_location }}{{ page.url }}">
   {% endif -%}
 
   {% if site.head.noindex == true -%}
   <meta name="robots" content="noindex">
   {% endif -%}
 
-  {% if page.itunes-app -%}
-    <meta name="apple-itunes-app" content="app-id={{ page.itunes }}">
+  {% if page.itunes_app -%}
+    <meta name="apple-itunes-app" content="app-id={{ page.itunes_app }}">
   {% endif -%}
 
   {% if page.layout == "home" or page.layout == "post" -%}
   {% feed_meta -%}
   {% endif -%}
   
-  {% include custom-head.html %}
+  {% include custom_head.html %}
 </head>

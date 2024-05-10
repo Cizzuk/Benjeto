@@ -7,9 +7,9 @@ layout: base
 {%- if page.title != "" -%}
   <h1>{{ page.title }}</h1>
 {%- endif -%}
-{%- assign date-format = page.date-format | default: site.date-format | default: "%Y-%m-%d" -%}
+{%- assign date_format = page.date_format | default: site.date_format | default: "%Y-%m-%d" -%}
 <time datetime="{{ page.date | date_to_xmlschema }}">
-  {{- page.date | date: date-format -}}
+  {{- page.date | date: date_format -}}
 </time>
 {%- if page.tag -%}
 {%- for entry in page.tag -%}

@@ -7,7 +7,7 @@
   $direction: ltr;
 {% endif %}
 
-{% if site.profile.round-icon == true %}
+{% if site.profile.round_icon == true %}
   $round-icon: 50%;
 {% else %}
   $round-icon: 4px;
@@ -24,7 +24,7 @@
 {% endif %}
 
 
-{% if site.allow-image-select == false %}
+{% if site.allow_image_select == false %}
 img {
   pointer-events: none;
   -webkit-touch-callout: none;

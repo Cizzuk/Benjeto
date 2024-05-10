@@ -17,7 +17,7 @@ layout: base
     {%- if site.profile.tip.url %}
     <a class="bigbutton" href="{{ site.profile.tip.url }}" title="{{ site.profile.tip.name | default: Tip }}">{{ site.profile.tip.name }}</a>
     {%- endif -%}
-    {%- if site.home.subscribe-button == true %}
+    {%- if site.home.subscribe_button == true %}
     <a href="{{ site.feed.path | default: 'feed.xml' | absolute_url }}" class="bigbutton">{{ site.text.subscribe | default: "Subscribe" }}</a>
     {%- endif %}
     </section>
@@ -46,7 +46,7 @@ layout: base
     {%- if site.profile.tip.url %}
     <a class="bigbutton" href="{{ site.profile.tip.url }}" title="{{ site.profile.tip.name | default: Tip }}">{{ site.profile.tip.name }}</a>
     {%- endif -%}
-    {%- if site.home.subscribe-button == true %}
+    {%- if site.home.subscribe_button == true %}
     <a href="{{ site.feed.path | default: 'feed.xml' | absolute_url  }}" class="bigbutton">{{ site.text.subscribe | default: "Subscribe" }}</a>
   {%- endif %}
   </section>
@@ -64,26 +64,26 @@ layout: base
   {%- assign posts = paginator.posts -%}
 {%- else -%}
   {%- assign posts = site.posts -%}
-  {%- assign max-posts = site.home.max-posts -%}
+  {%- assign max_posts = site.home.max-posts -%}
 {%- endif -%}
 
 {%- if posts.size > 0 %}
 <section class="post-list" role="feed">
-  {%- assign date-format = page.date-format | default: site.date-format | default: "%Y-%m-%d" -%}
-  {%- for post in posts limit:max-posts -%}
+  {%- assign date_format = page.date_format | default: site.date_format | default: "%Y-%m-%d" -%}
+  {%- for post in posts limit:max_posts -%}
   {%- if post.hidden != true %}
   <article class="post">
     <a class="post-link" href="{{ post.url | relative_url }}">
       {%- if post.title != "" %}
       <h2>{{ post.title | escape }}</h2>
       {%- endif %}
-      {%- if post.title == "" or site.home.show-excerpts == true %}
+      {%- if post.title == "" or site.home.show_excerpts == true %}
       {{ post.excerpt }}
       {%- endif %}
       {%- if post.title == "" and post.image %}
       <img src="{{ post.image | relative_url }}" class="feature">
       {%- endif %}
-      <time datetime="{{ page.date | date_to_xmlschema }}">{{- post.date | date: date-format -}}</time>
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{- post.date | date: date_format -}}</time>
       {%- if post.tag -%}
       {%- for entry in post.tag -%}
       <span class="tag">{{ entry }}</span>
@@ -98,15 +98,15 @@ layout: base
 {%- if site.paginate %}
 <section class="paginate">
   {%- if paginator.previous_page %}
-  <a href="{{ paginator.previous_page_path | relative_url }}" class="back">{{ site.text.paginate-back }}</a>
+  <a href="{{ paginator.previous_page_path | relative_url }}" class="back">{{ site.text.paginate_back | default: "Back" }}</a>
   {%- else %}
-  <span class="back">{{ site.text.paginate-back }}</span>
+  <span class="back">{{ site.text.paginate_back | default: "Back" }}</span>
   {%- endif %}
   <span class="current">{{ paginator.page }} / {{ paginator.total_pages }}</span>
   {%- if paginator.next_page %}
-  <a href="{{ paginator.next_page_path | relative_url }}" class="next">{{ site.text.paginate-next }}</a>
+  <a href="{{ paginator.next_page_path | relative_url }}" class="next">{{ site.text.paginate_next | default: "Next" }}</a>
   {%- else %}
-  <span class="next">{{ site.text.paginate-next }}</span>
+  <span class="next">{{ site.text.paginate_next | default: "Next" }}</span>
   {%- endif %}
 </section>
 {%- endif %}
