@@ -93,36 +93,6 @@ hr {
 
 header.post {
   margin: 32px 0px;
-  div.headline {
-    display: flex;
-    justify-content: space-between;
-    a.icon {
-      text-decoration: none;
-      img {
-        width: 40px;
-        height: 40px;
-        object-fit: cover;
-        background: var(--boxbg);
-        border-radius: $round-icon;
-        vertical-align: middle;
-      }
-      span {
-        margin: 0 8px;
-        font-size: 1.2em;
-        font-weight: 500;
-        color: var(--text);
-        vertical-align: middle;
-      }
-      &:hover {
-        span {
-          text-decoration: underline;
-        }
-      }
-    }
-    div.sbbutton {
-      margin: auto 0;
-    }
-  }
   h1 {
     font-size: 2em;
     margin: 32px 0 8px;
@@ -343,14 +313,60 @@ section.paginate {
 }
 
 footer {
-  margin: 32px 0;
+  margin: 32px 8px;
   p.copy {
-    margin: 0;
     color: var(--gray);
 	text-align: center;
   }
+  div.footprof {
+    margin: 0 16px;
+    padding: 20px 24px 4px;
+    border: 2px solid var(--border);
+	border-radius: 16px;
+  }
+  div.miniprof {
+    a.icon {
+      img {
+        width:50px;
+      }
+      span {
+        font-size: 1.4em;
+        font-weight: 600;
+      }
+    }
+  }
 }
 
+div.miniprof {
+  display: flex;
+  justify-content: space-between;
+  a.icon {
+    text-decoration: none;
+    img {
+      width: 40px;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      background: var(--boxbg);
+      border-radius: $round-icon;
+      vertical-align: middle;
+    }
+    span {
+      margin: 0 8px;
+      font-size: 1.2em;
+      font-weight: 500;
+      color: var(--text);
+      vertical-align: middle;
+    }
+    &:hover {
+      span {
+        text-decoration: underline;
+      }
+    }
+  }
+  div.sbbutton {
+    margin: auto 0;
+  }
+}
 a.bigbutton {
   display: inline-block;
   text-decoration: none;

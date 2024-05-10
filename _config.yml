@@ -73,21 +73,24 @@ head:
 
 footer: 
   copyright: 
-  # Hide the RSS subscribe button.
-  subscribe-button: true
 
 home:
   # If true, the titled post's excerpt will be displayed on the home page.
   show-excerpts: true
-  # Hide the RSS subscribe button.
+  # Show the RSS subscribe button.
   subscribe-button: true
   # Maximum number of posts to display on the home when paginate is not used.
   # If blank, unlimited
   max-posts: 20
 
 post:
+  # Show the RSS subscribe button.
+  subscribe-button: true
   # Highlight color to code in the post
   highlight: true
+  # Show your profile in footer.
+  footer-profile: "article" #true, false, article
+
 
 feed:
   # Maximum number of posts in the feed

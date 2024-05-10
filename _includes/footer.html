@@ -1,4 +1,16 @@
 <footer>
+{%- if page.layout == "post" and site.post.footer-profile == "true" %}
+  {% assign show = true %}
+{%- endif %}
+{%- if page.title != "" and site.post.footer-profile == "article" %}
+  {% assign show = true %}
+{%- endif %}
+{%- if show %}
+<div class="footprof">
+{%- include miniprof.html -%}
+<p class="bio">{{ site.profile.bio }}</p>
+</div>
+{%- endif %}
 {%- if site.footer.copyright %}
 <p class="copy">{{ site.footer.copyright }}</p>
 {%- endif %}

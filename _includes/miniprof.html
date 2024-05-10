@@ -1,9 +1,9 @@
-<div class="headline">
+<div class="miniprof">
 <a class="icon" href="{{ "/" | relative_url }}">
 <img src="{{ site.profile.icon }}" alt="{{ site.profile.name }}">
 <span itemprop="name">{{ site.profile.name | default: site.title }}</span>
 </a>
-{%- if site.footer.subscribe-button == true %}
+{%- if page.layout == "post" and site.post.subscribe-button == true %}
 <div class="sbbutton">
 <a href="{{ site.feed.path | default: 'feed.xml' | absolute_url  }}" class="bigbutton">{{ site.text.subscribe }}</a>
 </div>
