@@ -1,45 +1,38 @@
+{%- if page.title != "" -%}
+{%- capture title -%}{{ page.title }} - {{ site.title }}{% endcapture %}
+{%- else -%}
+{%- assign title = site.title -%}
+{%- endif -%}
+{%- assign icon = page.image | default: site.head.siteicon | default: site.profile.icon -%}
+{%- assign description = page.description | default: site.description -%}
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <link rel="stylesheet" href="/assets/style.css">
-  <title>{% if page.title != ""%}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <title>{{ title }}</title>
   {% if site.head.ogp == true -%}
   <meta name="twitter:card" content="summary">
   <meta property="og:url" content="{{ site.url }}{{ page.url }}">
-  <meta property="og:title" content="{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}">
-  {% if page.description -%}
-  <meta property="og:description" content="{{ page.description }}">
-  {% elsif site.description -%}
-  <meta property="og:description" content="{{ site.description }}">
+  <meta property="og:title" content="{{ title }}">
+  {% if description -%}
+  <meta property="og:description" content="{{ description }}">
   {% endif -%}
-  {% if page.icon -%}
-  <meta property="og:image" content="{{ site.url }}{{ page.icon }}">
-  {% elsif site.head.siteicon -%}
-  <meta property="og:image" content="{{ site.url }}{{ site.head.siteicon }}">
-  {% elsif site.profile.icon -%}
-  <meta property="og:image" content="{{ site.url }}{{ site.profile.icon }}">
+  {% if icon -%}
+  <meta property="og:image" content="{{ site.url }}{{ icon }}">
   {% endif -%}
   {%- endif -%}
   
-  {% if page.description -%}
-  <meta name="description" content="{{ page.description }}">
-  {% elsif site.description -%}
-  <meta name="description" content="{{ site.description }}">
+  {% if description -%}
+  <meta name="description" content="{{ description }}">
   {% endif -%}
 
-  {% if page.icon -%}
-  <link rel="apple-touch-icon" href="{{ page.icon }}">
-  {% elsif site.head.siteicon -%}
-  <link rel="apple-touch-icon" href="{{ site.head.siteicon }}">
-  {% elsif site.profile.icon -%}
-  <link rel="apple-touch-icon" href="{{ site.profile.icon }}">
+  {% if icon -%}
+  <link rel="apple-touch-icon" href="{{ icon }}">
   {% endif -%}
 
 
-  {% if site.head.favicon -%}
-  <link rel="icon" href="{{ site.head.favicon }}">
-  {% elsif site.profile.icon -%}
-  <link rel="icon" href="{{ site.profile.icon }}">
+  {% if site.head.favicon or site.profile.icon -%}
+  <link rel="icon" href="{{ site.head.favicon | default: site.profile.icon }}">
   {% endif -%}
 
   
@@ -59,7 +52,9 @@
     <meta name="apple-itunes-app" content="app-id={{ page.itunes }}">
   {% endif -%}
 
+  {% if page.layout == "home" or page.layout == "post" -%}
   {% feed_meta -%}
+  {% endif -%}
   
   {% include custom-head.html %}
 </head>
