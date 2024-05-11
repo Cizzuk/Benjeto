@@ -1,13 +1,16 @@
+{%- assign profile = site.data.profile -%}
+{%- assign texts = site.data.texts -%}
+{%- assign settings = site.data.settings -%}
 <div class="miniprof">
 <a class="icon" href="{{ "/" | relative_url }}">
-{%- if site.profile.icon %}
-<img src="{{ site.profile.icon | relative_url }}" alt="{{ site.profile.name | default: site.title }}">
+{%- if profile.icon %}
+<img src="{{ profile.icon | relative_url }}" alt="">
 {%- endif %}
-<span itemprop="name">{{ site.profile.name | default: site.title }}</span>
+<span itemprop="name">{{ profile.name | default: site.title }}</span>
 </a>
-{%- if page.layout == "post" and site.post.subscribe_button == true %}
+{%- if page.layout == "post" and settings.post.subscribe_button == true %}
 <div class="sbbutton">
-<a href="{{ site.feed.path | default: 'feed.xml' | absolute_url }}" class="bigbutton">{{ site.text.subscribe | default: "Subscribe"}}</a>
+<a href="{{ site.feed.path | default: 'feed.xml' | absolute_url }}" class="bigbutton">{{ texts.subscribe | default: "Subscribe"}}</a>
 </div>
 {%- endif %}
 </div>

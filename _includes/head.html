@@ -1,16 +1,19 @@
+{%- assign profile = site.data.profile -%}
+{%- assign settings = site.data.settings -%}
+
 {%- if page.title != "" -%}
 {%- capture title -%}{{ page.title }} - {{ site.title }}{% endcapture %}
 {%- else -%}
 {%- assign title = site.title -%}
 {%- endif -%}
-{%- assign icon = page.image | default: site.head.siteicon | default: site.profile.icon -%}
+{%- assign icon = page.image | default: settings.head.siteicon | default: profile.icon -%}
 {%- assign description = page.description | default: site.description -%}
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <link rel="stylesheet" href="/assets/style.css">
   <title>{{ title }}</title>
-  {% if site.head.ogp == true -%}
+  {% if settings.head.ogp == true -%}
   <meta name="twitter:card" content="summary">
   <meta property="og:url" content="{{ site.url }}{{ page.url }}">
   <meta property="og:title" content="{{ title }}">
@@ -30,11 +33,11 @@
   <link rel="apple-touch-icon" href="{{ icon | relative_url }}">
   {% endif -%}
 
-  {% if site.head.favicon or site.profile.icon -%}
-  <link rel="icon" href="{{ site.head.favicon | relative_url | default: site.profile.icon | relative_url }}">
+  {% if settings.head.favicon or profile.icon -%}
+  <link rel="icon" href="{{ settings.head.favicon | relative_url | default: profile.icon | relative_url }}">
   {% endif -%}
 
-  {% if site.head.noindex == true -%}
+  {% if page.noindex == true or settings.head.noindex == true -%}
   <meta name="robots" content="noindex">
   {% endif -%}
 

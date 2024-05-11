@@ -1,19 +1,21 @@
 ---
 ---
+{%- assign profile = site.data.profile -%}
+{%- assign settings = site.data.settings -%}
 
-{% if site.direction == "rtl" %}
+{% if settings.direction == "rtl" %}
   $direction: rtl;
 {% else %}
   $direction: ltr;
 {% endif %}
 
-{% if site.profile.round_icon == true %}
+{% if settings.round_icon == true %}
   $round-icon: 50%;
 {% else %}
   $round-icon: 4px;
 {% endif %}
 
-{% if site.profile.header and site.profile.icon %}
+{% if profile.header and profile.icon %}
   $headline-align: flex-end;
   $headline-margin-top: 8px;
   $icon-margin-top: -18%;
@@ -24,7 +26,7 @@
 {% endif %}
 
 
-{% if site.allow_image_select == false %}
+{% if settings.allow_image_select == false %}
 img {
   pointer-events: none;
   -webkit-touch-callout: none;
@@ -33,24 +35,24 @@ img {
 }
 {% endif %}
 
-{% if site.colorstyle == "blue" or site.colorstyle == "red" or site.colorstyle == "green" %}
-  {% assign color = site.colorstyle %}
+{% if settings.colorstyle == "blue" or settings.colorstyle == "red" or settings.colorstyle == "green" %}
+  {% assign color = settings.colorstyle %}
 {% else %}
   {% assign color = "blue" %}
 {% endif %}
 
-{% if site.darkmode == "true" %}
+{% if settings.darkmode == "true" %}
     @import "benjeto/{{ color }}-dark.scss";
 {% else %}
   @import "benjeto/{{ color }}.scss";
-  {% if site.darkmode == "allow" %}
+  {% if settings.darkmode == "allow" %}
 	@media(prefers-color-scheme:dark) {
       @import "benjeto/{{ color }}-dark.scss";
 	}
   {% endif %}
 {% endif %}
 
-{% if site.post.highlight == true %}
+{% if settings.post.highlight == true %}
   @import "benjeto/highlight.scss";
 {% endif %}
 

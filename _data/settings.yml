@@ -1,0 +1,50 @@
+##### Common settings #####
+
+# Select language direction | 言語の方向を選択
+direction: "ltr" #ltr, rtl
+
+# Select theme color | テーマカラーを選択
+colorstyle: "blue" #blue, red, green
+# Set darkmode | ダークモードを設定
+darkmode: "allow" #allow, true, false
+
+# If true, round the icon. | trueの場合、アイコンを丸くします。
+round_icon: true
+
+copyright: 
+
+
+##### Advanced settings #####
+
+# If true, the images can be saved by right-clicking, etc.
+allow_image_select: true
+
+head:
+  # Prevents search engines from indexing your website.
+  noindex: false
+  # If true, website previews will be displayed on social media, etc.
+  ogp: true
+  # Use profile icon if blank.
+  favicon: 
+  siteicon: 
+
+home:
+  # If true, the titled post's excerpt will be displayed on the home page.
+  show_excerpts: true
+  # Show the RSS subscribe button.
+  subscribe_button: true
+  # Maximum number of posts to display on the home when paginate is not used.
+  # If blank, unlimited
+  max_posts: 20
+  tags:
+    - name: "aaa"
+      url: /tag/aaa.html
+
+post:
+  # Show the RSS subscribe button.
+  subscribe_button: true
+  # Highlight color to code in the post
+  highlight: true
+  # Show your profile in footer.
+  footer_profile: "article" #true, false, article
+

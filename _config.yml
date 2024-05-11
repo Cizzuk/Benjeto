@@ -5,88 +5,11 @@ description: >-
   Here is a description of website.
 # Language of the website | Webサイトの言語
 lang: "en"
-direction: "ltr" #ltr, rtl
 # Web site protocol and host name | Webサイトのプロトコルとホスト名
 url: https://example.com
-# Select theme color | テーマカラーを選択
-colorstyle: "blue" #blue, red, green
-darkmode: "allow" #allow, true, false
 
 
-### Create your profile. Each field can be left blank. ###
-### プロフィールを作成します。項目は空白にもできます。 ###
-profile:
-  # Your display name | 表示名
-  name: User
-  # Relative URL of your profile icon | プロフィールアイコンの相対URL
-  icon: "/assets/icon.png" 
-  # If true, round the icon. | trueの場合、アイコンを丸くします。
-  round_icon: true
-  # Relative URL of your header image | ヘッダー画像の相対URL
-  header: "/assets/header.png" 
-  # Your personal introduction | 自己紹介文
-  bio: >-
-    You can edit your profile in _config.yml.
-  # Your pronouns | 代名詞
-  pronouns: 
-  # External links (e.g. social media). | 外部リンク (例、SNS)
-  links:
-    - name: X
-      url: "https://x.com/x"
-    - name: YouTube
-      url: "https://youtube.com/@YouTube"
-    - name: GitHub
-      url: "https://github.com/github"
-  # Your contact info | 連絡先
-  contact: 
-    name: Email
-    url: mailto:user@example.com
-  # Tip | 寄付
-  # Example, GitHub Sponsor link : https://github.com/sponsors/github
-  #          Patreon link        : https://www.patreon.com/patreon
-  #          Bitcoin address     : bitcoin:1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa
-  tip: 
-    name: Tip
-    url: 
-
-
-
-##### Advanced settings #####
-
-# Set the date format, default is YYYY-MM-DD
-date_format: "%Y-%m-%d"
-# If true, the images can be saved by right-clicking, etc.
-allow_image_select: true
-
-head:
-  # Prevents search engines from indexing your website.
-  noindex: false
-  # If true, website previews will be displayed on social media, etc.
-  ogp: true
-  # Use profile icon if blank.
-  favicon: 
-  siteicon: 
-
-footer: 
-  copyright: 
-
-home:
-  # If true, the titled post's excerpt will be displayed on the home page.
-  show_excerpts: true
-  # Show the RSS subscribe button.
-  subscribe_button: true
-  # Maximum number of posts to display on the home when paginate is not used.
-  # If blank, unlimited
-  max_posts: 20
-
-post:
-  # Show the RSS subscribe button.
-  subscribe_button: true
-  # Highlight color to code in the post
-  highlight: true
-  # Show your profile in footer.
-  footer_profile: "article" #true, false, article
-
+##### Build settings #####
 
 feed:
   # Maximum number of posts in the feed
@@ -96,18 +19,8 @@ feed:
 
 # Maximum number of posts to be displayed on one home page.
 # If blank, disable paginate.
-paginate: 20
+paginate: 2
 paginate_path: "/pages/:num/"
-
-# Text settings
-text:
-  paginate_back: "Back" #Back
-  paginate_next: "Next" #Next
-  subscribe: "Subscribe" #Subscribe
-
-
-
-##### Build settings #####
 
 defaults:
   - values:

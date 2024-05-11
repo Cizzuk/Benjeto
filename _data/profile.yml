@@ -1,0 +1,33 @@
+### Create your profile. Each field can be left blank. ###
+### プロフィールを作成します。項目は空白にもできます。 ###
+# Your display name | 表示名
+name: User
+# Relative URL of your profile icon | プロフィールアイコンの相対URL
+icon: "/assets/icon.png" 
+# Relative URL of your header image | ヘッダー画像の相対URL
+header: "/assets/header.png" 
+# Your personal introduction | 自己紹介文
+bio: >-
+  You can edit your profile in _config.yml.
+# Your pronouns | 代名詞
+pronouns: 
+# External links (e.g. social media). | 外部リンク (例、SNS)
+links:
+  - name: X
+    url: "https://x.com/x"
+  - name: YouTube
+    url: "https://youtube.com/@YouTube"
+  - name: GitHub
+    url: "https://github.com/github"
+# Your contact info | 連絡先
+contact: 
+  name: Email
+  url: mailto:user@example.com
+# Tip | 寄付
+# Example, GitHub Sponsor link : https://github.com/sponsors/github
+#          Patreon link        : https://www.patreon.com/patreon
+#          Bitcoin address     : bitcoin:1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa
+tip: 
+  name: Tip
+  url: 
+

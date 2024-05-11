@@ -1,0 +1,9 @@
+# Set the date format, default is YYYY-MM-DD
+date_format: "%Y-%m-%d"
+
+##### Translates #####
+text:
+  paginate_back: "Back" #Back
+  paginate_next: "Next" #Next
+  subscribe: "Subscribe" #Subscribe
+

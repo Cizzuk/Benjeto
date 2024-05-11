@@ -1,61 +1,64 @@
 ---
 layout: base
 ---
+{%- assign profile = site.data.profile -%}
+{%- assign texts = site.data.texts -%}
+{%- assign settings = site.data.settings -%}
 <main>
 <header class="home">
-  {%- if site.profile.header %}
-  <img class="header" src="{{ site.profile.header }}" alt="" aria-hidden>
+  {%- if profile.header %}
+  <img class="header" src="{{ profile.header }}" alt="" aria-hidden>
   <div class="dumheader" role="none"></div>
   {%- endif %}
   <div class="headline">
-    {%- if site.profile.icon %}
-    <a class="icon" href="{{ "/" | relative_url }}"><img src="{{ site.profile.icon | relative_url }}" alt="{{ site.profile.name }}"></a>
+    {%- if profile.icon %}
+    <a class="icon" href="{{ "/" | relative_url }}"><img src="{{ profile.icon | relative_url }}" alt="{{ profile.name }}"></a>
 	<section class="sidebutton">
-    {%- if site.profile.contact.url %}
-    <a class="bigbutton" href="{{ site.profile.contact.url }}" title="{{ site.profile.contact.name | default: Contact }}">{{ site.profile.contact.name }}</a>
+    {%- if profile.contact.url %}
+    <a class="bigbutton" href="{{ profile.contact.url }}" title="{{ profile.contact.name | default: Contact }}">{{ profile.contact.name }}</a>
     {%- endif -%}
-    {%- if site.profile.tip.url %}
-    <a class="bigbutton" href="{{ site.profile.tip.url }}" title="{{ site.profile.tip.name | default: Tip }}">{{ site.profile.tip.name }}</a>
+    {%- if profile.tip.url %}
+    <a class="bigbutton" href="{{ profile.tip.url }}" title="{{ profile.tip.name | default: Tip }}">{{ profile.tip.name }}</a>
     {%- endif -%}
-    {%- if site.home.subscribe_button == true %}
-    <a href="{{ site.feed.path | default: 'feed.xml' | absolute_url }}" class="bigbutton">{{ site.text.subscribe | default: "Subscribe" }}</a>
+    {%- if settings.home.subscribe_button == true %}
+    <a href="{{ site.feed.path | default: 'feed.xml' | absolute_url }}" class="bigbutton">{{ texts.subscribe | default: "Subscribe" }}</a>
     {%- endif %}
     </section>
 	{%- endif %}
   </div>
-  <h1 itemprop="name">{{ site.profile.name | default: site.title }}</h1>
-  {%- if site.profile.pronouns %}
-  <span class="pronouns" itemprop="pronouns">{{ site.profile.pronouns }}</span>
+  <h1 itemprop="name">{{ profile.name | default: site.title }}</h1>
+  {%- if profile.pronouns %}
+  <span class="pronouns" itemprop="pronouns">{{ profile.pronouns }}</span>
   {%- endif %}
-  {%- if site.profile.bio %}
-  <p class="bio">{{ site.profile.bio }}</p>
+  {%- if profile.bio %}
+  <p class="bio">{{ profile.bio }}</p>
   {%- endif %}
   <ul class="exlink">
-  {%- if site.profile.links -%}
-  {%- for entry in site.profile.links -%}
+  {%- if profile.links -%}
+  {%- for entry in profile.links -%}
     {%- include exlink.html item = entry -%}
   {%- endfor -%}
   {%- endif -%}
   </ul>
-  {%- unless site.profile.icon %}
+  {%- unless profile.icon %}
   <div class="headline">
   <section class="sidebutton">
-    {%- if site.profile.contact.url %}
-    <a class="bigbutton" href="{{ site.profile.contact.url }}" title="{{ site.profile.contact.name | default: Contact }}">{{ site.profile.contact.name }}</a>
+    {%- if profile.contact.url %}
+    <a class="bigbutton" href="{{ profile.contact.url }}" title="{{ profile.contact.name | default: Contact }}">{{ profile.contact.name }}</a>
     {%- endif -%}
-    {%- if site.profile.tip.url %}
-    <a class="bigbutton" href="{{ site.profile.tip.url }}" title="{{ site.profile.tip.name | default: Tip }}">{{ site.profile.tip.name }}</a>
+    {%- if profile.tip.url %}
+    <a class="bigbutton" href="{{ profile.tip.url }}" title="{{ profile.tip.name | default: Tip }}">{{ profile.tip.name }}</a>
     {%- endif -%}
-    {%- if site.home.subscribe_button == true %}
-    <a href="{{ site.feed.path | default: 'feed.xml' | absolute_url  }}" class="bigbutton">{{ site.text.subscribe | default: "Subscribe" }}</a>
+    {%- if settings.home.subscribe_button == true %}
+    <a href="{{ site.feed.path | default: 'feed.xml' | absolute_url  }}" class="bigbutton">{{ texts.subscribe | default: "Subscribe" }}</a>
   {%- endif %}
   </section>
   </div>
   {%- endunless %}
 </header>
-{%- if site.profile == nil %}
+{%- if profile == nil %}
   <p style="font-weight:bold">
-  You must create your profile in _config.yml.
+  You must create your profile in _data_benjeto/profile.yml.
   <br><a href="https://benjeto.tsg0o0.com/2024/05/10/how-to-setup.html">See Benjeto documentation for more information.</a>
   </p>
 {%- endif -%}
@@ -64,12 +67,13 @@ layout: base
   {%- assign posts = paginator.posts -%}
 {%- else -%}
   {%- assign posts = site.posts -%}
-  {%- assign max_posts = site.home.max-posts -%}
+  {%- assign max_posts = settings.home.max-posts -%}
+{%- endif -%}
 {%- endif -%}
 
 {%- if posts.size > 0 %}
 <section class="post-list" role="feed">
-  {%- assign date_format = page.date_format | default: site.date_format | default: "%Y-%m-%d" -%}
+  {%- assign date_format = page.date_format | default: texts.date_format | default: "%Y-%m-%d" -%}
   {%- for post in posts limit:max_posts -%}
   {%- if post.hidden != true %}
   <article class="post">
@@ -77,7 +81,7 @@ layout: base
       {%- if post.title != "" %}
       <h2>{{ post.title | escape }}</h2>
       {%- endif %}
-      {%- if post.title == "" or site.home.show_excerpts == true %}
+      {%- if post.title == "" or settings.home.show_excerpts == true %}
       {{ post.excerpt }}
       {%- endif %}
       {%- if post.title == "" and post.image %}
@@ -98,15 +102,15 @@ layout: base
 {%- if site.paginate %}
 <section class="paginate">
   {%- if paginator.previous_page %}
-  <a href="{{ paginator.previous_page_path | relative_url }}" class="back">{{ site.text.paginate_back | default: "Back" }}</a>
+  <a href="{{ paginator.previous_page_path | relative_url }}" class="back">{{ texts.paginate_back | default: "Back" }}</a>
   {%- else %}
-  <span class="back">{{ site.text.paginate_back | default: "Back" }}</span>
+  <span class="back">{{ texts.paginate_back | default: "Back" }}</span>
   {%- endif %}
   <span class="current">{{ paginator.page }} / {{ paginator.total_pages }}</span>
   {%- if paginator.next_page %}
-  <a href="{{ paginator.next_page_path | relative_url }}" class="next">{{ site.text.paginate_next | default: "Next" }}</a>
+  <a href="{{ paginator.next_page_path | relative_url }}" class="next">{{ texts.paginate_next | default: "Next" }}</a>
   {%- else %}
-  <span class="next">{{ site.text.paginate_next | default: "Next" }}</span>
+  <span class="next">{{ texts.paginate_next | default: "Next" }}</span>
   {%- endif %}
 </section>
 {%- endif %}
