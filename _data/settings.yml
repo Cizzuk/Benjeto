@@ -1,4 +1,4 @@
-##### Common settings #####
+##### Website settings #####
 
 # Select language direction | 言語の方向を選択
 direction: "ltr" #ltr, rtl
@@ -11,10 +11,8 @@ darkmode: "allow" #allow, true, false
 # If true, round the icon. | trueの場合、アイコンを丸くします。
 round_icon: true
 
+# Copyright notice in footer | フッターに著作権表示をする
 copyright: 
-
-
-##### Advanced settings #####
 
 # If true, the images can be saved by right-clicking, etc.
 allow_image_select: true
@@ -36,9 +34,14 @@ home:
   # Maximum number of posts to display on the home when paginate is not used.
   # If blank, unlimited
   max_posts: 20
+  # Filter by tag in home
   tags:
-    - name: "aaa"
-      url: /tag/aaa.html
+    - name: "All"
+      url: "/"
+    - name: "Article"
+      url: "/tag/article/"
+    - name: "Donacat"
+      url: "/tag/donacat/"
 
 post:
   # Show the RSS subscribe button.
