@@ -10,10 +10,10 @@
 {%- assign description = page.description | default: site.description -%}
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <link rel="stylesheet" href="/assets/style.css">
   <title>{{ title }}</title>
-  {% if settings.head.ogp == true -%}
+  {% if page.ogp == true or settings.head.ogp == true -%}
   <meta name="twitter:card" content="summary">
   <meta property="og:url" content="{{ site.url }}{{ page.url }}">
   <meta property="og:title" content="{{ title }}">
