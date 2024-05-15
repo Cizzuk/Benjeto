@@ -39,9 +39,9 @@ home:
     - name: "All"
       url: "/"
     - name: "Article"
-      url: "/tag/article/"
+      url: "/tags/article/"
     - name: "Donacat"
-      url: "/tag/donacat/"
+      url: "/tags/donacat/"
 
 post:
   # Show the RSS subscribe button.
