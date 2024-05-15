@@ -91,6 +91,11 @@ hr {
   border:1px solid var(--border);
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 a.bigbutton {
   display: inline-block;
   text-decoration: none;
@@ -390,6 +395,7 @@ footer {
 div.miniprof {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   a.icon {
     text-decoration: none;
     img {
