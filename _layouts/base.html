@@ -11,10 +11,11 @@
     {%- assign dir = "ltr" %}
   {%- endif %}
 {%- endif -%}
+{%- assign settings = site.data.settings -%}
 <!DOCTYPE html>
 <html lang="{{ lang | default: "en" }}"{% if dir == "rtl" %} dir="rtl"{% endif %}>
 {% include head.html -%}
-<body>
+<body{% if settings.allow_image_select == true %} class="allow-image-select"{% endif %}>
 {{ content }}
 {%- include footer.html -%}
 </body>

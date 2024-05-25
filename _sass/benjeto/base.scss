@@ -129,6 +129,12 @@ img {
   max-width: 100%;
   height: auto;
 }
+body:not(.allow-image-select) img{
+  pointer-events: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
 
 a.bigbutton {
   display: inline-block;

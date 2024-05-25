@@ -20,15 +20,6 @@
 {% endif %}
 
 
-{% if settings.allow_image_select == false %}
-img {
-  pointer-events: none;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  user-select: none;
-}
-{% endif %}
-
 {% if settings.colorstyle == "blue" or settings.colorstyle == "red" or settings.colorstyle == "green" %}
   {% assign color = settings.colorstyle %}
 {% else %}
