@@ -17,6 +17,7 @@ copyright:
 # If true, the images can be saved by right-clicking, etc.
 allow_image_select: true
 
+# Source to allow JavaScript to be loaded for embedding
 embed_js:
   tiktok: true
   x: true
