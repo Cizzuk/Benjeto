@@ -1,8 +1,14 @@
 {%- assign url = include.url -%}
 {% assign parts = url | split: "/" %}
+{%- assign texts = site.data.texts -%}
 {%- assign settings = site.data.settings -%}
 {%- if url -%}
-<iframe class="mastodon-embed" src="{{ url }}/embed" allowfullscreen="allowfullscreen"></iframe>
+<iframe class="mastodon-embed" src="{{ url }}/embed" allowfullscreen="allowfullscreen">
+<blockquote>
+<p>{{ texts.mastodon_no_excerpt | default: "(Quote from Mastodon)" }}</p>
+<a href="{{ url }}">{{ url }}</a>
+</blockquote>
+</iframe>
 {%- if settings.embed_js.mastodon == true or settings.embed_js.mastodon contains parts[2] -%}
 <script src="https://{{ parts[2] }}/embed.js" async="async"></script>
 {%- endif -%}
