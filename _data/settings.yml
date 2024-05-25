@@ -15,7 +15,7 @@ round_icon: true
 copyright: 
 
 # If true, the images can be saved by right-clicking, etc.
-allow_image_select: true
+allow_image_select: false
 
 # Source to allow JavaScript to be loaded for embedding
 embed_js:
