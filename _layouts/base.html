@@ -5,7 +5,7 @@
 {%- elsif site.dir == "ltr" %}
   {%- assign dir = "ltr" %}
 {%- else %}
-  {%- if rtl_languages contains site.lang %}
+  {%- if rtl_languages contains lang %}
     {%- assign dir = "rtl" %}
   {%- else %}
     {%- assign dir = "ltr" %}
