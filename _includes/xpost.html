@@ -3,6 +3,7 @@
 {%- assign user = include.user -%}
 {%- assign date = include.date -%}
 {%- assign texts = site.data.texts -%}
+{%- assign texts = site.data.settings -%}
 {%- if url -%}
 <blockquote class="twitter-tweet">
 {%- if excerpt %}
@@ -16,6 +17,8 @@
 {%- else %}
 <a href="{{ url }}">{{ url }}</a>
 {%- endif %}
+{%- if settings.embed_js.x == true -%}
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+{%- endif -%}
 </blockquote>
 {%- endif -%}

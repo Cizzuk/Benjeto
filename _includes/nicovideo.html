@@ -2,6 +2,8 @@
 {%- assign title = include.title -%}
 {%- assign aspect = include.aspect -%}
 {%- assign texts = site.data.texts -%}
+{%- if id -%}
 <iframe class="nicovideo"{% if aspect %} style="aspect-ratio:{{ aspect }}"{% endif %} src="https://embed.nicovideo.jp/watch/{{ id }}" title="{{ texts.nicovideo_title | default: "Niconico video player" }}" frameborder="0" allowfullscreen>
 <a href="https://www.nicovideo.jp/watch/{{ id }}">{{ title | default: texts.nicovideo_link | default: "Watch on Niconico" }}</a>
 </iframe>
+{%- endif -%}
