@@ -125,6 +125,14 @@ span.tag {
   text-align: center;
 }
 
+iframe.youtube, iframe.nicovideo{
+  display: block;
+  margin: 16px auto;
+  aspect-ratio: 16 / 9;
+  width: 560px;
+  max-width: 100%;
+}
+
 header.post {
   margin: 32px 0px;
   h1 {

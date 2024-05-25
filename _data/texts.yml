@@ -2,8 +2,13 @@
 date_format: "%Y-%m-%d"
 
 ##### Translates #####
-text:
-  paginate_back: "Back" #Back
-  paginate_next: "Next" #Next
-  subscribe: "Subscribe" #Subscribe
+paginate_back: "Back" #Back
+paginate_next: "Next" #Next
+subscribe: "Subscribe" #Subscribe
+
+youtube_title: "YouTube video player" #YouTube video player
+youtube_link: "Watch on YouTube" #Watch on YouTube
+
+nicovideo_title: "Niconico video player" #Niconico video player
+nicovideo_link: "Watch on Niconico" #Watch on Niconico
 
