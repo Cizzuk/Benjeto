@@ -1,5 +1,18 @@
+{% assign rtl_languages = "ar,arc,dv,fa,he,ks,nqo,ps,syr,ur,yi" | split: ',' %}
+{%- assign lang = page.lang | default: site.lang %}
+{%- if site.dir == "rtl" -%}
+  {%- assign dir = "rtl" %}
+{%- elsif site.dir == "ltr" %}
+  {%- assign dir = "ltr" %}
+{%- else %}
+  {%- if rtl_languages contains site.lang %}
+    {%- assign dir = "rtl" %}
+  {%- else %}
+    {%- assign dir = "ltr" %}
+  {%- endif %}
+{%- endif -%}
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+<html lang="{{ page.lang | default: site.lang | default: "en" }}"{% if dir == "rtl" %} dir="rtl"{% endif %}>
 {% include head.html -%}
 <body>
 {{ content }}
