@@ -63,9 +63,15 @@ table {
 
 blockquote {
   margin: 16px 0;
-  padding: 4px 24px;
+  padding: 16px 24px;
   background: var(--boxbg);
   border-left: 4px solid var(--border);
+  p {
+    margin: 4px 0;
+  }
+}
+.twitter-tweet {
+  margin: 16px auto;
 }
 
 code {
@@ -352,15 +358,15 @@ footer {
     padding: 20px 24px 4px;
     border: 2px solid var(--border);
 	border-radius: 16px;
-  }
-  div.miniprof {
-    a.icon {
-      img {
-        width:50px;
-      }
-      span {
-        font-size: 1.4em;
-        font-weight: 600;
+    & div.miniprof {
+      a.icon {
+        img {
+          width:50px;
+        }
+        span {
+          font-size: 1.4em;
+          font-weight: 600;
+        }
       }
     }
   }

@@ -1,0 +1,21 @@
+{%- assign url = include.url -%}
+{%- assign excerpt = include.excerpt -%}
+{%- assign user = include.user -%}
+{%- assign date = include.date -%}
+{%- assign texts = site.data.texts -%}
+{%- if url -%}
+<blockquote class="twitter-tweet">
+{%- if excerpt %}
+<p>{{ excerpt }}</p>
+{%- else %}
+<p>{{ texts.x_no_excerpt | default: "(Quote from X)" }}</p>
+{%- endif %}
+&mdash; {{ user }}
+{%- if date %}
+<a href="{{ url }}">{{ date }}</a>
+{%- else %}
+<a href="{{ url }}">{{ url }}</a>
+{%- endif %}
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</blockquote>
+{%- endif -%}
