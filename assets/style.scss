@@ -3,12 +3,6 @@
 {%- assign profile = site.data.profile -%}
 {%- assign settings = site.data.settings -%}
 
-{% if settings.direction == "rtl" %}
-  $direction: rtl;
-{% else %}
-  $direction: ltr;
-{% endif %}
-
 {% if settings.round_icon == true %}
   $round-icon: 50%;
 {% else %}
