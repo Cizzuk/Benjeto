@@ -66,7 +66,7 @@ table {
   }
 }
 
-blockquote {
+blockquote:not(.tiktok-embed) {
   margin: 16px 0;
   padding: 16px 24px;
   background: var(--boxbg);
@@ -76,7 +76,22 @@ blockquote {
   }
 }
 .twitter-tweet {
+  overflow: scroll;
   margin: 16px auto;
+  max-width: 100%;
+}
+.tiktok-embed:not(:has(iframe)) {
+  margin: 16px auto;
+  width: 560px;
+  max-width: 100%;
+  section {
+    padding: 16px;
+    border: 2px solid var(--border);
+    border-radius: 8px;
+    p {
+      margin: 4px 0;
+    }
+  }
 }
 
 iframe.mastodon-embed {
@@ -84,7 +99,8 @@ iframe.mastodon-embed {
   margin: 16px auto;
   width: 560px;
   max-width: 100%;
-  border: none
+  border: none;
+  border-radius: 8px;
 }
 
 code {

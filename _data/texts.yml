@@ -12,5 +12,8 @@ youtube_link: "Watch on YouTube" #Watch on YouTube
 nicovideo_title: "Niconico video player" #Niconico video player
 nicovideo_link: "Watch on Niconico" #Watch on Niconico
 
+tiktok_from: "From TikTok" #From TikTok
+
 x_no_excerpt: "(Quote from X)" #(Quote from X)
+
 mastodon_no_excerpt: "(Quote from Mastodon)" #(Quote from Mastodon)

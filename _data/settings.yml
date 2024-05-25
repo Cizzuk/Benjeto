@@ -18,6 +18,7 @@ copyright:
 allow_image_select: true
 
 embed_js:
+  tiktok: true
   x: true
   mastodon:
     - "mastodon.social"
