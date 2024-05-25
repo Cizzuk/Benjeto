@@ -3,17 +3,6 @@
 {%- assign profile = site.data.profile -%}
 {%- assign settings = site.data.settings -%}
 
-{% if profile.header and profile.icon %}
-  $headline-align: flex-end;
-  $headline-margin-top: 8px;
-  $icon-margin-top: -18%;
-{% else %}
-  $headline-align: center;
-  $headline-margin-top: 0;
-  $icon-margin-top: 0;
-{% endif %}
-
-
 {% if settings.colorstyle == "blue" or settings.colorstyle == "red" or settings.colorstyle == "green" %}
   {% assign color = settings.colorstyle %}
 {% else %}

@@ -228,14 +228,18 @@ header.home {
   div.headline {
     display: flex;
     flex-wrap: wrap;
-    align-items: $headline-align;
+    align-items: flex-end;
     justify-content: space-between;
-    margin: $headline-margin-top 0 8px;
+    margin: 8px 0 8px;
     section.sidebutton {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       margin: 4px 0 0 4px;
+    }
+    &.no-img {
+      align-items: center;
+      margin: 0;
     }
   }
   a.icon {
@@ -243,7 +247,7 @@ header.home {
     width: 108px;
     max-width: 25%;
     min-width: 68px;
-    margin-top: $icon-margin-top;
+    margin-top: -18%;
     img {
       display: block;
       width: 100%;
@@ -255,6 +259,9 @@ header.home {
     }
     &.round img {
       border-radius: 50%;
+    }
+    &.no-header {
+      margin-top: 0;
     }
   }
   img.header {
