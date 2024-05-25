@@ -11,7 +11,7 @@ body {
   background: var(--bg);
   color: var(--text);
   width: 800px;
-  margin: 0 auto 16px;
+  margin: 0 auto 32px;
   padding: 0;
 }
 
@@ -22,8 +22,13 @@ main, article {
 }
 
 h1, h2, h3 {
+  margin: 32px 0 8px;
+  padding-bottom: 4px;
   color: var(--head);
   line-height: 1.2;
+}
+h2 {
+  border-bottom: 1.5px solid var(--border);
 }
 
 a {
@@ -72,6 +77,14 @@ blockquote {
 }
 .twitter-tweet {
   margin: 16px auto;
+}
+
+iframe.mastodon-embed {
+  display: block;
+  margin: 16px auto;
+  width: 560px;
+  max-width: 100%;
+  border: none
 }
 
 code {
@@ -176,14 +189,14 @@ header.home {
       margin: 4px;
       a {
         color: var(--link);
-        background: var(--boxbglight);
+        background: var(--boxbg);
         border-radius: 4px;
         text-decoration: none;
         padding: 4px 6px;
         margin: 0;
         transition: background 0.1s;
         &:hover {
-          background: var(--boxbg);
+          background: var(--boxbglight);
           text-decoration: underline;
         }
       }
@@ -348,15 +361,16 @@ section.paginate {
 }
 
 footer {
-  margin: 32px 8px;
+  margin: 16px;
   p.copy {
     color: var(--gray);
 	text-align: center;
   }
   div.footprof {
-    margin: 0 16px;
+    margin: 0 auto;
     padding: 20px 24px 4px;
     border: 2px solid var(--border);
+    max-width: 560px;
 	border-radius: 16px;
     & div.miniprof {
       a.icon {
