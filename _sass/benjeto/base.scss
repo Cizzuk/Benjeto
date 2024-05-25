@@ -244,7 +244,6 @@ header.home {
     max-width: 25%;
     min-width: 68px;
     margin-top: $icon-margin-top;
-    border-radius: calc($round-icon + 4px);
     img {
       display: block;
       width: 100%;
@@ -252,7 +251,10 @@ header.home {
       object-fit: cover;
       background: var(--boxbg);
       border: 4px solid var(--bg);
-      border-radius: calc($round-icon + 4px);
+      border-radius: 8px;
+    }
+    &.round img {
+      border-radius: 50%;
     }
   }
   img.header {
@@ -420,7 +422,7 @@ div.miniprof {
       aspect-ratio: 1 / 1;
       object-fit: cover;
       background: var(--boxbg);
-      border-radius: $round-icon;
+      border-radius: 4px;
       vertical-align: middle;
       margin-inline-end: 6px;
     }
@@ -435,6 +437,11 @@ div.miniprof {
     &:hover {
       span {
         text-decoration: underline;
+      }
+    }
+    &.round {
+      img {
+        border-radius: 50%;
       }
     }
   }

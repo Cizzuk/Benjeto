@@ -3,12 +3,6 @@
 {%- assign profile = site.data.profile -%}
 {%- assign settings = site.data.settings -%}
 
-{% if settings.round_icon == true %}
-  $round-icon: 50%;
-{% else %}
-  $round-icon: 4px;
-{% endif %}
-
 {% if profile.header and profile.icon %}
   $headline-align: flex-end;
   $headline-margin-top: 8px;
