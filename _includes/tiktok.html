@@ -3,7 +3,7 @@
 {%- assign user = include.user -%}
 {%- assign excerpt = include.excerpt -%}
 {%- assign texts = site.data.texts -%}
-{%- if url -%}
+{%- if url and id -%}
 <blockquote class="tiktok-embed" cite="{{ url }}" data-video-id="{{ id }}">
 <section>
 {% if user %}<b>{{- user }}</b>{% endif %}
