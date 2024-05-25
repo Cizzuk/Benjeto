@@ -17,6 +17,12 @@ copyright:
 # If true, the images can be saved by right-clicking, etc.
 allow_image_select: true
 
+embed_js:
+  x: true
+  mastodon:
+    - "mastodon.social"
+    - "floss.social"
+
 head:
   # Prevents search engines from indexing your website.
   noindex: false

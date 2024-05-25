@@ -1,0 +1,10 @@
+{%- assign url = include.url -%}
+{% assign parts = url | split: "/" %}
+{%- assign settings = site.data.settings -%}
+{%- if url -%}
+<iframe class="mastodon-embed" src="{{ url }}/embed" allowfullscreen="allowfullscreen"></iframe>
+{%- if settings.embed_js.mastodon == true or settings.embed_js.mastodon contains parts[2] -%}
+<script src="https://{{ parts[2] }}/embed.js" async="async"></script>
+{%- endif -%}
+{%- endif -%}
+
