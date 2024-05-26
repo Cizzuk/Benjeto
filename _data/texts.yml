@@ -4,6 +4,8 @@ date_format: "%Y-%m-%d"
 ##### Translates #####
 paginate_back: "Back" #Back
 paginate_next: "Next" #Next
+
+message: "Message" #Message
 subscribe: "Subscribe" #Subscribe
 
 youtube_title: "YouTube video player" #YouTube video player
