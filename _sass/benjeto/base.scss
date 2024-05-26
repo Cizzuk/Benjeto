@@ -75,33 +75,6 @@ blockquote:not(.tiktok-embed) {
     margin: 4px 0;
   }
 }
-.twitter-tweet {
-  overflow: scroll;
-  margin: 16px auto;
-  max-width: 100%;
-}
-.tiktok-embed:not(:has(iframe)) {
-  margin: 16px auto;
-  width: 560px;
-  max-width: 100%;
-  section {
-    padding: 16px;
-    border: 2px solid var(--border);
-    border-radius: 8px;
-    p {
-      margin: 4px 0;
-    }
-  }
-}
-
-iframe.mastodon-embed {
-  display: block;
-  margin: 16px auto;
-  width: 560px;
-  max-width: 100%;
-  border: none;
-  border-radius: 8px;
-}
 
 code {
   background: var(--boxbg);
@@ -174,14 +147,35 @@ span.tag {
   text-align: center;
 }
 
-iframe.youtube, iframe.nicovideo{
+iframe.youtube, iframe.nicovideo, iframe.mastodon-embed{
   display: block;
   margin: 16px auto;
-  aspect-ratio: 16 / 9;
   width: 560px;
   max-width: 100%;
+  border: none;
   border-radius: 8px;
 }
+
+.twitter-tweet-rendered {
+  overflow: scroll;
+  margin: 16px auto;
+  max-width: 100%;
+}
+
+.tiktok-embed {
+  margin: 16px auto;
+  width: 560px;
+  max-width: 100%;
+  section {
+    padding: 16px;
+    border: 2px solid var(--border);
+    border-radius: 8px;
+    p {
+      margin: 4px 0;
+    }
+  }
+}
+
 
 header.post {
   margin: 32px 0px;
