@@ -25,9 +25,6 @@ contact:
   - name: X Direct Messages
     url: https://x.com/messages/compose?recipient_id=xxxxxxxx
 # Tip
-# Example, GitHub Sponsor link : https://github.com/sponsors/github
-#          Patreon link        : https://www.patreon.com/patreon
-#          Bitcoin address     : bitcoin:1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa
 tip: 
   - name: GitHub Sponsor
     url: https://github.com/sponsors/github
