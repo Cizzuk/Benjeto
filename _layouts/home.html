@@ -10,9 +10,9 @@ layout: base
   <img class="header" src="{{ profile.header }}" alt="" aria-hidden>
   <div class="dumheader" role="none"></div>
   {%- endif %}
-  <div class="headline">
+  <div class="headline {% if profile.header and profile.icon == nil %}no-img{% endif %}">
     {%- if profile.icon %}
-    <a class="icon" href="{{ "/" | relative_url }}"><img src="{{ profile.icon | relative_url }}" alt="{{ profile.name }}"></a>
+    <a class="icon {% if settings.round_icon == true %}round{% endif %} {% if profile.header == nil %}no-header{% endif %}" href="{{ "/" | relative_url }}"><img src="{{ profile.icon | relative_url }}" alt="{{ profile.name }}"></a>
 	<section class="sidebutton">
     {%- if profile.contact.url %}
     <a class="bigbutton" href="{{ profile.contact.url }}" title="{{ profile.contact.name | default: Contact }}">{{ profile.contact.name }}</a>
