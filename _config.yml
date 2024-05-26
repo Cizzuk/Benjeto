@@ -17,6 +17,9 @@ feed:
   posts_limit: 20
   tags:
     path: "/tags/"
+  categories:
+    - articles
+    - clips
 
 # Maximum number of posts to be displayed on one home page.
 # If blank, disable paginate.

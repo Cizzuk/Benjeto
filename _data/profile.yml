@@ -1,17 +1,16 @@
 ### Create your profile. Each field can be left blank. ###
-### プロフィールを作成します。項目は空白にもできます。 ###
-# Your display name | 表示名
+# Your display name
 name: User
-# Relative URL of your profile icon | プロフィールアイコンの相対URL
+# Relative URL of your profile icon
 icon: "/assets/icon.png" 
-# Relative URL of your header image | ヘッダー画像の相対URL
+# Relative URL of your header image
 header: "/assets/header.png" 
-# Your personal introduction | 自己紹介文
+# Your personal introduction
 bio: >-
   You can edit your profile in _config.yml.
-# Your pronouns | 代名詞
+# Your pronouns
 pronouns: 
-# External links (e.g. social media). | 外部リンク (例、SNS)
+# External links (e.g. social media).
 links:
   - name: X
     url: "https://x.com/x"
@@ -19,15 +18,19 @@ links:
     url: "https://youtube.com/@YouTube"
   - name: GitHub
     url: "https://github.com/github"
-# Your contact info | 連絡先
+# Your contact info
 contact: 
-  name: Email
-  url: mailto:user@example.com
-# Tip | 寄付
+  - name: Email
+    url: mailto:user@example.com
+  - name: X Direct Messages
+    url: https://x.com/messages/compose?recipient_id=xxxxxxxx
+# Tip
 # Example, GitHub Sponsor link : https://github.com/sponsors/github
 #          Patreon link        : https://www.patreon.com/patreon
 #          Bitcoin address     : bitcoin:1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa
 tip: 
-  name: Tip
-  url: 
-
+  - name: GitHub Sponsor
+    url: https://github.com/sponsors/github
+  - name: Bitcoin
+    url: bitcoin:1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa
+    copy: true

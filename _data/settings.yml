@@ -1,12 +1,8 @@
 ##### Website settings #####
-
-# Select language direction | 言語の方向を選択
-direction: "ltr" #ltr, rtl
-
 # Select theme color | テーマカラーを選択
 colorstyle: "blue" #blue, red, green
 # Set darkmode | ダークモードを設定
-darkmode: "allow" #allow, true, false
+darkmode: "false" #allow, true, false
 
 # If true, round the icon. | trueの場合、アイコンを丸くします。
 round_icon: true
@@ -42,16 +38,31 @@ home:
   # Maximum number of posts to display on the home when paginate is not used.
   # If blank, unlimited
   max_posts: 20
-  # Filter by tag in home
-  tags:
+  # Filter tab in home
+  tabs:
     - name: "All"
       url: "/"
-    - name: "Article"
-      url: "/tags/article/"
-    - name: "Donacat"
-      url: "/tags/donacat/"
+      feed: "/feed.xml"
+    - name: "Articles"
+      discription: >-
+        All articles written by me
+      url: "/category/articles/"
+      feed: "/feed/articles.xml"
+    - name: "Clips"
+      discription: >-
+        Little notes or diaries
+      url: "/category/clips/"
+      feed: "/feed/clips.xml"
+    - name: "Favorite"
+      discription: >-
+        My favorite clips and articles
+      url: "/tags/likes/"
+      feed: "/tags/likes.xml"
 
 post:
+  # Category to post clips
+  clip_category: 
+    - "clip"
   # Show the RSS subscribe button.
   subscribe_button: true
   # Highlight color to code in the post
