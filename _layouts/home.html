@@ -63,7 +63,7 @@ layout: base
   </p>
 {%- endif -%}
 {{ content }}
-{%- if site.paginate and paginator.posts != nil -%}
+{%- if site.paginate or site.pagination -%}
   {%- assign posts = paginator.posts -%}
 {%- else -%}
   {%- assign posts = site.posts -%}
@@ -99,7 +99,7 @@ layout: base
 {%- endfor %}
 </section>
 
-{%- if site.paginate %}
+{%- if site.paginate or site.pagination %}
 <section class="paginate">
   {%- if paginator.previous_page %}
   <a href="{{ paginator.previous_page_path | relative_url }}" class="back">{{ texts.paginate_back | default: "Back" }}</a>
