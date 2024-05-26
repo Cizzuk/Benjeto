@@ -1,0 +1,12 @@
+:root {
+  color-scheme:dark;
+}
+a.menu-btn:hover {
+  filter: brightness(0.8);
+}
+header.home ul.exlink li a:hover {
+  filter: brightness(0.75);
+}
+#overlay {
+  background: rgba(127, 127, 127, 0.3);
+}

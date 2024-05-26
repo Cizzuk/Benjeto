@@ -1,0 +1,60 @@
+{%- assign profile = site.data.profile -%}
+{%- assign texts = site.data.texts -%}
+{%- assign settings = site.data.settings -%}
+{%- assign needjs = false -%}
+<section class="sidebutton">
+  <div id="overlay"></div>
+  {%- if include.only_subs != true %}
+  {%- if profile.tip %}
+    {%- if profile.tip.size > 1 %}
+    {%- assign needjs = true %}
+    <a class="menu-btn menues" data-menu="menu-tip">{{ texts.tip }}</a>
+    <div class="menu" id="menu-tip" role="menu">
+      <b>{{ texts.tip_menu }}</b>
+      <ul>
+        {%- for entry in profile.tip %}
+        <li><a href="{{ entry.url }}" target="_blank" rel="nofollow">{{ entry.name }}</a></li>
+        {%- endfor -%}
+      </ul>
+    </div>
+    {%- else %}
+    <a class="menu-btn" href="{{ profile.tip[0].url }}" target="_blank" rel="nofollow">{{ texts.tip }}</a>
+    {%- endif -%}
+  {%- endif -%}
+  {%- if profile.message %}
+    {%- if profile.message.size > 1 %}
+    {%- assign needjs = true %}
+    <a class="menu-btn menues" data-menu="menu-message">{{ texts.message }}</a>
+    <div class="menu" id="menu-message" role="menu">
+      <b>{{ texts.message_menu }}</b>
+      <ul>
+        {%- for entry in profile.message %}
+        <li><a href="{{ entry.url }}" target="_blank" rel="nofollow">{{ entry.name }}</a></li>
+        {%- endfor -%}
+      </ul>
+    </div>
+    {%- else %}
+    <a class="menu-btn" href="{{ profile.message[0].url }}" target="_blank" rel="nofollow">{{ texts.message }}</a>
+    {%- endif -%}
+  {%- endif -%}
+  {%- endif %}
+  {%- if settings.home.subscribe_button == true %}
+    {%- if settings.home.tabs.size > 1 %}
+    {%- assign needjs = true %}
+    <a class="menu-btn subscribe menues" data-menu="menu-subscribe">{{ texts.subscribe }}</a>
+    <div class="menu" id="menu-subscribe" role="menu">
+      <b>{{ texts.subscribe_menu }}</b>
+      <ul>
+        {%- for entry in settings.home.tabs %}
+        <li><a href="{{ entry.feed | relative_url }}" target="_blank">{{ entry.name }}{% if entry.discription %} - {{ entry.discription }}{% endif %}</a></li>
+        {%- endfor -%}
+      </ul>
+    </div>
+    {%- else %}
+    <a class="menu-btn subscribe" href="{{ settings.home.tabs[0].feed | relative_url }}" target="_blank" rel="nofollow">{{ texts.subscribe }}</a>
+    {%- endif -%}
+  {%- endif -%}
+</section>
+{%- if needjs == true %}
+<script src="{{ "/assets/js/menu.js" | relative_url }}"></script>
+{%- endif %}

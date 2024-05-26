@@ -9,17 +9,6 @@
   {% assign color = "blue" %}
 {% endif %}
 
-{% if settings.darkmode == "true" %}
-    @import "benjeto/{{ color }}-dark.scss";
-{% else %}
-  @import "benjeto/{{ color }}.scss";
-  {% if settings.darkmode == "allow" %}
-	@media(prefers-color-scheme:dark) {
-      @import "benjeto/{{ color }}-dark.scss";
-	}
-  {% endif %}
-{% endif %}
-
 {% if settings.post.highlight == true %}
   @import "benjeto/highlight.scss";
 {% endif %}
@@ -28,4 +17,17 @@
   "benjeto/base.scss",
   "benjeto/custom.scss"
 ;
+
+{% if settings.darkmode == "true" %}
+    @import "benjeto/{{ color }}-dark.scss";
+    @import "benjeto/dark.scss";
+{% else %}
+  @import "benjeto/{{ color }}.scss";
+  {% if settings.darkmode == "allow" %}
+	@media(prefers-color-scheme:dark) {
+      @import "benjeto/{{ color }}-dark.scss";
+      @import "benjeto/dark.scss";
+	}
+  {% endif %}
+{% endif %}
 

@@ -9,8 +9,6 @@
 <span itemprop="name">{{ profile.name | default: site.title }}</span>
 </a>
 {%- if page.layout == "post" and settings.post.subscribe_button == true %}
-<div class="sbbutton">
-<a href="{{ site.feed.path | default: 'feed.xml' | absolute_url }}" class="bigbutton">{{ texts.subscribe | default: "Subscribe"}}</a>
-</div>
+{%- include menu.html only_subs=true %}
 {%- endif %}
 </div>

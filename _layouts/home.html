@@ -7,23 +7,13 @@ layout: base
 <main>
 <header class="home">
   {%- if profile.header %}
-  <img class="header" src="{{ profile.header }}" alt="" aria-hidden>
+  <img class="header" src="{{ profile.header | relative_url }}" alt="" aria-hidden>
   <div class="dumheader" role="none"></div>
   {%- endif %}
   <div class="headline {% if profile.header and profile.icon == nil %}no-img{% endif %}">
     {%- if profile.icon %}
     <a class="icon {% if settings.round_icon == true %}round{% endif %} {% if profile.header == nil %}no-header{% endif %}" href="{{ "/" | relative_url }}"><img src="{{ profile.icon | relative_url }}" alt="{{ profile.name }}"></a>
-	<section class="sidebutton">
-    {%- if profile.contact.url %}
-    <a class="bigbutton" href="{{ profile.contact.url }}" title="{{ profile.contact.name | default: Contact }}">{{ profile.contact.name }}</a>
-    {%- endif -%}
-    {%- if profile.tip.url %}
-    <a class="bigbutton" href="{{ profile.tip.url }}" title="{{ profile.tip.name | default: Tip }}">{{ profile.tip.name }}</a>
-    {%- endif -%}
-    {%- if settings.home.subscribe_button == true %}
-    <a href="{{ site.feed.path | default: 'feed.xml' | absolute_url }}" class="bigbutton subscribe">{{ texts.subscribe | default: "Subscribe" }}</a>
-    {%- endif %}
-    </section>
+    {%- include menu.html %}
 	{%- endif %}
   </div>
   <h1 itemprop="name">{{ profile.name | default: site.title }}</h1>
@@ -42,17 +32,7 @@ layout: base
   </ul>
   {%- unless profile.icon %}
   <div class="headline">
-  <section class="sidebutton">
-    {%- if profile.contact.url %}
-    <a class="bigbutton" href="{{ profile.contact.url }}" title="{{ profile.contact.name | default: Contact }}">{{ profile.contact.name }}</a>
-    {%- endif -%}
-    {%- if profile.tip.url %}
-    <a class="bigbutton" href="{{ profile.tip.url }}" title="{{ profile.tip.name | default: Tip }}">{{ profile.tip.name }}</a>
-    {%- endif -%}
-    {%- if settings.home.subscribe_button == true %}
-    <a href="{{ site.feed.path | default: 'feed.xml' | absolute_url  }}" class="bigbutton subscribe">{{ texts.subscribe | default: "Subscribe" }}</a>
-  {%- endif %}
-  </section>
+    {%- include menu.html %}
   </div>
   {%- endunless %}
 </header>
