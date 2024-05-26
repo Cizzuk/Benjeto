@@ -21,10 +21,19 @@ feed:
     - articles
     - clips
 
-# Maximum number of posts to be displayed on one home page.
+## Pagenate v1
+# Maximum number of posts to be displayed on home page.
 # If blank, disable paginate.
-paginate: 2
-paginate_path: "/pages/:num/"
+#paginate: 2
+#paginate_path: "/pages/:num/"
+
+## Pagenate-v2
+pagination:
+  enabled: true
+  # Maximum number of posts to be displayed on home page.
+  per_page: 2
+  permalink: '/pages/:num/'
+  sort_reverse: true
 
 defaults:
   - values:
@@ -35,7 +44,8 @@ sass:
 
 plugins:
   - jekyll-feed
-  - jekyll-paginate
+  #- jekyll-paginate
+  - jekyll-paginate-v2
 
 exclude:
   - LICENSE.txt
