@@ -4,6 +4,6 @@
 {%- assign texts = site.data.texts -%}
 {%- if id -%}
 <iframe class="youtube"{% if aspect %} style="aspect-ratio:{{ aspect }}"{% endif %} src="https://www.youtube-nocookie.com/embed/{{ id }}" title="{{ texts.youtube_title | default: "YouTube video player" }}" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-<a href="https://www.youtube.com/watch?v={{ id }}">{{ title | default: texts.youtube_link | default: "Watch on YouTube" }}</a>
+<a href="https://www.youtube.com/watch?v={{ id }}" target="_blank" rel="noopener noreferrer">{{ title | default: texts.youtube_link | default: "Watch on YouTube" }}</a>
 </iframe>
 {%- endif -%}

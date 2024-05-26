@@ -13,7 +13,7 @@
 <p>{{ texts.mastodon_no_excerpt | default: "(Quote from Mastodon)" }}</p>
 {%- endif %}
 &mdash; {{ user }}
-<a href="{{ url }}">{{ url }}</a>
+<a href="{{ url }}" target="_blank" rel="noopener noreferrer">{{ url }}</a>
 </blockquote>
 </iframe>
 {%- if settings.embed_js.mastodon == true or settings.embed_js.mastodon contains parts[2] -%}

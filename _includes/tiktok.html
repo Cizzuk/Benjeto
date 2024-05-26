@@ -9,7 +9,7 @@
 {% if user %}<b>{{- user }}</b>{% endif %}
 {{ texts.tiktok_from | default: "From TikTok" }}
 {% if excerpt %}<p>{{ excerpt }}</p>{% endif %}
-<a href="{{ url }}">{{ url }}</a>
+<a href="{{ url }}" target="_blank" rel="noopener noreferrer">{{ url }}</a>
 </section>
 </blockquote>
 {%- if site.data.settings.embed_js.tiktok == true -%}
