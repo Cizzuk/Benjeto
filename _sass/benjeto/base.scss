@@ -146,11 +146,19 @@ a.bigbutton {
   padding: 4px 16px;
   margin: 2px 4px;
   border: 1px solid var(--border);
-  border-radius: 100px;
-  transition: background 0.2s;
+  border-radius: 8px;
+  transition: filter 0.2s;
   &:hover {
-    background: var(--boxbglight);
+    filter: brightness(0.9);
     text-decoration: underline;
+  }
+  &.subscribe {
+    background: var(--link);
+    color: var(--bg);
+    border: 1px solid var(--link);
+    &:hover {
+      filter: brightness(0.8);
+    }
   }
 }
 
@@ -214,13 +222,11 @@ header.home {
         color: var(--link);
         background: var(--boxbg);
         border-radius: 4px;
-        text-decoration: none;
         padding: 4px 6px;
         margin: 0;
-        transition: background 0.1s;
+        transition: filter 0.15s;
         &:hover {
-          background: var(--boxbglight);
-          text-decoration: underline;
+          filter: brightness(0.9);
         }
       }
     }
@@ -356,10 +362,11 @@ section.paginate {
   }
   a {
     color: var(--link);
+    background: var(--bg);
     text-decoration: none;
-    transition: background 0.2s;
+    transition: filter 0.2s;
     &:hover {
-      background: var(--boxbglight);
+      filter: brightness(0.95);
       text-decoration: underline;
     }
     &:first-child {

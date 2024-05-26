@@ -21,7 +21,7 @@ layout: base
     <a class="bigbutton" href="{{ profile.tip.url }}" title="{{ profile.tip.name | default: Tip }}">{{ profile.tip.name }}</a>
     {%- endif -%}
     {%- if settings.home.subscribe_button == true %}
-    <a href="{{ site.feed.path | default: 'feed.xml' | absolute_url }}" class="bigbutton">{{ texts.subscribe | default: "Subscribe" }}</a>
+    <a href="{{ site.feed.path | default: 'feed.xml' | absolute_url }}" class="bigbutton subscribe">{{ texts.subscribe | default: "Subscribe" }}</a>
     {%- endif %}
     </section>
 	{%- endif %}
@@ -50,7 +50,7 @@ layout: base
     <a class="bigbutton" href="{{ profile.tip.url }}" title="{{ profile.tip.name | default: Tip }}">{{ profile.tip.name }}</a>
     {%- endif -%}
     {%- if settings.home.subscribe_button == true %}
-    <a href="{{ site.feed.path | default: 'feed.xml' | absolute_url  }}" class="bigbutton">{{ texts.subscribe | default: "Subscribe" }}</a>
+    <a href="{{ site.feed.path | default: 'feed.xml' | absolute_url  }}" class="bigbutton subscribe">{{ texts.subscribe | default: "Subscribe" }}</a>
   {%- endif %}
   </section>
   </div>
