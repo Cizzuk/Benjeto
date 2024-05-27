@@ -8,7 +8,10 @@
   {%- if profile.tip %}
     {%- if profile.tip.size > 1 %}
     {%- assign needjs = true %}
-    <a class="menu-btn menues" data-menu="menu-tip" href="{{ profile.tip[0].url }}">{{ texts.tip }}</a>
+    <noscript>
+      <a class="menu-btn menues" href="{{ profile.tip[0].url }}" target="_blank" rel="nofollow">{{ texts.tip }}</a>
+    </noscript>
+    <button id="btn" class="menu-btn menues" data-menu="menu-tip" aria-haspopup="menu">{{ texts.tip }}</button>
     <div class="menu" id="menu-tip" role="menu">
       <div class="menuline">
         <button class="close-btn" aria-label="{{ texts.close }}">
@@ -18,7 +21,7 @@
       </div>
       <ul>
         {%- for entry in profile.tip %}
-        <li><a href="{{ entry.url }}" target="_blank" rel="nofollow">{{ entry.name }}</a></li>
+        <li><a href="{{ entry.url }}" target="_blank" rel="nofollow" role="menuitem">{{ entry.name }}</a></li>
         {%- endfor -%}
       </ul>
     </div>
@@ -29,7 +32,10 @@
   {%- if profile.message %}
     {%- if profile.message.size > 1 %}
     {%- assign needjs = true %}
-    <a class="menu-btn menues" data-menu="menu-message" href="{{ profile.message[0].url }}">{{ texts.message }}</a>
+    <noscript>
+      <a class="menu-btn menues" href="{{ profile.message[0].url }}" target="_blank" rel="nofollow">{{ texts.message }}</a>
+    </noscript>
+    <button id="btn" class="menu-btn menues" data-menu="menu-message" aria-haspopup="menu">{{ texts.message }}</button>
     <div class="menu" id="menu-message" role="menu">
       <div class="menuline">
         <button class="close-btn" aria-label="{{ texts.close }}">
@@ -39,7 +45,7 @@
       </div>
       <ul>
         {%- for entry in profile.message %}
-        <li><a href="{{ entry.url }}" target="_blank" rel="nofollow">{{ entry.name }}</a></li>
+        <li><a href="{{ entry.url }}" target="_blank" rel="nofollow" role="menuitem">{{ entry.name }}</a></li>
         {%- endfor -%}
       </ul>
     </div>
@@ -51,7 +57,10 @@
   {%- if settings.home.subscribe_button == true %}
     {%- if settings.home.tabs.size > 1 %}
     {%- assign needjs = true %}
-    <a class="menu-btn subscribe menues" data-menu="menu-subscribe" href="{{ entry.feed | relative_url }}">{{ texts.subscribe }}</a>
+    <noscript>
+      <a class="menu-btn subscribe menues" href="{{ settings.home.tabs[0].feed | relative_url }}" target="_blank" rel="nofollow">{{ texts.subscribe }}</a>
+    </noscript>
+    <button id="btn" class="menu-btn subscribe menues" data-menu="menu-subscribe" aria-haspopup="menu">{{ texts.subscribe }}</button>
     <div class="menu" id="menu-subscribe" role="menu">
       <div class="menuline">
         <button class="close-btn" aria-label="{{ texts.close }}">
@@ -61,7 +70,7 @@
       </div>
       <ul>
         {%- for entry in settings.home.tabs %}
-        <li><a href="{{ entry.feed | relative_url }}">{{ entry.name }}{% if entry.discription %} - {{ entry.discription }}{% endif %}</a></li>
+        <li><a href="{{ entry.feed | relative_url }}" role="menuitem">{{ entry.name }}{% if entry.discription %} - {{ entry.discription }}{% endif %}</a></li>
         {%- endfor -%}
       </ul>
     </div>

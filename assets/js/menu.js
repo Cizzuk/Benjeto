@@ -1,19 +1,11 @@
 document.addEventListener("DOMContentLoaded", function() {
-  var menuLinks = document.querySelectorAll("a.menu-btn");
   var closeButtons = document.querySelectorAll("button.close-btn");
-  menuLinks.forEach(function(menuLink) {
-    var button = document.createElement("button");
-    button.innerHTML = menuLink.innerHTML;
-    button.className = menuLink.className;
-    button.setAttribute("data-menu", menuLink.getAttribute("data-menu"));
-    
-    menuLink.parentNode.replaceChild(button, menuLink);
-  });
-
   var menuButtons = document.querySelectorAll(".menues");
   var overlay = document.getElementById("overlay");
 
+
   menuButtons.forEach(function(menuButton) {
+    menuButton.style.display = "block";
     menuButton.addEventListener("click", function(event) {
       event.stopPropagation();
       var menuId = menuButton.getAttribute("data-menu");

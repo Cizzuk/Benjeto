@@ -135,6 +135,9 @@ body:not(.allow-image-select) img{
       filter: brightness(0.8);
     }
   }
+  &#btn {
+    display: none;
+  }
 }
 
 .menu {
