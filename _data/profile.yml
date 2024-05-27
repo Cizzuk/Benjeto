@@ -9,7 +9,7 @@ header: "/assets/header.png"
 bio: >-
   You can edit your profile in _config.yml.
 # Your pronouns
-pronouns: 
+pronouns: "they/them"
 # External links (e.g. social media).
 links:
   - name: X
