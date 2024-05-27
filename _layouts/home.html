@@ -5,14 +5,14 @@ layout: base
 {%- assign texts = site.data.texts -%}
 {%- assign settings = site.data.settings -%}
 {%- if profile.header %}
-<img class="header" src="{{ profile.header | relative_url }}" alt="" aria-hidden>
+<img class="header" src="{{ profile.header | relative_url }}" alt aria-hidden>
 {%- endif %}
 
 <main>
 <header class="home">
-  <div class="headline {% if profile.header and profile.icon == nil %}no-img{% endif %}">
+  <div class="headline{% if profile.header and profile.icon == nil %} no-img{% endif %}">
     {%- if profile.icon %}
-    <a class="proficon {% if settings.round_icon == true %}round{% endif %} {% if profile.header == nil %}no-header{% endif %}" href="{{ "/" | relative_url }}"><img src="{{ profile.icon | relative_url }}" alt="{{ profile.name }}"></a>
+    <a class="proficon{% if settings.round_icon == true %} round{% endif %}{% if profile.header == nil %} no-header{% endif %}" href="{{ "/" | relative_url }}"><img src="{{ profile.icon | relative_url }}" alt="{{ profile.name }}"></a>
     {%- include menu.html %}
 	{%- endif %}
   </div>
@@ -82,15 +82,15 @@ layout: base
 {%- if site.paginate or site.pagination %}
 <section class="paginate">
   {%- if paginator.previous_page %}
-  <a href="{{ paginator.previous_page_path | relative_url }}" class="back">{{ texts.paginate_back | default: "Back" }}</a>
+  <a href="{{ paginator.previous_page_path | relative_url }}" class="back" role="button">{{ texts.paginate_back | default: "Back" }}</a>
   {%- else %}
-  <span class="back">{{ texts.paginate_back | default: "Back" }}</span>
+  <span class="back" aria-disabled>{{ texts.paginate_back | default: "Back" }}</span>
   {%- endif %}
   <span class="current">{{ paginator.page }} / {{ paginator.total_pages }}</span>
   {%- if paginator.next_page %}
-  <a href="{{ paginator.next_page_path | relative_url }}" class="next">{{ texts.paginate_next | default: "Next" }}</a>
+  <a href="{{ paginator.next_page_path | relative_url }}" class="next" role="button">{{ texts.paginate_next | default: "Next" }}</a>
   {%- else %}
-  <span class="next">{{ texts.paginate_next | default: "Next" }}</span>
+  <span class="next" aria-disabled>{{ texts.paginate_next | default: "Next" }}</span>
   {%- endif %}
 </section>
 {%- endif %}
