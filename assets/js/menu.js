@@ -1,4 +1,14 @@
 document.addEventListener("DOMContentLoaded", function() {
+  var menuLinks = document.querySelectorAll("a.menu-btn");
+  menuLinks.forEach(function(menuLink) {
+    var button = document.createElement("button");
+    button.innerHTML = menuLink.innerHTML;
+    button.className = menuLink.className;
+    button.setAttribute("data-menu", menuLink.getAttribute("data-menu"));
+    
+    menuLink.parentNode.replaceChild(button, menuLink);
+  });
+
   var menuButtons = document.querySelectorAll(".menues");
   var overlay = document.getElementById("overlay");
 

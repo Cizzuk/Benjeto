@@ -110,11 +110,12 @@ body:not(.allow-image-select) img{
 }
 
 
-a.menu-btn {
+.menu-btn {
   display: inline-block;
   text-decoration: none;
   text-align: center;
   font-weight: 500;
+  font-size: 1em;
   color: var(--text);
   background: var(--boxbg);
   padding: 4px 12px;
@@ -208,16 +209,15 @@ iframe.youtube, iframe.nicovideo, iframe.mastodon-embed{
   overflow: scroll;
   margin: 16px auto;
   max-width: 100%;
+  border-radius: 12px;
 }
 
 .tiktok-embed {
   margin: 16px auto;
-  width: 560px;
-  max-width: 100%;
+  border-radius: 8px;
   section {
     padding: 16px;
     border: 2px solid var(--border);
-    border-radius: 8px;
     p {
       margin: 4px 0;
     }
