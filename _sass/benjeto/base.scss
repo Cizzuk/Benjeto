@@ -409,7 +409,7 @@ section.post-list {
     }
     a {
       display: block;
-      padding: 8px 24px;
+      padding: 8px 24px 4px;
       color: var(--text);
       background: var(--boxbg);
       text-decoration: none;
@@ -430,8 +430,9 @@ section.post-list {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-top: 12px;
       border-top: 1px solid var(--border);
+      margin-top: 12px;
+      padding: 4px 0;
       time {
         display: inline-block;
         color: var(--gray);
@@ -444,14 +445,13 @@ section.post-list {
         display: inline-block;
         color: var(--link);
         background: none;
-        border: 1px solid rgba(0, 0, 0, 0);
+        border: none;
         border-radius: 100px;
-        padding: 4px;
-        margin: 4px 0;
-        transition: opacity 0.2s, background 0.2s, border-color 0.2s;
+        padding: 5px;
+        margin: 0;
+        transition: opacity 0.2s, background 0.2s;
         &:hover, &:focus {
           opacity: 1;
-          border-color: var(--border);
           background: var(--boxbg);
         }
         & .icon {
