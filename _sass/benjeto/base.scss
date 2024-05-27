@@ -1,13 +1,13 @@
 * {
-  font-family: system-ui, sans-serif;
   text-underline-offset: 0.1em;
-  box-sizing: border-box;
   line-height: 1.6;
+  box-sizing: border-box;
   overflow-wrap: break-word;
   word-break: auto-phrase;
 }
 
 body {
+  font-family: system-ui, sans-serif;
   background: var(--bg);
   color: var(--text);
   width: 750px;
@@ -19,6 +19,12 @@ main, article {
   display: block;
   width: 100%;
   padding: 0 16px 16px;
+}
+article:not(.post) {
+  font-size: 1.1rem;
+}
+article.serif {
+  font-family: serif, sans-serif;
 }
 
 h1, h2, h3 {
@@ -109,23 +115,40 @@ body:not(.allow-image-select) img{
   user-select: none;
 }
 
+.icon {
+  display: inline-block;
+  width: 1em;
+  margin: 0;
+  vertical-align: middle;
+}
 
 .menu-btn {
-  display: inline-block;
   text-decoration: none;
   text-align: center;
-  font-weight: 500;
+  font-weight: bold;
   font-size: 1em;
   color: var(--text);
   background: var(--boxbg);
   padding: 4px 12px;
   margin: 2px 4px;
+  min-width: 36px;
+  min-height: 36px;
   border: 1px solid var(--border);
   border-radius: 6px;
   transition: filter 0.2s;
+  .icon {
+    object-fit: cover;
+    vertical-align: text-bottom;
+    width: 100%;
+    height: auto;
+  }
+  &:has(.icon) {
+    width: 1em;
+    height: 1em;
+    padding: 5px;
+  }
   &:hover, &:focus {
     filter: brightness(0.9);
-    text-decoration: underline;
   }
   &.subscribe {
     background: var(--link);
@@ -258,7 +281,7 @@ iframe.youtube, iframe.nicovideo, iframe.mastodon-embed{
 }
 
 header.post {
-  margin: 32px 0px;
+  margin: 32px 16px;
   h1 {
     font-size: 2em;
     margin: 24px 0 8px;

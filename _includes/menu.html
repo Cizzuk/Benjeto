@@ -11,11 +11,13 @@
     <noscript>
       <a class="menu-btn menues" href="{{ profile.tip[0].url }}" target="_blank" rel="nofollow">{{ texts.tip }}</a>
     </noscript>
-    <button id="btn" class="menu-btn menues" data-menu="menu-tip" aria-haspopup="menu">{{ texts.tip }}</button>
+    <button id="btn" class="menu-btn menues" data-menu="menu-tip" aria-haspopup="menu" aria-label="{{ texts.tip }}">
+      <img class="icon" src="{{ "/assets/icon/love.svg" | relative_url }}" alt="{{ texts.tip }}">
+    </button>
     <div class="menu" id="menu-tip" role="menu">
       <div class="menuline">
         <button class="close-btn" aria-label="{{ texts.close }}">
-          <img class="icon" src="{{ "/assets/icon/close.png" | relative_url }}" alt="{{ texts.close }}">
+          <img class="icon" src="{{ "/assets/icon/close.svg" | relative_url }}" alt="{{ texts.close }}">
         </button>
         <b>{{ texts.tip_menu }}</b>
       </div>
@@ -35,11 +37,13 @@
     <noscript>
       <a class="menu-btn menues" href="{{ profile.message[0].url }}" target="_blank" rel="nofollow">{{ texts.message }}</a>
     </noscript>
-    <button id="btn" class="menu-btn menues" data-menu="menu-message" aria-haspopup="menu">{{ texts.message }}</button>
+    <button id="btn" class="menu-btn menues" data-menu="menu-message" aria-haspopup="menu" aria-label="{{ texts.message }}">
+      <img class="icon" src="{{ "/assets/icon/message.svg" | relative_url }}" alt="{{ texts.message }}">
+    </button> 
     <div class="menu" id="menu-message" role="menu">
       <div class="menuline">
         <button class="close-btn" aria-label="{{ texts.close }}">
-          <img class="icon" src="{{ "/assets/icon/close.png" | relative_url }}" alt="{{ texts.close }}">
+          <img class="icon" src="{{ "/assets/icon/close.svg" | relative_url }}" alt="{{ texts.close }}">
         </button>
         <b>{{ texts.message_menu }}</b>
       </div>
@@ -64,7 +68,7 @@
     <div class="menu" id="menu-subscribe" role="menu">
       <div class="menuline">
         <button class="close-btn" aria-label="{{ texts.close }}">
-          <img class="icon" src="{{ "/assets/icon/close.png" | relative_url }}" alt="{{ texts.close }}">
+          <img class="icon" src="{{ "/assets/icon/close.svg" | relative_url }}" alt="{{ texts.close }}">
         </button>
         <b>{{ texts.subscribe_menu }}</b>
       </div>

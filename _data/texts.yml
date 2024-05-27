@@ -6,7 +6,7 @@ close: "Close" #Close
 paginate_back: "Back" #Back
 paginate_next: "Next" #Next
 
-message: "DM" #Message
+message: "Message" #Message
 message_menu: "Send a message" #Send a message
 tip: "Tip" #Tip
 tip_menu: "Send a tip" #Send a tip

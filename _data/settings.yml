@@ -4,6 +4,7 @@ colorstyle: "blue" #blue, red, green
 # Set darkmode | ダークモードを設定
 darkmode: "allow" #allow, true, false
 
+
 # If true, round the icon. | trueの場合、アイコンを丸くします。
 round_icon: true
 
@@ -61,4 +62,6 @@ post:
   highlight: true
   # Show your profile in footer.
   footer_profile: "article" #true, false, article
+  # Set the font on the article to serif
+  article_serif: false
 

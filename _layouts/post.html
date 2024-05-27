@@ -2,7 +2,7 @@
 layout: base
 ---
 {%- assign texts = site.data.texts -%}
-<article>
+{%- assign settings = site.data.settings -%}
 <header class="post">
 {%- include miniprof.html type="nav" -%}
 {%- if page.title != "" -%}
@@ -26,6 +26,7 @@ layout: base
 </span>
 {%- endif %}
 </header>
+<article{% if settings.post.article_serif == true %} class="serif"{% endif %}>
 
 {{ content }}
 </article>
