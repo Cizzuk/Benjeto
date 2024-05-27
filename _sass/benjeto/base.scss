@@ -10,7 +10,7 @@
 body {
   background: var(--bg);
   color: var(--text);
-  width: 800px;
+  width: 750px;
   margin: 0 auto 32px;
   padding: 0;
 }
@@ -145,7 +145,7 @@ body:not(.allow-image-select) img{
   transform: translate(-50%, -50%);
   background: var(--boxbglight);
   border-radius: 16px;
-  padding: 20px 24px 16px;
+  padding: 16px 24px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
   z-index: 2;
   width: 500px;
@@ -169,6 +169,36 @@ body:not(.allow-image-select) img{
   text-decoration: none;
   &:hover {
     text-decoration: underline;
+  }
+}
+
+.menu .menuline {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2px 0 4px;
+}
+
+.menu .close-btn {
+  background: none;
+  width: 2em;
+  height: 2em;
+  border: none;
+  border-radius: 50%;
+  display: inline-block;
+  padding: 0;
+  font-size: 1em;
+  transition: background 0.15s;
+  &:hover {
+    background: var(--boxbg);
+  }
+  img {
+    width: 1em;
+    height: 1em;
+    margin: 0.5em;
+    vertical-align: middle;
   }
 }
 
@@ -247,8 +277,18 @@ header.post {
   }
 }
 
+img.header {
+  background: var(--boxbg);
+  z-index: -1;
+  aspect-ratio: 5 / 1;
+  width: 100%;
+  margin-bottom: -8px;
+  border-radius: 0 0 8px 8px;
+  vertical-align: bottom;
+}
+
 header.home {
-  margin: 24px 0;
+  margin: 0;
   padding-bottom: 8px;
   border-bottom: 2px solid var(--border);
   ul.exlink {
@@ -277,7 +317,7 @@ header.home {
     flex-wrap: wrap;
     align-items: flex-end;
     justify-content: space-between;
-    margin: 8px 0 8px;
+    margin: 12px 0 8px;
     section.sidebutton {
       display: flex;
       flex-wrap: wrap;
@@ -289,7 +329,7 @@ header.home {
       margin: 0;
     }
   }
-  a.icon {
+  a.proficon {
     display: block;
     width: 108px;
     max-width: 25%;
@@ -310,22 +350,6 @@ header.home {
     &.no-header {
       margin-top: 0;
     }
-  }
-  img.header {
-    position: absolute;
-    object-fit: cover;
-    background: var(--boxbg);
-    z-index: -1;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100px;
-    margin: 0;
-    vertical-align: bottom;
-  }
-  div.dumheader {
-    height: 76px;
-	margin: 0;
   }
   h1 {
     font-size: 1.5em;
@@ -453,7 +477,7 @@ footer {
     max-width: 700px;
 	border-radius: 16px;
     & div.miniprof {
-      a.icon {
+      a.proficon {
         img {
           width:50px;
         }
@@ -470,7 +494,7 @@ div.miniprof {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  a.icon {
+  a.proficon {
     text-decoration: none;
     img {
       width: 40px;

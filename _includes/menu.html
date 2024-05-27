@@ -10,7 +10,12 @@
     {%- assign needjs = true %}
     <a class="menu-btn menues" data-menu="menu-tip" href="{{ profile.tip[0].url }}">{{ texts.tip }}</a>
     <div class="menu" id="menu-tip" role="menu">
-      <b>{{ texts.tip_menu }}</b>
+      <div class="menuline">
+        <button class="close-btn" aria-label="{{ texts.close }}">
+          <img class="icon" src="{{ "/assets/icon/close.png" | relative_url }}" alt="{{ texts.close }}">
+        </button>
+        <b>{{ texts.tip_menu }}</b>
+      </div>
       <ul>
         {%- for entry in profile.tip %}
         <li><a href="{{ entry.url }}" target="_blank" rel="nofollow">{{ entry.name }}</a></li>

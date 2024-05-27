@@ -4,15 +4,15 @@ layout: base
 {%- assign profile = site.data.profile -%}
 {%- assign texts = site.data.texts -%}
 {%- assign settings = site.data.settings -%}
+{%- if profile.header %}
+<img class="header" src="{{ profile.header | relative_url }}" alt="" aria-hidden>
+{%- endif %}
+
 <main>
 <header class="home">
-  {%- if profile.header %}
-  <img class="header" src="{{ profile.header | relative_url }}" alt="" aria-hidden>
-  <div class="dumheader" role="none"></div>
-  {%- endif %}
   <div class="headline {% if profile.header and profile.icon == nil %}no-img{% endif %}">
     {%- if profile.icon %}
-    <a class="icon {% if settings.round_icon == true %}round{% endif %} {% if profile.header == nil %}no-header{% endif %}" href="{{ "/" | relative_url }}"><img src="{{ profile.icon | relative_url }}" alt="{{ profile.name }}"></a>
+    <a class="proficon {% if settings.round_icon == true %}round{% endif %} {% if profile.header == nil %}no-header{% endif %}" href="{{ "/" | relative_url }}"><img src="{{ profile.icon | relative_url }}" alt="{{ profile.name }}"></a>
     {%- include menu.html %}
 	{%- endif %}
   </div>

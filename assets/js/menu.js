@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
   var menuLinks = document.querySelectorAll("a.menu-btn");
+  var closeButtons = document.querySelectorAll("button.close-btn");
   menuLinks.forEach(function(menuLink) {
     var button = document.createElement("button");
     button.innerHTML = menuLink.innerHTML;
@@ -20,7 +21,14 @@ document.addEventListener("DOMContentLoaded", function() {
       
       menu.style.display = "block";
       overlay.style.display = "block";
-    });
+      
+      setTimeout(function() {
+        var closeItem = menu.querySelector(".close-btn");
+          if (closeItem) {
+            closeItem.focus();
+          }
+        }, 100);
+      });
   });
 
   document.addEventListener("click", function(event) {
@@ -36,6 +44,18 @@ document.addEventListener("DOMContentLoaded", function() {
     });
     overlay.style.display = "none";
   }
+
+  closeButtons.forEach(function(closeButton) {
+    closeButton.addEventListener("click", function() {
+      hideMenus();
+    });
+  });
+
+  document.addEventListener("keydown", function(event) {
+    if (event.key === "Escape") {
+      hideMenus();
+    }
+  });
 
   function isDescendant(parent, child) {
   for (var i = 0; i < parent.length; i++) {

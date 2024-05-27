@@ -2,6 +2,7 @@
 date_format: "%Y-%m-%d"
 
 ##### Translates #####
+close: "Close" #Close
 paginate_back: "Back" #Back
 paginate_next: "Next" #Next
 

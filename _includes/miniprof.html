@@ -2,7 +2,7 @@
 {%- assign texts = site.data.texts -%}
 {%- assign settings = site.data.settings -%}
 <div class="miniprof">
-<a class="icon {% if settings.round_icon == true %}round{% endif %}" href="{{ "/" | relative_url }}">
+<a class="proficon {% if settings.round_icon == true %}round{% endif %}" href="{{ "/" | relative_url }}">
 {%- if profile.icon %}
 <img src="{{ profile.icon | relative_url }}" alt="">
 {%- endif %}
