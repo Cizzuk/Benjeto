@@ -530,9 +530,12 @@ div.miniprof {
 }
 
 
-@media only screen and (max-width:800px) {
+@media only screen and (max-width:750px) {
   body {
     width: 100%;
+  }
+  img.header {
+    border-radius: 0;
   }
 }
 @media only screen and (max-width:200px) {
