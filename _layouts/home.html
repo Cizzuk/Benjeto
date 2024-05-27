@@ -67,7 +67,7 @@ layout: base
       {%- if post.title == "" and post.image %}
       <img src="{{ post.image | relative_url }}" class="feature">
       {%- endif %}
-      <time datetime="{{ page.date | date_to_xmlschema }}">{{- post.date | date: date_format -}}</time>
+      <time datetime="{{ post.date | date_to_xmlschema }}">{{- post.date | date: date_format -}}</time>
       {%- if post.tag -%}
       {%- for entry in post.tag -%}
       <span class="tag">{{ entry }}</span>
