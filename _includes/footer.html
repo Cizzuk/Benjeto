@@ -8,10 +8,7 @@
   {% assign show = true %}
 {%- endif %}
 {%- if show %}
-<div class="footprof">
-{%- include miniprof.html -%}
-<p class="bio">{{ profile.bio }}</p>
-</div>
+{%- include miniprof.html type="box" -%}
 {%- endif %}
 {%- if settings.copyright %}
 <p class="copy">{{ settings.copyright }}</p>

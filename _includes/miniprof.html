@@ -1,7 +1,9 @@
 {%- assign profile = site.data.profile -%}
 {%- assign texts = site.data.texts -%}
 {%- assign settings = site.data.settings -%}
-<div class="miniprof">
+{%- assign type = include.type -%}
+<div class="miniprof{% if type == "box" %} box{% endif %}"{% if type == "nav" %} role="navigation"{% elsif type == "box" %} role="complementary"{% endif %}>
+<div class="profline">
 <a class="proficon {% if settings.round_icon == true %}round{% endif %}" href="{{ "/" | relative_url }}">
 {%- if profile.icon %}
 <img src="{{ profile.icon | relative_url }}" alt="">
@@ -10,5 +12,9 @@
 </a>
 {%- if page.layout == "post" and settings.post.subscribe_button == true %}
 {%- include menu.html only_subs=true %}
+{%- endif %}
+</div>
+{%- if type == "box" %}
+<p class="bio">{{ profile.bio }}</p>
 {%- endif %}
 </div>

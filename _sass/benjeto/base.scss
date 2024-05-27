@@ -474,63 +474,64 @@ footer {
     color: var(--gray);
 	text-align: center;
   }
-  div.footprof {
+}
+
+div.miniprof {
+  div.profline {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+    a.proficon {
+      text-decoration: none;
+      img {
+        width: 40px;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        background: var(--boxbg);
+        border-radius: 4px;
+        vertical-align: middle;
+        margin-inline-end: 6px;
+      }
+      span {
+        margin: 0;
+        font-size: 1.2em;
+        font-weight: 500;
+        color: var(--text);
+        vertical-align: middle;
+        overflow-wrap: anywhere;
+      }
+      &:hover, &:focus {
+        span {
+          text-decoration: underline;
+        }
+      }
+      &.round {
+        img {
+          border-radius: 50%;
+        }
+      }
+    }
+    div.sbbutton {
+      margin: auto 0;
+    }
+  }
+  &.box {
     margin: 0 auto;
     padding: 20px 24px 4px;
     border: 2px solid var(--border);
     max-width: 700px;
 	border-radius: 16px;
-    & div.miniprof {
-      a.proficon {
-        img {
-          width:50px;
-        }
-        span {
-          font-size: 1.4em;
-          font-weight: 600;
-        }
-      }
-    }
-  }
-}
-
-div.miniprof {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  a.proficon {
-    text-decoration: none;
-    img {
-      width: 40px;
-      aspect-ratio: 1 / 1;
-      object-fit: cover;
-      background: var(--boxbg);
-      border-radius: 4px;
-      vertical-align: middle;
-      margin-inline-end: 6px;
-    }
-    span {
-      margin: 0;
-      font-size: 1.2em;
-      font-weight: 500;
-      color: var(--text);
-      vertical-align: middle;
-      overflow-wrap: anywhere;
-    }
-    &:hover, &:focus {
-      span {
-        text-decoration: underline;
-      }
-    }
-    &.round {
+    div.profline a.proficon {
       img {
-        border-radius: 50%;
+        width:50px;
+      }
+      span {
+        font-size: 1.4em;
+        font-weight: 600;
       }
     }
   }
-  div.sbbutton {
-    margin: auto 0;
-  }
+
 }
 
 
