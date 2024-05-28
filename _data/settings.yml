@@ -53,10 +53,7 @@ home:
       feed: "/tags/likes.xml"
 
 post:
-  # Category to post clips
-  clip_category: 
-    - "clip"
-  # Show the RSS subscribe button.
+  # Show RSS subscribe button.
   subscribe_button: true
   # Highlight color to code in the post
   highlight: true
