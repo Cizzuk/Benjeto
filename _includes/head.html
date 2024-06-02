@@ -1,7 +1,7 @@
 {%- assign profile = site.data.profile -%}
 {%- assign settings = site.data.settings -%}
 
-{%- if page.title != "" -%}
+{%- if page.title != "" and page.layout != "home" -%}
 {%- capture title -%}{{ page.title }} - {{ site.title }}{% endcapture %}
 {%- else -%}
 {%- assign title = site.title -%}
