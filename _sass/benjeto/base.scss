@@ -430,9 +430,10 @@ section.post-list {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
       border-top: 1px solid var(--border);
       margin-top: 12px;
-      padding: 4px 0;
+      padding: 2px 0;
       time {
         display: inline-block;
         color: var(--gray);
@@ -455,8 +456,8 @@ section.post-list {
           background: var(--boxbg);
         }
         & .icon {
-          width: 2em;
-          height: 2em;
+          width: 22px;
+          height: 22px;
           margin: 0;
         }
       }
@@ -470,6 +471,7 @@ section.post-list {
 section.paginate {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   margin: 16px 0;
   width: 100%;
   a, span {
@@ -512,10 +514,10 @@ section.paginate {
     }
   }
   :first-child {
-    border-inline-end: 0;
+    margin-inline-end: -1px;
   }
   :last-child {
-    border-inline-start: 0;
+    margin-inline-start: -1px;
   }
 }
 
