@@ -23,12 +23,6 @@ document.addEventListener("DOMContentLoaded", function() {
       });
   });
 
-  document.addEventListener("click", function(event) {
-    if (!event.target.classList.contains("menues") && !isDescendant(menuButtons, event.target)) {
-      hideMenus();
-    }
-  });
-
   function hideMenus() {
     var menus = document.querySelectorAll(".menu");
     menus.forEach(function(menu) {
@@ -36,6 +30,10 @@ document.addEventListener("DOMContentLoaded", function() {
     });
     overlay.style.display = "none";
   }
+
+  overlay.addEventListener("click", function() {
+    hideMenus();
+  });
 
   closeButtons.forEach(function(closeButton) {
     closeButton.addEventListener("click", function() {
