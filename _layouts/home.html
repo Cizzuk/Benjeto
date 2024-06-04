@@ -5,7 +5,7 @@ layout: base
 {%- assign texts = site.data.texts -%}
 {%- assign settings = site.data.settings -%}
 {%- if profile.header %}
-<img class="header" src="{{ profile.header | relative_url }}" alt aria-hidden>
+<div class="header"><img" src="{{ profile.header | relative_url }}" alt aria-hidden></div>
 {%- endif %}
 
 <main>

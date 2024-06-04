@@ -221,8 +221,8 @@ body:not(.allow-image-select) img{
     background: var(--boxbg);
   }
   img {
-    width: 24px;
-    height: 24px;
+    width: 1em;
+    height: 1em;
     margin: 0.5em;
     vertical-align: middle;
   }
@@ -333,14 +333,20 @@ header.post {
   }
 }
 
-img.header {
-  background: var(--boxbg);
+div.header {
   z-index: -1;
-  aspect-ratio: 5 / 1;
   width: 100%;
+  aspect-ratio: 5 / 1;
   margin-bottom: -8px;
-  border-radius: 0 0 8px 8px;
-  vertical-align: bottom;
+  img {
+    background: var(--boxbg);
+    vertical-align: bottom;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0 0 8px 8px;
+  }
 }
 
 header.home {
