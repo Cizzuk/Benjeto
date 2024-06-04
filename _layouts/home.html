@@ -57,23 +57,37 @@ layout: base
   {%- for post in posts limit:max_posts -%}
   {%- if post.hidden != true %}
   <article class="post">
-    <a class="post-link" href="{{ post.url | relative_url }}">
-      {%- if post.title != "" %}
-      <h2>{{ post.title | escape }}</h2>
-      {%- endif %}
-      {%- if post.title == "" or settings.home.show_excerpts == true %}
-      {{ post.excerpt }}
-      {%- endif %}
-      {%- if post.title == "" and post.image %}
-      <img src="{{ post.image | relative_url }}" class="feature">
-      {%- endif %}
-      <time datetime="{{ post.date | date_to_xmlschema }}">{{- post.date | date: date_format -}}</time>
-      {%- if post.tag -%}
-      {%- for entry in post.tag -%}
-      <span class="tag">{{ entry }}</span>
-      {%- endfor -%}
-      {%- endif -%}
-    </a>
+    <div class="post-box">
+      <a href="{{ post.url | relative_url }}">
+        {%- if post.title != "" %}
+        <h2>{{ post.title | escape }}</h2>
+        {%- endif %}
+        {%- if post.title == "" or settings.home.show_excerpts == true %}
+        {{ post.excerpt }}
+        {%- endif %}
+        {%- if post.image %}
+        <img src="{{ post.image | relative_url }}" class="feature">
+        {%- endif %}
+      </a>
+      <div class="post-foot">
+        <div>
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{- post.date | date: date_format -}}</time>
+        {%- if post.tag -%}
+        {%- for entry in post.tag -%}
+        <span class="tag">{{ entry }}</span>
+        {%- endfor -%}
+        {%- endif -%}
+        </div>
+        {%- if settings.home.share_button == true %}
+        <div>
+          <button class="shareBtn" id="shareButton" data-title="{{ post.title }}" data-url="{{ site.url }}{{ post.url | relative_url }}" role="button">
+            <span class="shareMsg"></span>
+            <img class="icon" src="{{ "/assets/icon/clip.svg" | relative_url }}" alt="{{ texts.copy }}">
+          </button>
+        </div>
+        {%- endif %}
+      </div>
+    </div>
   </article>
   {%- endif %}
 {%- endfor %}
@@ -96,4 +110,8 @@ layout: base
 {%- endif %}
 {%- endif -%}
 
+{%- if settings.home.share_button == true %}
+<script src="{{ "/assets/js/share.js" | relative_url }}"></script>
+{%- endif -%}
 </main>
+

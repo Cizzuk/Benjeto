@@ -31,6 +31,8 @@ home:
   # Maximum number of posts to display on the home when paginate is not used.
   # If blank, unlimited
   max_posts: 20
+  # Show the share button on the posts list
+  share_button: true
   # Filter tab in home
   tabs:
     - name: "All"

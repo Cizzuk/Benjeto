@@ -7,6 +7,8 @@ paginate_back: "Back" #Back
 paginate_next: "Next" #Next
 
 share: "Share" #Share
+copy: "Copy" #Copy
+copied: "Copied!" #Copied!
 
 message: "Message" #Message
 message_menu: "Send a message" #Send a message

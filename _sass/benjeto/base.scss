@@ -143,8 +143,8 @@ body:not(.allow-image-select) img{
     height: auto;
   }
   &:has(.icon) {
-    width: 1em;
-    height: 1em;
+    width: 24px;
+    height: 24px;
     padding: 5px;
   }
   &:hover, &:focus {
@@ -379,6 +379,7 @@ header.home {
     }
   }
   h1 {
+    display: inline-block;
     font-size: 1.5em;
     margin: 0;
   }
@@ -392,7 +393,6 @@ header.home {
     display: inline-block;
     color: var(--gray);
     font-size: 0.9em;
-    margin: 0 8px;
   }
 }
 
@@ -407,16 +407,19 @@ section.post-list {
       font-size: 1.2em;
       margin: 12px 0 6px;
     }
-    a {
+    div.post-box {
       display: block;
       padding: 8px 24px 4px;
       color: var(--text);
       background: var(--boxbg);
-      text-decoration: none;
       border-radius: 16px;
       transition: background 0.2s;
-      &:hover, &:focus {
+      &:has(a:hover) {
         background: var(--boxbglight);
+      }
+      a {
+        color: var(--text);
+        text-decoration: none;
       }
     }
 	img.feature {
@@ -441,24 +444,40 @@ section.post-list {
         margin: 6px 0;
         margin-inline-end: 4px;
       }
-      button {
-        opacity: 0.6;
-        display: inline-block;
+      button.shareBtn {
+        display: none;
         color: var(--link);
         background: none;
         border: none;
         border-radius: 100px;
         padding: 5px;
         margin: 0;
-        transition: opacity 0.2s, background 0.2s;
-        &:hover, &:focus {
-          opacity: 1;
-          background: var(--boxbg);
+        transition: background 0.2s;
+        &:hover, &.disabled {
+          background: var(--boxbglight);
+          & .icon {
+            opacity: 1;
+          }
+          & .shareMsg {
+            color: var(--text);
+          }
         }
         & .icon {
+          opacity: 0.6;
           width: 22px;
           height: 22px;
           margin: 0;
+          transition: opacity 0.2s;
+        }
+        & .shareMsg {
+          color: var(--gray);
+          font-size: 0.9rem;
+          line-height: 22px;
+          vertical-align: middle;
+          transition: color 0.2s;
+        }
+        &.disabled {
+          pointer-events: none;
         }
       }
     }
