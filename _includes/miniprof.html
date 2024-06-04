@@ -10,9 +10,18 @@
 {%- endif %}
 <span itemprop="name">{{ profile.name | default: site.title }}</span>
 </a>
+<div class="buttonline">
+{%- if page.layout == "post" and settings.post.share_button == true %}
+<button class="shareBtn" id="shareButton" data-title="{{ page.title }}" data-url="{{ site.url }}{{ page.url }}" role="button">
+  <span class="shareMsg"></span>
+  <img class="icon" src="{{ "/assets/icon/clip.svg" | relative_url }}" alt="{{ texts.copy }}">
+</button>
+<script src="{{ "/assets/js/share.js" | relative_url }}"></script>
+{%- endif %}
 {%- if page.layout == "post" and settings.post.subscribe_button == true %}
 {%- include menu.html only_subs=true %}
 {%- endif %}
+</div>
 </div>
 {%- if type == "box" %}
 <p class="bio">{{ profile.bio }}</p>
