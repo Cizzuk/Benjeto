@@ -108,7 +108,7 @@ img {
   max-width: 100%;
   height: auto;
 }
-body:not(.allow-image-select) img{
+body:not(.allow-image-select) img, img.icon {
   pointer-events: none;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
