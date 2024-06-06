@@ -130,7 +130,7 @@ body:not(.allow-image-select) img, img.icon {
   font-size: 1em;
   color: var(--text);
   background: var(--boxbg);
-  padding: 4px 12px;
+  padding: 4px 10px;
   margin: 2px 4px;
   min-width: 36px;
   min-height: 36px;
@@ -139,14 +139,13 @@ body:not(.allow-image-select) img, img.icon {
   transition: filter 0.2s;
   .icon {
     object-fit: cover;
-    vertical-align: text-bottom;
-    width: 100%;
+    vertical-align: bottom;
+    width: 24px;
     height: auto;
+    margin-bottom: 1px;
   }
   &:has(.icon) {
-    width: 24px;
-    height: 24px;
-    padding: 5px;
+    padding: 4px;
   }
   &:hover, &:focus {
     filter: brightness(0.9);
