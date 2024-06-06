@@ -80,7 +80,7 @@ layout: base
         </div>
         {%- if settings.home.share_button == true %}
         <div>
-          <button class="shareBtn" id="shareButton" data-title="{{ post.title }}" data-url="{{ site.url }}{{ post.url | relative_url }}" role="button">
+          <button class="shareBtn" id="shareButton" data-title="{{ post.title }}" data-url="{{ site.url }}{{ post.url | relative_url }}" role="button" title="{{ texts.share }}">
             <span class="shareMsg"></span>
             <img class="icon" src="{{ "/assets/icon/clip.svg" | relative_url }}" alt="{{ texts.copy }}">
           </button>
