@@ -9,9 +9,9 @@
     {%- if profile.tip.size > 1 %}
     {%- assign needjs = true %}
     <noscript>
-      <a class="menu-btn menues" href="{{ profile.tip[0].url }}" target="_blank" rel="nofollow">{{ texts.tip }}</a>
+      <a class="menu-btn menues" href="{{ profile.tip[0].url }}" title="{{ texts.tip_menu }}" target="_blank" rel="nofollow">{{ texts.tip }}</a>
     </noscript>
-    <button id="btn" class="menu-btn menues" data-menu="menu-tip" aria-haspopup="menu" aria-label="{{ texts.tip }}">
+    <button id="btn" class="menu-btn menues" data-menu="menu-tip" title="{{ texts.tip_menu }}" aria-haspopup="menu" aria-label="{{ texts.tip }}">
       <img class="icon" src="{{ "/assets/icon/love.svg" | relative_url }}" alt="{{ texts.tip }}">
     </button>
     <div class="menu" id="menu-tip" role="menu">
@@ -28,16 +28,16 @@
       </ul>
     </div>
     {%- else %}
-    <a class="menu-btn" href="{{ profile.tip[0].url }}" target="_blank" rel="nofollow">{{ texts.tip }}</a>
+    <a class="menu-btn" href="{{ profile.tip[0].url }}" title="{{ texts.tip_menu }}" target="_blank" rel="nofollow">{{ texts.tip }}</a>
     {%- endif -%}
   {%- endif -%}
   {%- if profile.message %}
     {%- if profile.message.size > 1 %}
     {%- assign needjs = true %}
     <noscript>
-      <a class="menu-btn menues" href="{{ profile.message[0].url }}" target="_blank" rel="nofollow">{{ texts.message }}</a>
+      <a class="menu-btn menues" href="{{ profile.message[0].url }}" title="{{ texts.message_menu }}" target="_blank" rel="nofollow">{{ texts.message }}</a>
     </noscript>
-    <button id="btn" class="menu-btn menues" data-menu="menu-message" aria-haspopup="menu" aria-label="{{ texts.message }}">
+    <button id="btn" class="menu-btn menues" data-menu="menu-message" title="{{ texts.message_menu }}" aria-haspopup="menu" aria-label="{{ texts.message }}">
       <img class="icon" src="{{ "/assets/icon/message.svg" | relative_url }}" alt="{{ texts.message }}">
     </button> 
     <div class="menu" id="menu-message" role="menu">
@@ -54,7 +54,7 @@
       </ul>
     </div>
     {%- else %}
-    <a class="menu-btn" href="{{ profile.message[0].url }}" target="_blank" rel="nofollow">{{ texts.message }}</a>
+    <a class="menu-btn" href="{{ profile.message[0].url }}" title="{{ texts.message_menu }}" target="_blank" rel="nofollow">{{ texts.message }}</a>
     {%- endif -%}
   {%- endif -%}
   {%- endif %}
@@ -62,9 +62,9 @@
     {%- if settings.home.tabs.size > 1 %}
     {%- assign needjs = true %}
     <noscript>
-      <a class="menu-btn subscribe menues" href="{{ settings.home.tabs[0].feed | relative_url }}" target="_blank" rel="nofollow">{{ texts.subscribe }}</a>
+      <a class="menu-btn subscribe menues" href="{{ settings.home.tabs[0].feed | relative_url }}" title="{{ texts.subscribe_menu }}" target="_blank" rel="nofollow">{{ texts.subscribe }}</a>
     </noscript>
-    <button id="btn" class="menu-btn subscribe menues" data-menu="menu-subscribe" aria-haspopup="menu">{{ texts.subscribe }}</button>
+    <button id="btn" class="menu-btn subscribe menues" data-menu="menu-subscribe" title="{{ texts.subscribe_menu }}" aria-haspopup="menu">{{ texts.subscribe }}</button>
     <div class="menu" id="menu-subscribe" role="menu">
       <div class="menuline">
         <button class="close-btn" aria-label="{{ texts.close }}">
@@ -79,7 +79,7 @@
       </ul>
     </div>
     {%- else %}
-    <a class="menu-btn subscribe" href="{{ settings.home.tabs[0].feed | relative_url }}">{{ texts.subscribe }}</a>
+    <a class="menu-btn subscribe" href="{{ settings.home.tabs[0].feed | relative_url }}" title="{{ texts.subscribe_menu }}">{{ texts.subscribe }}</a>
     {%- endif -%}
   {%- endif -%}
 </section>
