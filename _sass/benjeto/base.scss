@@ -471,13 +471,13 @@ section.post-list {
       display: inline-block;
       vertical-align: bottom;
       width: auto;
-	  max-width: calc(100% - 8px);
+	  max-width: 100%;
       max-height: 200px;
       border-radius: 8px;
-      margin: 4px;
+      padding: 4px;
     }
     img.feature.multi {
-      max-width: calc(50% - 8px);
+      max-width: 50%;
     }
     .post-foot {
       display: flex;
@@ -653,7 +653,7 @@ div.miniprof {
     width: 200px;
   }
   section.post-list article.post img.feature.multi {
-    max-width: calc(100% - 8px);
+    max-width: 100%;
   }
 }
 
