@@ -68,7 +68,6 @@ layout: base
         {%- if post.image %}
         <img src="{{ post.image | relative_url }}" class="feature">
         {%- endif %}
-      </a>
       <div class="post-foot">
         <div>
         <time datetime="{{ post.date | date_to_xmlschema }}">{{- post.date | date: date_format -}}</time>
@@ -87,6 +86,7 @@ layout: base
         </div>
         {%- endif %}
       </div>
+      </a>
     </div>
   </article>
   {%- endif %}
