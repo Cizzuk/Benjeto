@@ -9,10 +9,6 @@
   {% assign color = "blue" %}
 {% endif %}
 
-{% if settings.post.highlight == true %}
-  @import "benjeto/highlight.scss";
-{% endif %}
-
 @import
   "benjeto/base.scss",
   "benjeto/custom.scss"

@@ -4,7 +4,6 @@ colorstyle: "blue" #blue, red, green
 # Set darkmode | ダークモードを設定
 darkmode: "false" #allow, true, false
 
-
 # If true, round the icon. | trueの場合、アイコンを丸くします。
 round_icon: true
 
