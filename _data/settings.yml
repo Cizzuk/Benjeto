@@ -1,8 +1,8 @@
 ##### Website settings #####
 # Select theme color | テーマカラーを選択
-colorstyle: "green" #blue, red, green
+colorstyle: "blue" #blue, red, green
 # Set darkmode | ダークモードを設定
-darkmode: "allow" #allow, true, false
+darkmode: "false" #allow, true, false
 
 
 # If true, round the icon. | trueの場合、アイコンを丸くします。
