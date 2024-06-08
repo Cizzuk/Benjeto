@@ -14,6 +14,9 @@ document.addEventListener('DOMContentLoaded', function () {
             img.alt = '{{ texts.share }}';
 
             button.addEventListener('click', async function () {
+                event.preventDefault();
+                event.stopPropagation();
+
                 const title = button.getAttribute('data-title');
                 const url = button.getAttribute('data-url');
 
@@ -30,6 +33,9 @@ document.addEventListener('DOMContentLoaded', function () {
             button.style.display = 'inline-block';
 
             button.addEventListener('click', function () {
+                event.preventDefault();
+                event.stopPropagation();
+
                 const url = button.getAttribute('data-url');
 
                 navigator.clipboard.writeText(url).then(() => {

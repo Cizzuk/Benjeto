@@ -39,6 +39,10 @@ h2 {
 
 a {
   color: var(--link);
+  transition: color 0.1s;
+  &:hover, &:focus {
+    color: var(--linkhover);
+  }
 }
 
 i {
@@ -352,7 +356,6 @@ div.header {
 header.home {
   margin: 0;
   padding-bottom: 8px;
-  border-bottom: 2px solid var(--border);
   ul.exlink {
     display: flex;
     flex-wrap: wrap;
@@ -434,29 +437,34 @@ header.home {
 }
 
 section.post-list {
-  margin: 16px 0;
+  margin: 8px 0;
   list-style: none;
+  border-top: 2px solid var(--border);
   article.post {
     display: block;
-    margin: 16px 0;
+    margin: 0;
     padding: 0;
     h2 {
       font-size: 1.2em;
       margin: 12px 0 6px;
+      border-bottom: none;
     }
     div.post-box {
       display: block;
-      padding: 8px 24px 4px;
       color: var(--text);
-      background: var(--boxbg);
-      border-radius: 16px;
+      border-bottom: 1.5px solid var(--border);
       transition: background 0.2s;
       &:has(a:hover) {
         background: var(--boxbglight);
       }
       a {
+        display: block;
+        padding: 8px 16px;
         color: var(--text);
         text-decoration: none;
+        &:hover, &:focus {
+          color: var(--linkhover);
+        }
       }
     }
 	img.feature {
@@ -471,9 +479,8 @@ section.post-list {
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
-      border-top: 1px solid var(--border);
-      margin-top: 12px;
-      padding: 2px 0;
+      margin-top: 8px;
+      padding-top: 2px;
       time {
         display: inline-block;
         color: var(--gray);
@@ -483,7 +490,7 @@ section.post-list {
       }
       button.shareBtn {
         &:hover, &.disabled {
-          background: var(--boxbglight);
+          background: var(--boxbg);
           & .icon {
             opacity: 1;
           }
@@ -515,7 +522,6 @@ section.paginate {
     min-width: 64px
   }
   a {
-    color: var(--link);
     background: var(--bg);
     text-decoration: none;
     transition: background 0.2s;

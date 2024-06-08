@@ -31,7 +31,7 @@ feed:
 pagination:
   enabled: true
   # Maximum number of posts to be displayed on home page.
-  per_page: 2
+  per_page: 3
   permalink: '/pages/:num/'
   sort_reverse: true
 
