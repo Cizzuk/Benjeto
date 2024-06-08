@@ -67,7 +67,7 @@ layout: base
         {%- endif %}
         {%- if post.images %}
         {%- for entry in post.images -%}
-        <img class="feature" src="{{ entry.url | relative_url }}"{% if entry.alt %} alt="{{ entry.alt }}"{% endif %}>
+        <img class="feature{% if entry.size > 1 %} multi{% endif %}" src="{{ entry.url | relative_url }}"{% if entry.alt %} alt="{{ entry.alt }}"{% endif %}>
         {%- endfor -%}
         {%- elsif post.image %}
         <img class="feature" src="{{ post.image | relative_url }}"{% if post.image_alt %} alt="{{ post.image_alt }}"{% endif %}>

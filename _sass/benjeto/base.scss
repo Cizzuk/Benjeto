@@ -471,10 +471,13 @@ section.post-list {
       display: inline-block;
       vertical-align: bottom;
       width: auto;
-	  max-width: 100%;
+	  max-width: calc(100% - 8px);
       max-height: 200px;
       border-radius: 8px;
       margin: 4px;
+    }
+    img.feature.multi {
+      max-width: calc(50% - 8px);
     }
     .post-foot {
       display: flex;
@@ -644,9 +647,13 @@ div.miniprof {
     border-radius: 0;
   }
 }
+
 @media only screen and (max-width:200px) {
   body {
     width: 200px;
+  }
+  section.post-list article.post img.feature.multi {
+    max-width: calc(100% - 8px);
   }
 }
 
