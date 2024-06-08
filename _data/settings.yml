@@ -2,7 +2,9 @@
 # Select theme color | テーマカラーを選択
 colorstyle: "blue" #blue, red, green
 # Set darkmode | ダークモードを設定
-darkmode: "false" #allow, true, false
+darkmode: "allow" #allow, true, false
+# Highlight color to code in the post
+highlight: true
 
 # If true, round the icon. | trueの場合、アイコンを丸くします。
 round_icon: true
@@ -56,8 +58,6 @@ home:
 post:
   # Show RSS subscribe button.
   subscribe_button: true
-  # Highlight color to code in the post
-  highlight: true
   # Show your profile in footer.
   footer_profile: "article" #true, false, article
   # Set the font on the article to serif
