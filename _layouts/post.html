@@ -8,10 +8,12 @@ layout: base
 {%- if page.title != "" -%}
   <h1>{{ page.title }}</h1>
 {%- endif -%}
+{%- if page.date %}
 {%- assign date_format = page.date_format | default: texts.date_format | default: "%Y-%m-%d" -%}
 <time datetime="{{ page.date | date_to_xmlschema }}">
   {{- page.date | date: date_format -}}
 </time>
+{%- endif -%}
 {%- if page.tag -%}
 {%- for entry in page.tag -%}
 <span class="tag">{{ entry }}</span>
@@ -26,7 +28,7 @@ layout: base
 </span>
 {%- endif %}
 </header>
-<article{% if settings.post.article_serif == true %} class="serif"{% endif %}>
+<article class="pagebox{% if settings.post.article_serif == true %} serif{% endif %}">
 
 {{ content }}
 </article>

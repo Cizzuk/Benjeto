@@ -3,12 +3,6 @@
 {%- assign profile = site.data.profile -%}
 {%- assign settings = site.data.settings -%}
 
-{% if settings.colorstyle == "blue" or settings.colorstyle == "red" or settings.colorstyle == "green" %}
-  {% assign color = settings.colorstyle %}
-{% else %}
-  {% assign color = "blue" %}
-{% endif %}
-
 {% if settings.highlight == true %}
   @import "benjeto/highlight.scss";
 {% endif %}
@@ -19,13 +13,12 @@
 ;
 
 {% if settings.darkmode == "true" %}
-    @import "benjeto/{{ color }}-dark.scss";
-    @import "benjeto/dark.scss";
+  @import "benjeto/dark.scss";
 {% else %}
-  @import "benjeto/{{ color }}.scss";
+  @import "benjeto/light.scss";
   {% if settings.darkmode == "allow" %}
 	@media(prefers-color-scheme:dark) {
-      @import "benjeto/{{ color }}-dark.scss";
+      @import "benjeto/light.scss";
       @import "benjeto/dark.scss";
 	}
   {% endif %}

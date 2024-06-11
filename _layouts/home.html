@@ -56,7 +56,7 @@ layout: base
   {%- assign date_format = page.date_format | default: texts.date_format | default: "%Y-%m-%d" -%}
   {%- for post in posts limit:max_posts -%}
   {%- if post.hidden != true %}
-  <article class="post">
+  <article class="post pagebox">
     <div class="post-box">
       <a href="{{ post.url | relative_url }}">
         {%- if post.title != "" %}

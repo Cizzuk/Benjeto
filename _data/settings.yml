@@ -1,6 +1,4 @@
 ##### Website settings #####
-# Select theme color | テーマカラーを選択
-colorstyle: "blue" #blue, red, green
 # Set darkmode | ダークモードを設定
 darkmode: "false" #allow, true, false
 # Highlight color to code in the post

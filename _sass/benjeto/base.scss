@@ -20,6 +20,17 @@ main, article {
   width: 100%;
   padding: 0 16px 16px;
 }
+.pagebox {
+  background: var(--page);
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  & *:first-child {
+    margin-top: 0;
+  }
+  & *:last-child {
+    margin-bottom: 0;
+  }
+}
 article:not(.post) {
   font-size: 1.1rem;
 }
@@ -316,7 +327,7 @@ iframe.youtube, iframe.nicovideo, iframe.mastodon-embed{
 }
 
 header.post {
-  margin: 32px 16px;
+  margin: 32px 16px 16px;
   h1 {
     font-size: 2em;
     margin: 24px 0 8px;
@@ -344,6 +355,7 @@ div.header {
   aspect-ratio: 5 / 1;
   margin-bottom: -8px;
   img {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     background: var(--boxbg);
     vertical-align: bottom;
     margin: 0;
@@ -368,6 +380,7 @@ header.home {
       a {
         color: var(--link);
         background: var(--boxbg);
+        border: 1px solid var(--border);
         border-radius: 4px;
         padding: 4px 6px;
         margin: 0;
@@ -443,8 +456,12 @@ section.post-list {
   border-top: 2px solid var(--border);
   article.post {
     display: block;
-    margin: 0;
+    margin: 16px 0;
     padding: 0;
+    transition: background 0.2s;
+    &:has(a:hover) {
+      background: var(--boxbglight);
+    }
     h2 {
       font-size: 1.2em;
       margin: 12px 0 6px;
@@ -453,11 +470,6 @@ section.post-list {
     div.post-box {
       display: block;
       color: var(--text);
-      border-bottom: 1.5px solid var(--border);
-      transition: background 0.2s;
-      &:has(a:hover) {
-        background: var(--boxbglight);
-      }
       a {
         display: block;
         padding: 8px 16px;
@@ -528,7 +540,6 @@ section.paginate {
     min-width: 64px
   }
   a {
-    background: var(--bg);
     text-decoration: none;
     transition: background 0.2s;
     &:hover, &:focus {
@@ -589,6 +600,7 @@ div.miniprof {
         border-radius: 4px;
         vertical-align: middle;
         margin-inline-end: 6px;
+        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
       }
       span {
         margin: 0;
@@ -614,7 +626,7 @@ div.miniprof {
     }
   }
   &.box {
-    margin: 0 auto;
+    margin: 24px auto 0;
     padding: 20px 24px 4px;
     border: 2px solid var(--border);
     max-width: 700px;
