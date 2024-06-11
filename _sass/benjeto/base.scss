@@ -98,7 +98,7 @@ blockquote:not(.tiktok-embed) {
 }
 
 code {
-  background: var(--boxbg);
+  background: var(--boxbglight);
   border: 1px solid var(--border);
   border-radius: 2px;
   padding: 1px 5px;
@@ -379,7 +379,7 @@ header.home {
       margin: 4px;
       a {
         color: var(--link);
-        background: var(--boxbg);
+        background: var(--boxbglight);
         border: 1px solid var(--border);
         border-radius: 4px;
         padding: 4px 6px;

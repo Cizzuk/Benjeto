@@ -1,18 +1,18 @@
 :root {
   color-scheme:dark;
   --bg: #000;
-  --page: #1a2028;
+  --page: #1a1c28;
   --text: #eee;
   --gray: #999;
   --head: #fff;
   --link: #00b2ff;
   --linkhover: #a0d0ff;
-  --boxbg: #233043;
+  --boxbg: #2a3550;
   --boxbglight: #222a38;
-  --border: #456;
+  --border: #457;
 }
 .menu-btn:hover, .menu-btn:focus {
-  filter: brightness(0.8);
+  filter: brightness(0.7);
 }
 header.home ul.exlink li {
   a:hover, a:focus {
@@ -20,7 +20,7 @@ header.home ul.exlink li {
   }
 }
 #overlay {
-  background: rgba(127, 127, 127, 0.3);
+  background: rgba(191, 191, 191, 0.3);
 }
 .icon {
   filter: invert(1);
