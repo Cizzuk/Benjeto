@@ -355,7 +355,6 @@ div.header {
   aspect-ratio: 5 / 1;
   margin-bottom: -8px;
   img {
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     background: var(--boxbg);
     vertical-align: bottom;
     margin: 0;
@@ -475,7 +474,7 @@ section.post-list {
         padding: 8px 16px;
         color: var(--text);
         text-decoration: none;
-        &:hover, &:focus {
+        &:hover {
           color: var(--linkhover);
         }
       }
@@ -507,7 +506,7 @@ section.post-list {
         margin-inline-end: 4px;
       }
       button.shareBtn {
-        &:hover, &.disabled {
+        &:hover, &:focus, &.disabled {
           background: var(--boxbg);
           & .icon {
             opacity: 1;
@@ -600,7 +599,6 @@ div.miniprof {
         border-radius: 4px;
         vertical-align: middle;
         margin-inline-end: 6px;
-        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
       }
       span {
         margin: 0;
