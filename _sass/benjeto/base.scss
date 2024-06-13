@@ -377,13 +377,6 @@ span.license {
   font-size: 0.9em;
   margin: 4px 8px 0;
   text-align: end;
-  a {
-    color: var(--link);
-    text-decoration: none;
-    &:hover, &:focus {
-      text-decoration: underline;
-    }
-  }
 }
 
 div.header {
