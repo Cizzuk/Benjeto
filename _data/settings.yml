@@ -1,6 +1,6 @@
 ##### Website settings #####
 # Set darkmode | ダークモードを設定
-darkmode: "false" #allow, true, false
+darkmode: "allow" #allow, true, false
 # Highlight color to code in the post
 highlight: true
 
