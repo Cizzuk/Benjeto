@@ -8,17 +8,32 @@ layout: base
 {%- if page.title != "" -%}
   <h1>{{ page.title }}</h1>
 {%- endif -%}
-{%- if page.date %}
-{%- assign date_format = page.date_format | default: texts.date_format | default: "%Y-%m-%d" -%}
-<time datetime="{{ page.date | date_to_xmlschema }}">
-  {{- page.date | date: date_format -}}
-</time>
+{%- if page.category %}
+<span class="category">
+{%- for category in page.category -%}
+{{ category }}
+{%- if forloop.last == false %}, {% endif -%}
+{%- endfor -%}
+</span>
 {%- endif -%}
 {%- if page.tag -%}
 {%- for entry in page.tag -%}
 <span class="tag">{{ entry }}</span>
 {%- endfor -%}
 {%- endif -%}
+{%- if page.date or page.update %}
+<div class="time">
+{%- assign date_format = page.date_format | default: texts.date_format | default: "%Y-%m-%d" -%}
+<time datetime="{{ page.date | date_to_xmlschema }}">
+  {{- texts.upload }} {{ page.date | date: date_format -}}
+</time>
+{%- if page.update %}
+<time datetime="{{ page.update | date_to_xmlschema }}">
+  {{- texts.update }} {{ page.update | date: date_format -}}
+</time>
+{%- endif %}
+</div>
+{%- endif %}
 {%- if page.author %}
 <span class="author" itemprop="name">
 {%- for author in page.author -%}
@@ -32,3 +47,12 @@ layout: base
 
 {{ content }}
 </article>
+{%- if page.license %}
+<span class="license" itemprop="license">
+{% if page.license.url %}
+{{ texts.post_license }}<a href="{{ page.license.url }}" target="_blank">{{ page.license.name }}</a>
+{% else %}
+{{ texts.post_license }}{{ page.license }}
+{% endif %}
+</span>
+{%- endif %}

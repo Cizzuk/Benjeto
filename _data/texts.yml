@@ -6,6 +6,10 @@ close: "Close" #Close
 paginate_back: "Back" #Back
 paginate_next: "Next" #Next
 
+upload: "Posted" #Posted
+update: "Last updated" #Last updated
+post_license: "This post is licensed under: " #This post is licensed under
+
 share: "Share" #Share
 copy: "Copy" #Copy
 copied: "Copied!" #Copied!

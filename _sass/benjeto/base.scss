@@ -338,22 +338,46 @@ header.post {
   margin: 32px 16px 16px;
   h1 {
     font-size: 2em;
-    margin: 24px 0 8px;
-  }
-  time {
-    display: inline-block;
-    color: var(--gray);
-    font-size: 0.9em;
-    margin: 2px 4px;
+    margin: 20px 0 4px;
   }
   span.tag {
-    margin: 2px 4px;
+    margin: 4px 4px 0;
+  }
+  span.category {
+    display: inline-block;
+    font-size: 1em;
+    font-weight: 500;
+    margin: 4px 4px 0;
+  }
+  div.time {
+    display: flex;
+    align-items: center;
+    margin: 4px 4px 0;
+    time {
+      color: var(--gray);
+      font-size: 0.9em;
+      margin-inline-end: 12px;
+    }
   }
   span.author {
     display: block;
     color: var(--gray);
     font-size: 0.9em;
-    margin: 2px 4px;
+    margin: 4px 4px 0;
+  }
+}
+span.license {
+  display: block;
+  color: var(--gray);
+  font-size: 0.9em;
+  margin: 4px 8px 0;
+  text-align: end;
+  a {
+    color: var(--link);
+    text-decoration: none;
+    &:hover, &:focus {
+      text-decoration: underline;
+    }
   }
 }
 
@@ -509,8 +533,7 @@ section.post-list {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      flex-wrap: wrap;
-      margin-top: -4px;
+      margin-top: -2px;
       .meta {
         flex: 1 auto;
         a {
@@ -518,12 +541,28 @@ section.post-list {
           padding: 0 20px 4px;
         }
       }
+      span.category {
+        display: inline-block;
+        font-size: 0.9em;
+        font-weight: 500;
+        color: var(--gray);
+        margin: 0;
+        margin-inline-end: 8px;
+      }
       time {
         display: inline-block;
         color: var(--gray);
         font-size: 0.95em;
-        margin: 6px 0;
-        margin-inline-end: 4px;
+        margin: 0;
+        margin-inline-end: 8px;
+      }
+      div.tags {
+        display: inline-block;
+        margin: 0;
+        span.tag {
+          margin: 3px 0;
+          margin-inline-end: 6px;
+        }
       }
       button.shareBtn {
         flex: 0 0 auto;
@@ -606,6 +645,7 @@ footer {
 }
 
 div.miniprof {
+  margin: 16px 0;
   div.profline {
   display: flex;
   justify-content: space-between;
