@@ -264,8 +264,11 @@ button.shareBtn {
   background: none;
   border: none;
   border-radius: 100px;
-  padding: 5px 10px;
+  aspect-ratio: 1 / 1;
+  height: 34px;
+  padding: 0 6px;
   margin: 0;
+  text-align: end;
   transition: background 0.2s;
   &:hover, &.disabled {
     background: var(--boxbg);
@@ -274,6 +277,7 @@ button.shareBtn {
     width: 22px;
     height: 22px;
     margin: 0;
+    vertical-align: bottom;
   }
   & .shareMsg {
     margin: 0;
@@ -283,6 +287,7 @@ button.shareBtn {
     vertical-align: middle;
   }
   &.disabled {
+    aspect-ratio: initial;
     pointer-events: none;
   }
 }
@@ -456,10 +461,10 @@ section.post-list {
   margin: 8px 0;
   list-style: none;
   border-top: 2px solid var(--border);
-  article.post {
+  .post {
     display: block;
     margin: 16px 0;
-    padding: 4px 20px;
+    padding: 4px 0;
     transition: background 0.2s;
     &:has(a:hover) {
       background: var(--boxbglight);
@@ -467,6 +472,7 @@ section.post-list {
     h2 {
       font-size: 1.2em;
       margin: 6px 0;
+      padding: 0 20px;
       border-bottom: none;
     }
     div.post-box {
@@ -482,25 +488,36 @@ section.post-list {
         }
       }
     }
-	img.feature {
-      display: inline-block;
-      vertical-align: bottom;
-      width: auto;
-	  max-width: 100%;
-      max-height: 200px;
-      border-radius: 8px;
-      padding: 4px;
+    &:has(.post-foot .meta:hover) div.post-box a {
+      color: var(--linkhover);
     }
-    img.feature.multi {
-      max-width: 50%;
+	.feature {
+      display: flex;
+      overflow: auto;
+      align-items: center;
+      padding: 0 20px;
+      img {
+        width: auto;
+	    max-width: 100%;
+        max-height: 200px;
+        padding: 4px;
+        border-radius: 8px;
+        vertical-align: middle;
+      }
     }
     .post-foot {
       display: flex;
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
-      padding-bottom: 4px;
       margin-top: -4px;
+      .meta {
+        flex: 1 auto;
+        a {
+          width: 100%;
+          padding: 0 20px 4px;
+        }
+      }
       time {
         display: inline-block;
         color: var(--gray);
@@ -509,6 +526,8 @@ section.post-list {
         margin-inline-end: 4px;
       }
       button.shareBtn {
+        flex: 0 0 auto;
+        margin-inline-end: 8px;
         &:hover, &:focus, &.disabled {
           background: var(--boxbg);
           & .icon {
@@ -522,7 +541,7 @@ section.post-list {
       }
     }
     p {
-      margin: 4px 0;
+      margin: 4px 20px;
     }
   }
 }
@@ -646,6 +665,7 @@ div.miniprof {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    align-items: center;
     button.shareBtn {
       margin: 0 4px;
     }
