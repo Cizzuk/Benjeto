@@ -8,7 +8,7 @@
 {%- else -%}
 {%- assign title = site.title -%}
 {%- endif -%}
-{%- assign icon = page.image | default: settings.head.siteicon | default: profile.icon -%}
+{%- assign icon = page.icon | default: page.image | default: settings.head.siteicon | default: profile.icon -%}
 {%- assign description = page.description | default: site.description -%}
 <head>
   <meta charset="utf-8">
@@ -16,14 +16,22 @@
   <link rel="stylesheet" href="{{ "/assets/style.css" | relative_url }}">
   <title>{{ title }}</title>
   {% if page.ogp == true or settings.head.ogp == true -%}
+  {% if page.ogp and page.layout == post -%}
+  <meta name="twitter:card" content="summary_large_image">
+  {% else -%}
   <meta name="twitter:card" content="summary">
+  {% endif -%}
   <meta property="og:url" content="{{ site.url }}{{ page.url }}">
   <meta property="og:title" content="{{ title }}">
+  <meta property="og:site_name" content="{{ site.title }}">
   {% if description -%}
   <meta property="og:description" content="{{ description }}">
   {% endif -%}
-  {% if icon -%}
-  <meta property="og:image" content="{{ site.url }}{{ icon }}">
+  {% if page.ogp or icon -%}
+  <meta property="og:image" content="{{ site.url }}{{ page.ogp | default: icon }}">
+  {% endif -%}
+  {% if page.ogp_alt -%}
+  <meta property="og:image:alt" content="{{ page.ogp_alt }}">
   {% endif -%}
   {% if page.type -%}
   <meta property="og:type" content="{{ page.type }}">
@@ -37,7 +45,15 @@
   {% if settings.head.x_id -%}
   <meta content="{{ settings.head.x_id }}" name="twitter:site">
   {% endif -%}
-  {%- endif -%}
+  {% if page.layout == "post" -%}
+  {% if page.date -%}
+  <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
+  {% endif -%}
+  {% if page.update -%}
+  <meta property="article:modified_time" content="{{ page.update | date_to_xmlschema }}">
+  {% endif -%}
+  {% endif -%}
+  {% endif -%}
   
   {% if description -%}
   <meta name="description" content="{{ description }}">
@@ -56,7 +72,7 @@
   {% endif -%}
 
   {% if page.itunes_app -%}
-    <meta name="apple-itunes-app" content="app-id={{ page.itunes_app }}">
+  <meta name="apple-itunes-app" content="app-id={{ page.itunes_app }}">
   {% endif -%}
 
   {% if page.layout == "home" or page.layout == "post" -%}
