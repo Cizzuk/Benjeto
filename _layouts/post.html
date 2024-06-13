@@ -8,19 +8,8 @@ layout: base
 {%- if page.title != "" -%}
   <h1>{{ page.title }}</h1>
 {%- endif -%}
-{%- if page.category %}
-<span class="category">
-{%- for category in page.category -%}
-{{ category }}
-{%- if forloop.last == false %}, {% endif -%}
-{%- endfor -%}
-</span>
-{%- endif -%}
-{%- if page.tag -%}
-{%- for entry in page.tag -%}
-<span class="tag">{{ entry }}</span>
-{%- endfor -%}
-{%- endif -%}
+{%- include category.html category=page.category %}
+{%- include tags.html tags=page.tag %}
 {%- if page.date or page.update %}
 <div class="time">
 {%- assign date_format = page.date_format | default: texts.date_format | default: "%Y-%m-%d" -%}

@@ -1,0 +1,8 @@
+{%- if include.category -%}
+<span class="category">
+{%- for category in include.category -%}
+{{ category }}
+{%- if forloop.last == false %}, {% endif -%}
+{%- endfor -%}
+</span>
+{%- endif -%}

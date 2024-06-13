@@ -340,8 +340,12 @@ header.post {
     font-size: 2em;
     margin: 20px 0 4px;
   }
-  span.tag {
-    margin: 4px 4px 0;
+  div.tags {
+    display: inline-block;
+    margin: 0 4px;
+    span.tag {
+      margin: 4px 4px 0;
+    }
   }
   span.category {
     display: inline-block;
@@ -352,6 +356,7 @@ header.post {
   div.time {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     margin: 4px 4px 0;
     time {
       color: var(--gray);
