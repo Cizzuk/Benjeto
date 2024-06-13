@@ -25,6 +25,18 @@
   {% if icon -%}
   <meta property="og:image" content="{{ site.url }}{{ icon }}">
   {% endif -%}
+  {% if page.type -%}
+  <meta property="og:type" content="{{ page.type }}">
+  {% elsif page.layout == "post" -%}
+  <meta property="og:type" content="article">
+  {% elsif page.layout == "home" -%}
+  <meta property="og:type" content="profile">
+  {% else -%}
+  <meta property="og:type" content="website">
+  {% endif -%}
+  {% if settings.head.x_id -%}
+  <meta content="{{ settings.head.x_id }}" name="twitter:site">
+  {% endif -%}
   {%- endif -%}
   
   {% if description -%}
