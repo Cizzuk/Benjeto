@@ -18,6 +18,8 @@ head:
   noindex: false
   # If true, website previews will be displayed on social media, etc.
   ogp: true
+  # If ogp is true, you can set your X account ID starting with @.
+  x_id: 
   # Use profile icon if blank.
   favicon: 
   siteicon: 
