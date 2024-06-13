@@ -14,7 +14,7 @@ layout: base
 <div class="time">
 {%- assign date_format = page.date_format | default: texts.date_format | default: "%Y-%m-%d" -%}
 <time datetime="{{ page.date | date_to_xmlschema }}">
-  {{- texts.upload }} {{ page.date | date: date_format -}}
+  {{ page.date | date: date_format -}}
 </time>
 {%- if page.update %}
 <time datetime="{{ page.update | date_to_xmlschema }}">
