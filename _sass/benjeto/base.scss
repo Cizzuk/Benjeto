@@ -82,6 +82,9 @@ table {
   th {
     background: var(--boxbg);
   }
+  tr:nth-child(odd) {
+    background: var(--page);
+  }
   tr:nth-child(even) {
     background: var(--boxbglight);
   }
