@@ -65,32 +65,38 @@ layout: base
         {%- if post.title == "" or settings.home.show_excerpts == true %}
         {{ post.excerpt }}
         {%- endif %}
-        {%- if post.images %}
-        {%- for entry in post.images -%}
-        <img class="feature{% if entry.size > 1 %} multi{% endif %}" src="{{ entry.url | relative_url }}"{% if entry.alt %} alt="{{ entry.alt }}"{% endif %}>
-        {%- endfor -%}
+        {%- if post.feature %}
+        <div class="feature">
+          {%- for entry in post.images -%}
+          <img src="{{ entry.url | relative_url }}"{% if entry.alt %} alt="{{ entry.alt }}"{% endif %}>
+          {%- endfor -%}
+        </div>
         {%- elsif post.image %}
-        <img class="feature" src="{{ post.image | relative_url }}"{% if post.image_alt %} alt="{{ post.image_alt }}"{% endif %}>
+        <div class="feature">
+          <img src="{{ post.image | relative_url }}"{% if post.image_alt %} alt="{{ post.image_alt }}"{% endif %}>
+        </div>
         {%- endif %}
+      </a>
       <div class="post-foot">
-        <div>
-        <time datetime="{{ post.date | date_to_xmlschema }}">{{- post.date | date: date_format -}}</time>
-        {%- if post.tag -%}
-        {%- for entry in post.tag -%}
-        <span class="tag">{{ entry }}</span>
-        {%- endfor -%}
-        {%- endif -%}
+        <div class="meta">
+        <a href="{{ post.url | relative_url }}">
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{- post.date | date: date_format -}}</time>
+          {%- if post.tag -%}
+          {%- for entry in post.tag -%}
+          <span class="tag">{{ entry }}</span>
+          {%- endfor -%}
+          {%- endif -%}
+        </a>
         </div>
         {%- if settings.home.share_button == true %}
         <div>
-          <button class="shareBtn" id="shareButton" data-title="{{ post.title }}" data-url="{{ site.url }}{{ post.url | relative_url }}" role="button" title="{{ texts.share }}">
+          <button class="shareBtn" id="shareButton" data-title="{{ post.title | default: post.excerpt }}" data-url="{{ post.url | relative_url }}" role="button" title="{{ texts.share }}">
             <span class="shareMsg"></span>
             <img class="icon" src="{{ "/assets/icon/clip.svg" | relative_url }}" alt="{{ texts.copy }}">
           </button>
         </div>
         {%- endif %}
       </div>
-      </a>
     </div>
   </article>
   {%- endif %}

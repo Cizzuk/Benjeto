@@ -3,6 +3,8 @@
 
 {%- if page.title != "" and page.layout != "home" -%}
 {%- capture title -%}{{ page.title }} - {{ site.title }}{% endcapture %}
+{%- elsif page.layout == "post" and page.title= "" -%}
+{%- capture title -%}{{ page.excerpt | strip_html }} - {{ site.title }}{% endcapture %}
 {%- else -%}
 {%- assign title = site.title -%}
 {%- endif -%}

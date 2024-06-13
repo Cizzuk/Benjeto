@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
     shareButtons.forEach(button => {
         const img = button.querySelector('img');
         const shareMsg = button.querySelector('.shareMsg');
+        const url = window.location.protocol + window.location.host + button.getAttribute('data-url');
 
         if (navigator.share) {
             button.style.display = 'inline-block';
@@ -18,7 +19,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 event.stopPropagation();
 
                 const title = button.getAttribute('data-title');
-                const url = button.getAttribute('data-url');
 
                 try {
                     await navigator.share({
@@ -35,8 +35,6 @@ document.addEventListener('DOMContentLoaded', function () {
             button.addEventListener('click', function () {
                 event.preventDefault();
                 event.stopPropagation();
-
-                const url = button.getAttribute('data-url');
 
                 navigator.clipboard.writeText(url).then(() => {
                     button.classList.add('disabled');
