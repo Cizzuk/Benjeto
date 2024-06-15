@@ -42,60 +42,29 @@ layout: base
   <br><a href="https://benjeto.tsg0o0.com/2024/05/10/how-to-setup.html">See Benjeto documentation for more information.</a>
   </p>
 {%- endif -%}
-{{ content }}
-{%- if site.paginate or site.pagination -%}
+
+{%- if page.tag %}
+  {%- assign posts = site.tags[page.tag] -%}
+  {%- assign max_posts = settings.home.max_posts -%}
+{%- else -%}
+{%- if site.paginate or site.pagination.enabled == true -%}
   {%- assign posts = paginator.posts -%}
 {%- else -%}
   {%- assign posts = site.posts -%}
-  {%- assign max_posts = settings.home.max-posts -%}
+  {%- assign max_posts = settings.home.max_posts -%}
 {%- endif -%}
 {%- endif -%}
 
-{%- if posts.size > 0 %}
+
+{%- if posts.size > 0 or content %}
 <section class="post-list" role="feed">
-  {%- assign date_format = page.date_format | default: texts.date_format | default: "%Y-%m-%d" -%}
+  {%- if page.pinned_post == true %}
+  {% include postbox-pin.html content=content url=page.pinned_url feature=pinned_feature %}
+  {% endif %}
+  
   {%- for post in posts limit:max_posts -%}
   {%- if post.hidden != true %}
-  <article class="post pagebox">
-    <div class="post-box">
-      <a href="{{ post.url | relative_url }}">
-        {%- if post.title != "" %}
-        <h2>{{ post.title | escape }}</h2>
-        {%- endif %}
-        {%- if post.title == "" or settings.home.show_excerpts == true %}
-        {{ post.excerpt }}
-        {%- endif %}
-        {%- if post.feature %}
-        <div class="feature">
-          {%- for entry in post.images -%}
-          <img src="{{ entry.url | relative_url }}"{% if entry.alt %} alt="{{ entry.alt }}"{% endif %}>
-          {%- endfor -%}
-        </div>
-        {%- elsif post.image %}
-        <div class="feature">
-          <img src="{{ post.image | relative_url }}"{% if post.image_alt %} alt="{{ post.image_alt }}"{% endif %}>
-        </div>
-        {%- endif %}
-      </a>
-      <div class="post-foot">
-        <div class="meta">
-        <a href="{{ post.url | relative_url }}">
-          <time datetime="{{ post.date | date_to_xmlschema }}">{{- post.date | date: date_format -}}</time>
-          {%- include category.html category=post.category -%}
-          {%- include tags.html tags=post.tag -%}
-        </a>
-        </div>
-        {%- if settings.home.share_button == true %}
-        <div>
-          <button class="shareBtn" id="shareButton" data-title="{{ post.title | default: post.excerpt | strip_html }}" data-url="{{ post.url | relative_url }}" role="button" title="{{ texts.share }}">
-            <span class="shareMsg"></span>
-            <img class="icon" src="{{ "/assets/icon/clip.svg" | relative_url }}" alt="{{ texts.copy }}">
-          </button>
-        </div>
-        {%- endif %}
-      </div>
-    </div>
-  </article>
+  {%- include postbox-feed.html post=post %}
   {%- endif %}
 {%- endfor %}
 </section>
