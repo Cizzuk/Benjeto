@@ -1,0 +1,20 @@
+{%- assign content = include.content -%}
+{%- assign url = include.url -%}
+{%- assign feature = include.feature -%}
+{%- assign texts = site.texts | default: site.text | default: site.data.texts -%}
+{%- assign settings = site.settings | default: site.data.settings -%}
+
+<article class="post pagebox">
+    <div class="post-box">
+      <a href="{{ url }}">
+        {{ content }}
+        {%- if feature %}
+        <div class="feature">
+          {%- for entry in post.images -%}
+          <img src="{{ entry.url | relative_url }}"{% if entry.alt %} alt="{{ entry.alt }}"{% endif %}>
+          {%- endfor -%}
+        </div>
+        {%- endif %}
+      </a>
+    </div>
+  </article>
