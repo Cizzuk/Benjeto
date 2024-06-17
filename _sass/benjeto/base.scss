@@ -514,8 +514,6 @@ section.post-list {
       color: var(--linkhover);
     }
 	.media {
-      display: flex;
-      overflow: auto;
       align-items: center;
       padding: 0 20px;
       * {
@@ -525,6 +523,12 @@ section.post-list {
         padding: 4px;
         border-radius: 8px;
         vertical-align: middle;
+      }
+      audio {
+        width: calc(100% - 8px);
+        height: auto;
+        padding: 0;
+        margin: 4px;
       }
     }
     .post-foot {
