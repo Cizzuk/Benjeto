@@ -513,15 +513,15 @@ section.post-list {
     &:has(.post-foot .meta:hover) div.post-box a {
       color: var(--linkhover);
     }
-	.feature {
+	.media {
       display: flex;
       overflow: auto;
       align-items: center;
       padding: 0 20px;
-      img {
+      * {
         width: auto;
 	    max-width: 100%;
-        max-height: 200px;
+        max-height: 240px;
         padding: 4px;
         border-radius: 8px;
         vertical-align: middle;

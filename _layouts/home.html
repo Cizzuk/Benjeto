@@ -58,10 +58,7 @@ layout: base
 
 {%- if posts.size > 0 or content %}
 <section class="post-list" role="feed">
-  {%- if page.pinned_post == true %}
-  {% include postbox-pin.html content=content url=page.pinned_url feature=pinned_feature %}
-  {% endif %}
-  
+  {{ content }}
   {%- for post in posts limit:max_posts -%}
   {%- if post.hidden != true %}
   {%- include postbox-feed.html post=post %}

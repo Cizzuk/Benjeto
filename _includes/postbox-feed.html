@@ -11,18 +11,29 @@
         {%- if post.title == "" or settings.home.show_excerpts == true %}
         {{ post.excerpt }}
         {%- endif %}
-        {%- if post.feature %}
-        <div class="feature">
-          {%- for entry in post.images -%}
-          <img src="{{ entry.url | relative_url }}"{% if entry.alt %} alt="{{ entry.alt }}"{% endif %}>
-          {%- endfor -%}
+        {% if post.image %}
+        <div class="media">
+          <img src="{{ post.image.url | default: post.image | relative_url }}"
+          {% if post.image.alt %} alt="{{ post.image.alt }}"{% endif %}>
         </div>
-        {%- elsif post.image %}
-        <div class="feature">
-          <img src="{{ post.image | relative_url }}"{% if post.image_alt %} alt="{{ post.image_alt }}"{% endif %}>
+        {% endif %}
+        </a>
+        {% if post.video %}
+        <div class="media">
+          <video controlslist="nodownload" controls
+          {% if post.video.title %} title="{{ post.video.title }}"{% endif %}>
+            <source src="{{ post.video.url | default: post.video | relative_url }}"
+          </video>
         </div>
-        {%- endif %}
-      </a>
+        {% endif %}
+        {% if post.audio %}
+        <div class="media">
+          <audio controlslist="nodownload" controls
+          {% if post.audio.title %} title="{{ post.audio.title }}"{% endif %}>
+            <source src="{{ post.audio.url | default: post.audio | relative_url }}"
+          </audio>
+        </div>
+        {% endif %}
       <div class="post-foot">
         <div class="meta">
         <a href="{{ post.url | relative_url }}">
