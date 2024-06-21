@@ -11,17 +11,18 @@
         {%- if post.title == "" or settings.home.show_excerpts == true %}
         {{ post.excerpt }}
         {%- endif %}
-        {% if post.image %}
+        {% if post.image and post.video == nil %}
         <div class="media">
           <img src="{{ post.image.url | default: post.image | relative_url }}"
-          {% if post.image.alt %} alt="{{ post.image.alt }}"{% endif %}>
+          {% if post.image.alt or post.image_alt %} alt="{{ post.image.alt | default: post.image_alt }}"{% endif %}>
         </div>
         {% endif %}
         </a>
         {% if post.video %}
         <div class="media">
           <video controlslist="nodownload" controls
-          {% if post.video.title %} title="{{ post.video.title }}"{% endif %}>
+          {% if post.video.title %} title="{{ post.video.title }}"{% endif %}
+          {% if post.video.poster %} poster="{{ post.video.poster | relative_url }}"{% endif %}>
             <source src="{{ post.video.url | default: post.video | relative_url }}"
           </video>
         </div>
