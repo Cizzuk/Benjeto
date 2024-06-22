@@ -1,0 +1,25 @@
+{%- assign texts = site.data.texts -%}
+<figure class="audio">
+  <figcaption>
+    {% if include.artwork %}
+    <img src="{{ include.artwork | relative_url }}" alt="" class="audio-artwork">
+    {% endif %}
+    <div>
+    {% if include.title %}<b>{{ include.title }}</b><br>{% endif %}
+    {{ include.caption }}
+    {% if include.license %}
+    <br>
+    <span class="license">
+      {{ texts.audio_license }}
+      <a href="{{ include.license_url }}" target="_blank">{{ include.license }}</a>
+    </span>
+    {% endif %}
+    </div>
+  </figcaption>
+  <audio controls
+  {% if include.title %} title="{{ include.title }}" {% endif %}>
+    <source src="{{ include.src | relative_url }}">
+    {{ texts.audio_not_support }}
+  </audio>
+</figure>
+

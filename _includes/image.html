@@ -1,0 +1,16 @@
+{%- assign texts = site.data.texts -%}
+<figure class="image">
+  <img src="{{ include.src | relative_url }}" 
+  {% if include.pixel == true %}class="pixel"{% endif %}
+  {% if include.alt %}alt="{{ include.alt }}"{% endif %}>
+  <figcaption>
+    {{ include.caption }}
+    {% if include.license %}
+      <br>
+      <span class="license">
+        {{ texts.image_license }}
+        <a href="{{ include.license_url }}" target="_blank">{{ include.license }}</a>
+      </span>
+    {% endif %}
+  </figcaption>
+</figure>

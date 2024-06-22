@@ -1,0 +1,22 @@
+{%- assign texts = site.data.texts -%}
+<figure class="video">
+  <video controls
+    {% if include.title %} title="{{ include.title }}" {% endif %}
+    {% if include.poster %} poster="{{ include.poster | relative_url }}" {% endif %}
+  >
+    <source src="{{ include.src | relative_url }}">
+    {{ texts.video_not_support }}
+  </video>
+  <figcaption>
+    {% if include.title %}<b>{{ include.title }}</b><br>{% endif %}
+    {{ include.caption }}
+    {% if include.license %}
+    <br>
+    <span class="license">
+      {{ texts.video_license }}
+      <a href="{{ include.license_url }}" target="_blank">{{ include.license }}</a>
+    </span>
+    {% endif %}
+  </figcaption>
+</figure>
+
