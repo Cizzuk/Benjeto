@@ -4,21 +4,22 @@
 
 <article class="post pagebox">
     <div class="post-box">
-      <a href="{{ post.url | relative_url }}">
-        {%- if post.title != "" %}
-        <h2>{{ post.title | escape }}</h2>
-        {%- endif %}
-        {%- if post.title == "" or settings.home.show_excerpts == true %}
-        {{ post.excerpt }}
-        {%- endif %}
-        {% if post.image and post.video == nil %}
-        <div class="media">
-          <img src="{{ post.image.url | default: post.image | relative_url }}"
-          {% if post.image.alt or post.image_alt %} alt="{{ post.image.alt | default: post.image_alt }}"{% endif %}>
-        </div>
-        {% endif %}
+      <div class="post-excerpt">
+        <a href="{{ post.url | relative_url }}">
+          {%- if post.title != "" %}
+          <h2>{{ post.title | escape }}</h2>
+          {%- endif %}
+          {%- if post.title == "" or settings.home.show_excerpts == true %}
+          {{ post.excerpt }}
+          {%- endif %}
+          {% if post.image and post.video == nil and post.image.hide != true  %}
+          <div class="media">
+            <img src="{{ post.image.url | default: post.image | relative_url }}"
+            {% if post.image.alt or post.image_alt %} alt="{{ post.image.alt | default: post.image_alt }}"{% endif %}>
+          </div>
+          {% endif %}
         </a>
-        {% if post.video %}
+        {% if post.video and post.video.hide != true %}
         <div class="media">
           <video controlslist="nodownload" controls
           {% if post.video.title %} title="{{ post.video.title }}"{% endif %}
@@ -27,7 +28,7 @@
           </video>
         </div>
         {% endif %}
-        {% if post.audio %}
+        {% if post.audio and post.audio.hide != true %}
         <div class="media">
           <audio controlslist="nodownload" controls
           {% if post.audio.title %} title="{{ post.audio.title }}"{% endif %}>
@@ -35,6 +36,7 @@
           </audio>
         </div>
         {% endif %}
+      </div>
       <div class="post-foot">
         <div class="meta">
         <a href="{{ post.url | relative_url }}">
