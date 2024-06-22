@@ -421,6 +421,7 @@ header.home {
         border-radius: 4px;
         padding: 4px 6px;
         margin: 0;
+        text-decoration: none;
         transition: filter 0.15s;
         &:hover, &:focus {
           filter: brightness(0.9);
