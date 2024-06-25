@@ -5,6 +5,7 @@
     {% if include.poster %} poster="{{ include.poster | relative_url }}" {% endif %}
   >
     <source src="{{ include.src | relative_url }}">
+    {{ include.track }}
     {{ texts.video_not_support }}
   </video>
   <figcaption>

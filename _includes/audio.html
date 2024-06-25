@@ -19,6 +19,7 @@
   <audio controls
   {% if include.title %} title="{{ include.title }}" {% endif %}>
     <source src="{{ include.src | relative_url }}">
+    {{ include.track }}
     {{ texts.audio_not_support }}
   </audio>
 </figure>
