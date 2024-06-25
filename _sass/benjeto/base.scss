@@ -485,7 +485,7 @@ header.post {
   margin: 32px 16px 16px;
   h1 {
     font-size: 1.8em;
-    margin: 20px 0 4px;
+    margin: 16px 0 4px;
   }
   div.tags {
     display: inline-block;
@@ -631,14 +631,14 @@ header.home {
   }
 }
 
-section.post-list {
+section.post-list, div.custom-home {
   margin: 8px 0;
   list-style: none;
   border-top: 2px solid var(--border);
   .post {
     display: block;
     margin: 16px 0;
-    padding: 4px 0;
+    padding: 0;
     border: 2px solid var(--page);
     border-radius: 16px;
     transition: border-color 0.2s;
@@ -647,23 +647,25 @@ section.post-list {
     }
     h2 {
       font-size: 1.2em;
-      margin: 4px 0;
+      margin: 0;
+      padding: 0;
       border-bottom: none;
     }
     div.post-box {
       display: block;
       color: var(--text);
-      div.post-excerpt {
-        padding: 0 20px;
-        a {
+      div.post-excerpt, div.post-custom {
+        a.post-link {
           display: block;
-          padding-top: 8px;
+          padding: 10px 20px 0;
           color: var(--text);
           text-decoration: none;
           &:hover {
             color: var(--linkhover);
           }
         }
+      }
+      div.post-excerpt {
         p {
           margin: 0;
           padding: 0;
@@ -679,6 +681,9 @@ section.post-list {
           padding: 0;
           border: none
         }
+      }
+      div.post-custom a.post-link, div.post-custom div.no-link {
+        padding: 10px 20px;
       }
     }
     &:has(.post-foot .meta:hover) div.post-box a {

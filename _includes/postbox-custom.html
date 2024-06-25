@@ -3,10 +3,18 @@
 {%- assign texts = site.texts | default: site.text | default: site.data.texts -%}
 {%- assign settings = site.settings | default: site.data.settings -%}
 
-<article class="post pagebox">
-    <div class="post-box">
-      <a href="{{ url }}">
-        {{ content }}
-      </a>
+<div class="post pagebox">
+  <div class="post-box">
+    <div class="post-custom">
+      {%- if url %}
+        <a href="{{ url }}" class="post-link">
+          {{ content }}
+        </a>
+      {%- else %}
+        <div class="no-link">
+          {{ content }}
+        </div>
+      {%- endif %}
     </div>
-  </article>
+  </div>
+</div>

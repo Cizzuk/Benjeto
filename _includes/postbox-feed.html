@@ -5,7 +5,7 @@
 <article class="post pagebox">
     <div class="post-box">
       <div class="post-excerpt">
-        <a href="{{ post.url | relative_url }}">
+        <a href="{{ post.url | relative_url }}" class="post-link">
           {%- if post.title != "" %}
           <h2>{{ post.title | escape }}</h2>
           {%- endif %}
