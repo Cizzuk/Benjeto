@@ -695,12 +695,10 @@ section.post-list, div.custom-home {
       align-items: center;
       .meta {
         flex: 1 auto;
-        padding: 0 20px 4px;
-        margin-top: 4px;
         a {
           display: inline-block;
           width: 100%;
-          padding: 0;
+          padding: 4px 20px 8px;
         }
       }
       span.category {
