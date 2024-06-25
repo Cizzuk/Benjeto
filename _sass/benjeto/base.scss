@@ -42,14 +42,26 @@ article.serif {
 }
 
 h1, h2, h3 {
-  margin: 32px 0 8px;
-  padding-bottom: 4px;
+  padding-top: 4px;
   color: var(--head);
   line-height: 1.2;
   font-weight: 600;
 }
 h2 {
+  padding: 4px 0;
   border-bottom: 1.5px solid var(--border);
+}
+
+hgroup {
+  padding-bottom: 8px;
+  &:has(h2) {
+    border-bottom: 1.5px solid var(--border);
+  }
+  p, h2, h3, h4, h5, h6 {
+    padding: 0;
+    margin: 0;
+    border-bottom: none;
+  }
 }
 
 a {
@@ -83,16 +95,25 @@ table {
     padding: 8px 16px;
     border: 1px solid var(--border);
   }
-  th {
+  thead, tfoot {
     background: var(--boxbg);
   }
-  tr:nth-child(odd) {
+  tbody tr {
     background: var(--page);
   }
-  tr:nth-child(even) {
+  tbody th {
+    background: var(--boxbglight);
+  }
+  tbody:not(:has(th)) tr:nth-child(even) {
     background: var(--boxbglight);
   }
 }
+
+caption {
+  caption-side: bottom;
+  color: var(--gray);
+}
+
 
 blockquote:not(.tiktok-embed) {
   margin: 16px 0;
@@ -104,14 +125,14 @@ blockquote:not(.tiktok-embed) {
   }
 }
 
+kbd, pre, code, code * {
+  font-family: monospace, system-ui, sans-serif;
+}
 code {
   background: var(--boxbglight);
   border: 1px solid var(--border);
   border-radius: 2px;
-  padding: 1px 5px;
-}
-pre, code, code * {
-  font-family: monospace, system-ui, sans-serif;
+  padding: 0 4px;
 }
 pre code {
   direction: ltr;
@@ -121,6 +142,35 @@ pre code {
   overflow-x: auto;
   border-width: 1.5px;
 }
+kbd {
+  font-size: 0.85em;
+  font-weight: 600;
+  background: var(--boxbg);
+  color: var(--gray);
+  padding: 2px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  box-shadow: 0 2px 0 0 var(--boxbglight) inset;
+}
+
+mark {
+  background: var(--link);
+  color: var(--bg);
+  padding: 0 2px;
+}
+
+details {
+  margin: 16px 0;
+  padding: 8px 16px;
+  background: var(--boxbglight);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  summary {
+    font-weight: 600;
+    margin: 0;
+    padding: 4px 0;
+  }
+} 
 
 hr {
   margin:32px auto;
@@ -385,6 +435,49 @@ figure {
       display: block;
       width: 100%;
       border-radius: 12px;
+    }
+  }
+}
+
+div.section-box {
+  margin: 16px 0;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  li {
+    padding: 8px 12px;
+    border-top: 1px solid var(--border);
+    a {
+      text-decoration: none;
+      &:hover, &:focus {
+        text-decoration: underline;
+      }
+    }
+    ul {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      width: 100%;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      li {
+        flex-grow: 1;
+        padding: 0;
+        padding-inline-end: 12px;
+        border: none;
+        &:not(:first-child) {
+          padding-inline-start: 12px;
+          border-inline-start: 1px solid var(--border);
+        }
+      }
+    }
+    &:first-child {
+      border-top: none;
     }
   }
 }
