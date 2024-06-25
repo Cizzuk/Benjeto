@@ -27,12 +27,6 @@ main, article {
   * {
     line-height: 1.7;
   }
-  & *:first-child {
-    margin-top: 0;
-  }
-  & *:last-child {
-    margin-bottom: 0;
-  }
 }
 article:not(.post) {
   font-size: 1.05rem;
@@ -48,6 +42,7 @@ h1, h2, h3 {
   font-weight: 600;
 }
 h2 {
+  padding-bottom: 2px;
   border-bottom: 1.5px solid var(--border);
 }
 
@@ -481,6 +476,34 @@ div.section-box {
   }
 }
 
+div.app-box {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 8px 0;
+  img.app-icon {
+    width: 100px;
+    height: 100px;
+    vertical-align: top;
+    margin-inline-end: 16px;
+    border-radius: 8px;
+    flex-grow:0;
+  }
+  div.app-info {
+    flex-grow:1;
+    width:calc(100% - 116px);
+    min-width:166px;
+    line-height: 1.2;
+    h2, h3, b {
+      display: block;
+      line-height: 1.2;
+      font-size: 1.5em;
+      margin: 2px 0;
+      padding: 0;
+    }
+  }
+}
+
+
 header.post {
   margin: 32px 16px 16px;
   h1 {
@@ -577,7 +600,7 @@ header.home {
     flex-wrap: wrap;
     align-items: flex-end;
     justify-content: space-between;
-    margin: 12px 0 8px;
+    margin: 12px 0 4px;
     min-height: 44px;
     section.sidebutton {
       display: flex;
@@ -635,6 +658,10 @@ section.post-list, div.custom-home {
   margin: 8px 0;
   list-style: none;
   border-top: 2px solid var(--border);
+  h2 {
+    padding: 0;
+    border-bottom: none;
+  }
   .post {
     display: block;
     margin: 16px 0;
@@ -648,8 +675,6 @@ section.post-list, div.custom-home {
     h2 {
       font-size: 1.2em;
       margin: 0;
-      padding: 0;
-      border-bottom: none;
     }
     div.post-box {
       display: block;
