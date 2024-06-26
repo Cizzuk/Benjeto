@@ -43,22 +43,25 @@ layout: base
   </p>
 {%- endif -%}
 
-{%- if page.tag %}
-  {%- assign posts = site.tags[page.tag] -%}
-  {%- assign max_posts = settings.home.max_posts -%}
-{%- else -%}
-{%- if site.paginate or site.pagination.enabled == true -%}
+{%- if site.paginate == nil and page.pagination.enabled == true -%}
   {%- assign posts = paginator.posts -%}
 {%- else -%}
-  {%- assign posts = site.posts -%}
-  {%- assign max_posts = settings.home.max_posts -%}
+  {%- if page.pagination.tag %}
+    {%- assign posts = site.tags[page.pagination.tag] -%}
+  {%- elsif page.pagination.category -%}
+    {%- assign posts = site.categories[page.pagination.category] -%}
+  {%- else -%}
+    {%- assign posts = site.posts -%}
+  {%- endif -%}
+  {%- if site.paginate == nil or paginator.page == nil %}
+    {%- assign max_posts = settings.home.max_posts -%}
+    {%- assign posts = posts | slice: 0, max_posts -%}
+  {%- endif -%}
 {%- endif -%}
-{%- endif -%}
-
 
 {%- if posts.size > 0 %}
 <section class="post-list" role="feed">
-  {%- for post in posts limit:max_posts -%}
+  {%- for post in posts -%}
   {%- if post.hidden != true %}
   {%- include postbox-feed.html post=post %}
   {%- endif %}
@@ -66,6 +69,7 @@ layout: base
 </section>
 
 {%- if site.paginate or site.pagination %}
+{%- if paginator.total_pages > 1 %}
 <section class="paginate">
   {%- if paginator.previous_page %}
   <a href="{{ paginator.previous_page_path | relative_url }}" class="back" role="button">{{ texts.paginate_back | default: "Back" }}</a>
@@ -79,6 +83,7 @@ layout: base
   <span class="next" aria-disabled>{{ texts.paginate_next | default: "Next" }}</span>
   {%- endif %}
 </section>
+{%- endif %}
 {%- endif %}
 
 {%- if settings.home.share_button == true %}
