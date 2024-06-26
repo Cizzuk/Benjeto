@@ -7,6 +7,7 @@ date_format: "%Y-%m-%d" #YYYY-MM-DD
 close: "Close" #Close
 paginate_back: "Back" #Back
 paginate_next: "Next" #Next
+no_posts: "It looks like there are no posts yet.." #It looks like there are no posts yet..
 
 # Article meta
 update: "Last updated" #Last updated

@@ -767,6 +767,14 @@ section.post-list, div.custom-home {
   }
 }
 
+strong.no-posts {
+  display: block;
+  margin: 16px 0;
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
 section.paginate {
   display: flex;
   justify-content: center;

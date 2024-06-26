@@ -59,6 +59,7 @@ layout: base
   {%- endif -%}
 {%- endif -%}
 
+{%- if custom_home != true %}
 {%- if posts.size > 0 %}
 <section class="post-list" role="feed">
   {%- for post in posts -%}
@@ -88,6 +89,10 @@ layout: base
 
 {%- if settings.home.share_button == true %}
 <script src="{{ "/assets/js/share.js" | relative_url }}"></script>
+{%- endif -%}
+
+{%- else -%}
+<strong class="no-posts">{{ texts.no_posts }}</strong>
 {%- endif -%}
 
 {%- else -%}
