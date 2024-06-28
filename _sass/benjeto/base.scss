@@ -606,21 +606,21 @@ article.feed-post, div.custom-feed {
   border: 2px solid var(--page);
   border-radius: 16px;
   transition: border-color 0.2s;
-  &:has(a:hover) {
+  &:has(a.post-link:hover) {
     border-color: var(--border);
   }
   h2 {
     font-size: 1.2em;
     margin: 0;
   }
-}
-div.post-excerpt {
   a.post-link {
     display: block;
     padding: 10px 20px 0;
     color: var(--text);
     text-decoration: none;
   }
+}
+div.post-excerpt {
   p {
     margin: 0;
   }
