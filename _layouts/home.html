@@ -10,11 +10,15 @@ layout: base
 
 <main>
 <header class="home">
-  <div class="headline{% if profile.header and profile.icon == nil %} no-img{% endif %}">
-    {%- if profile.icon %}
-    <a class="proficon{% if settings.round_icon == true %} round{% endif %}{% if profile.header == nil %} no-header{% endif %}" href="{{ "/" | relative_url }}"><img src="{{ profile.icon | relative_url }}" alt="{{ profile.name }}"></a>
+  <div class="headline">
+    <a class="proficon{% if settings.round_icon == true %} round{% endif %}{% if profile.header == nil %} no-header{% endif %}" href="{{ "/" | relative_url }}">
+      {%- if profile.icon %}
+      <img src="{{ profile.icon | relative_url }}" alt="{{ profile.name }}">
+      {%- else %}
+      <div class="dummy"></div>
+      {%- endif %}
+    </a>
     {%- include menu.html %}
-	{%- endif %}
   </div>
   <h1 itemprop="name">{{ profile.name | default: site.title }}</h1>
   {%- if profile.pronouns %}
@@ -30,18 +34,7 @@ layout: base
   {%- endfor -%}
   {%- endif -%}
   </ul>
-  {%- unless profile.icon %}
-  <div class="headline">
-    {%- include menu.html %}
-  </div>
-  {%- endunless %}
 </header>
-{%- if profile == nil %}
-  <p style="font-weight:bold">
-  You must create your profile in _data_benjeto/profile.yml.
-  <br><a href="https://benjeto.tsg0o0.com/2024/05/10/how-to-setup.html">See Benjeto documentation for more information.</a>
-  </p>
-{%- endif -%}
 
 {%- if site.paginate == nil and page.pagination.enabled == true -%}
   {%- assign posts = paginator.posts -%}
@@ -59,7 +52,7 @@ layout: base
   {%- endif -%}
 {%- endif -%}
 
-{%- if custom_home != true %}
+{%- if page.custom_home != true %}
 {%- if posts.size > 0 %}
 <section class="post-list" role="feed">
   {%- for post in posts -%}

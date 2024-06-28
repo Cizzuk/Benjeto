@@ -2,7 +2,7 @@
 # Set darkmode | ダークモードを設定
 darkmode: "allow" #allow, true, false
 # Highlight color to code in the post
-highlight: true
+highlight: false
 
 # If true, round the icon. | trueの場合、アイコンを丸くします。
 round_icon: true

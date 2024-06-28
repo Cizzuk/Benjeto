@@ -4,35 +4,37 @@ layout: base
 {%- assign texts = site.data.texts -%}
 {%- assign settings = site.data.settings -%}
 <header class="post">
-{%- include miniprof.html type="nav" -%}
-{%- if page.title != "" -%}
+  {%- include miniprof.html type="nav" -%}
+  {%- if page.title != "" -%}
   <h1>{{ page.title }}</h1>
-{%- endif -%}
-{%- include category.html category=page.category %}
-{%- include tags.html tags=page.tag %}
-{%- if page.date or page.update %}
-<div class="time">
-{%- assign date_format = page.date_format | default: texts.date_format | default: "%Y-%m-%d" -%}
-<time datetime="{{ page.date | date_to_xmlschema }}">
-  {{ page.date | date: texts.date_format -}}
-</time>
-{%- if page.update %}
-<time datetime="{{ page.update | date_to_xmlschema }}">
-  {{- texts.update }} {{ page.update | date: texts.date_format -}}
-</time>
-{%- endif %}
-</div>
-{%- endif %}
-{%- if page.author %}
-<span class="author" itemprop="name">
-{%- for author in page.author -%}
-{{ author }}
-{%- if forloop.last == false %}, {% endif -%}
-{%- endfor -%}
-</span>
-{%- endif %}
+  {%- endif -%}
+  <div class="meta">
+    {%- include category.html category=page.category %}
+    {%- include tags.html tags=page.tag %}
+    {%- if page.date or page.update %}
+    <div class="time">
+      {%- assign date_format = page.date_format | default: texts.date_format | default: "%Y-%m-%d" -%}
+      <time datetime="{{ page.date | date_to_xmlschema }}">
+        {{ page.date | date: texts.date_format -}}
+      </time>
+      {%- if page.update %}
+      <time datetime="{{ page.update | date_to_xmlschema }}">
+        {{- texts.update }} {{ page.update | date: texts.date_format -}}
+      </time>
+      {%- endif %}
+    </div>
+    {%- endif %}
+    {%- if page.author %}
+    <span class="author" itemprop="name">
+      {%- for author in page.author -%}
+      {{ author }}
+      {%- if forloop.last == false %}, {% endif -%}
+      {%- endfor -%}
+    </span>
+    {%- endif %}
+  </div>
 </header>
-<article class="pagebox{% if settings.post.article_serif == true %} serif{% endif %}">
+<article class="post pagebox{% if settings.post.article_serif == true %} serif{% endif %}">
 
 {{ content }}
 </article>

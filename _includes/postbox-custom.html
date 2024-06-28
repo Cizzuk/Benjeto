@@ -3,18 +3,16 @@
 {%- assign texts = site.texts | default: site.text | default: site.data.texts -%}
 {%- assign settings = site.settings | default: site.data.settings -%}
 
-<div class="post pagebox">
-  <div class="post-box">
-    <div class="post-custom">
-      {%- if url %}
-        <a href="{{ url }}" class="post-link"{% if include.new_tab == true %} target="blank"{% endif %}>
-          {{ content }}
-        </a>
-      {%- else %}
-        <div class="no-link">
-          {{ content }}
-        </div>
-      {%- endif %}
-    </div>
+<div class="custom-feed pagebox">
+  <div class="post-custom">
+    {%- if url %}
+      <a href="{{ url }}" class="post-link"{% if include.new_tab == true %} target="blank"{% endif %}>
+        {{ content }}
+      </a>
+    {%- else %}
+      <div class="no-link">
+        {{ content }}
+      </div>
+    {%- endif %}
   </div>
 </div>
