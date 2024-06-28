@@ -18,7 +18,7 @@ body {
 main, article.post {
   display: block;
   width: 100%;
-  padding: 2px 16px;
+  padding: 0 16px;
 }
 .pagebox {
   background: var(--page);
@@ -30,6 +30,7 @@ main, article.post {
 }
 article.post {
   font-size: 1.05rem;
+  padding: 2px 20px;
 }
 article.serif {
   font-family: serif, sans-serif;
@@ -436,26 +437,26 @@ div.app-box {
   display: flex;
   flex-wrap: wrap;
   margin: 8px 0;
-  img.app-icon {
-    width: 100px;
-    height: 100px;
-    vertical-align: top;
-    margin-inline-end: 16px;
-    border-radius: 8px;
-    flex-grow:0;
-  }
-  div.app-info {
-    flex-grow:1;
-    width:calc(100% - 116px);
-    min-width:166px;
+}
+img.app-icon {
+  width: 100px;
+  height: 100px;
+  vertical-align: top;
+  margin-inline-end: 16px;
+  border-radius: 8px;
+  flex-grow:0;
+}
+div.app-info {
+  flex-grow:1;
+  width:calc(100% - 116px);
+  min-width:166px;
+  line-height: 1.2;
+  h2, h3, b {
+    display: block;
     line-height: 1.2;
-    h2, h3, b {
-      display: block;
-      line-height: 1.2;
-      font-size: 1.5em;
-      margin: 2px 0;
-      padding: 0;
-    }
+    font-size: 1.5em;
+    margin: 2px 0;
+    padding: 0;
   }
 }
 
@@ -546,7 +547,7 @@ header.home {
     flex-wrap: wrap;
     align-items: flex-end;
     justify-content: space-between;
-    margin: 8px 0 4px;
+    margin: 10px 0 4px;
     min-height: 44px;
     section.sidebutton {
       display: flex;
