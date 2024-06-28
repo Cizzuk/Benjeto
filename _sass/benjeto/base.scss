@@ -606,7 +606,7 @@ article.feed-post, div.custom-feed {
   border: 2px solid var(--page);
   border-radius: 16px;
   transition: border-color 0.2s;
-  &:has(a.post-link:hover) {
+  &:has(a.post-lighter:hover) {
     border-color: var(--border);
   }
   h2 {
