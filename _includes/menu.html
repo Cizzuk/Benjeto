@@ -59,10 +59,11 @@
   {%- endif -%}
   {%- endif %}
   {%- if settings.home.subscribe_button == true %}
-    {%- if settings.home.tabs.size > 1 %}
+    {%- assign subscribe_list = profile.subscribe | default: settings.home.tabs %}
+    {%- if subscribe_list.size > 1 %}
     {%- assign needjs = true %}
     <noscript>
-      <a class="menu-btn subscribe menues" href="{{ settings.home.tabs[0].feed | relative_url }}" title="{{ texts.subscribe_menu }}" target="_blank" rel="nofollow">{{ texts.subscribe }}</a>
+      <a class="menu-btn subscribe menues" href="{{ subscribe_list[0].feed | relative_url }}" title="{{ texts.subscribe_menu }}" target="_blank" rel="nofollow">{{ texts.subscribe }}</a>
     </noscript>
     <button id="btn" class="menu-btn subscribe menues" data-menu="menu-subscribe" title="{{ texts.subscribe_menu }}" aria-haspopup="menu">{{ texts.subscribe }}</button>
     <div class="menu" id="menu-subscribe" role="menu">
@@ -73,13 +74,13 @@
         <b>{{ texts.subscribe_menu }}</b>
       </div>
       <ul>
-        {%- for entry in settings.home.tabs %}
+        {%- for entry in subscribe_list %}
         <li><a href="{{ entry.feed | relative_url }}" role="menuitem">{{ entry.name }}{% if entry.description %} - {{ entry.description }}{% endif %}</a></li>
         {%- endfor -%}
       </ul>
     </div>
     {%- else %}
-    <a class="menu-btn subscribe" href="{{ settings.home.tabs[0].feed | relative_url }}" title="{{ texts.subscribe_menu }}">{{ texts.subscribe }}</a>
+    <a class="menu-btn subscribe" href="{{ subscribe_list.feed | relative_url }}" title="{{ texts.subscribe_menu }}">{{ texts.subscribe }}</a>
     {%- endif -%}
   {%- endif -%}
 </section>

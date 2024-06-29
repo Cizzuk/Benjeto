@@ -30,3 +30,16 @@ tip:
     url: https://github.com/sponsors/github
   - name: Bitcoin
     url: bitcoin:1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa
+# Custom subscribe button
+subscribe:
+  - name: "YouTube"
+    feed: "https://youtube.com/@YouTube"
+  - name: "Articles"
+    description: >-
+      All articles written by me
+    feed: "/feed/articles.xml"
+  - name: "Clips"
+    description: >-
+      Little notes or diaries
+    feed: "/feed/clips.xml"
+

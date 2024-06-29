@@ -26,3 +26,15 @@ tip:
     url: https://github.com/sponsors/github
   - name: Bitcoin
     url: bitcoin:1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa
+# カスタム登録ボタン
+subscribe:
+  - name: "YouTube"
+    feed: "https://youtube.com/@YouTube"
+  - name: "記事"
+    description: >-
+      わたしの記事
+    feed: "/feed/articles.xml"
+  - name: "クリップ"
+    description: >-
+      ちょっとした日記など
+    feed: "/feed/clips.xml"
