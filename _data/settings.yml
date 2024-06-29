@@ -39,7 +39,7 @@ home:
     - name: "All"
       url: "/"
       feed: "/feed.xml"
-      description: >
+      description: >-
         All articles and clips
     - name: "Articles"
       description: >-
