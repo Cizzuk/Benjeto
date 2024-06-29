@@ -1,0 +1,36 @@
+section.paginate {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 16px 0;
+  width: 100%;
+  a, span {
+    display: inline-block;
+    border: 1px solid var(--border);
+    padding: 8px 16px;
+    margin: 0;
+	text-align: center;
+    min-width: 64px;
+  }
+  a {
+    text-decoration: none;
+    transition: color 0.2s, background 0.2s;
+    &:hover, &:focus {
+      background: var(--boxbglight);
+    }
+  }
+  :first-child {
+    border-start-start-radius: 8px;
+    border-end-start-radius: 8px;
+  }
+  :last-child {
+    border-start-end-radius: 8px;
+    border-end-end-radius: 8px;
+  }
+  :first-child {
+    margin-inline-end: -1px;
+  }
+  :last-child {
+    margin-inline-start: -1px;
+  }
+}

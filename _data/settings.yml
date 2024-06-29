@@ -1,14 +1,10 @@
 ##### Website settings #####
-# Set darkmode.
-darkmode: "allow" #allow, true, false
-# Highlight color to code in the post.
-highlight: false
-
-# If true, round the icon.
-round_icon: true
 
 # Copyright notice in footer.
-copyright: 
+copyright:
+
+# If true, round the profile icon.
+round_icon: true
 
 # If true, the images can be saved by right-clicking, etc.
 allow_image_select: true
@@ -66,4 +62,17 @@ post:
   article_serif: false
   # Show the share button on the post.
   share_button: true
+
+style: # Style settings are applied to the entire website
+  # Set darkmode. 
+  darkmode: "allow" #allow, true, false
+  # Highlight color to code in the post.
+  highlight: false
+  # Advanced settings.
+  menu: true
+  figure: true
+  home_tab: true
+  paginate: true
+  app_box: false
+  section_box: false
 

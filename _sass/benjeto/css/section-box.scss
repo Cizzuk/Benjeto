@@ -1,0 +1,42 @@
+div.section-box {
+  margin: 16px 0;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  li {
+    padding: 8px 12px;
+    border-top: 1px solid var(--border);
+    a {
+      text-decoration: none;
+      &:hover, &:focus {
+        text-decoration: underline;
+      }
+    }
+    ul {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      width: 100%;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      li {
+        flex-grow: 1;
+        padding: 0;
+        padding-inline-end: 12px;
+        border: none;
+        &:not(:first-child) {
+          padding-inline-start: 12px;
+          border-inline-start: 1px solid var(--border);
+        }
+      }
+    }
+    &:first-child {
+      border-top: none;
+    }
+  }
+}

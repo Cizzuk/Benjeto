@@ -1,0 +1,26 @@
+div.app-box {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 8px 0;
+}
+img.app-icon {
+  width: 100px;
+  height: 100px;
+  vertical-align: top;
+  margin-inline-end: 16px;
+  border-radius: 8px;
+  flex-grow:0;
+}
+div.app-info {
+  flex-grow:1;
+  width:calc(100% - 116px);
+  min-width:166px;
+  line-height: 1.2;
+  h2, h3, b {
+    display: block;
+    line-height: 1.2;
+    font-size: 1.5em;
+    margin: 2px 0;
+    padding: 0;
+  }
+}
