@@ -671,13 +671,13 @@ div.post-custom {
   button.shareBtn {
     flex: 0 0 auto;
     margin-inline-end: 8px;
-    &:hover, &:focus, &.disabled {
-      background: var(--boxbg);
-    }
     .icon {
       opacity: 0.5;
       transition: opacity 0.2s;
-      &:hover, &:focus, &.disabled {
+    }
+    &:hover, &:focus, &.disabled {
+      background: var(--boxbg);
+      .icon {
         opacity: 1;
       }
     }
