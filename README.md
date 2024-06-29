@@ -31,9 +31,32 @@ And install the theme and its dependancies:
     $ bundle install
 
 
-## Usage
+## Settings
 
-TODO: Write usage instructions here. Describe your available layouts, includes, sass and/or assets.
+### _config.yml
+Refer to the sample configuration.
+Specifically,
+```yaml
+defaults:
+  - values:
+      title: ""
+```
+is necessary for creating short posts without titles.
+
+### Profile
+Copy [`_data/profile.yml`](https://github.com/Cizzuk/Benjeto/blob/main/_data/profile.yml) to your site to create your profile.  
+Use relative links for images: the header should be in a 5:1 ratio and the icon in a 1:1 ratio.
+
+### Benjeto Settings
+Copy [`_data/settings.yml`](https://github.com/Cizzuk/Benjeto/blob/main/_data/settings.yml) to your site.
+
+For tabs created in `home.tabs`, you need to create a dedicated page with `layout: home`.  
+When specifying `pagination.category` or `pagination.tag`, posts will be filtered by `jekyll-feed`.  
+Refer to the [sample](https://github.com/Cizzuk/Benjeto/blob/main/category/articles.html) for guidance.
+
+### Translation
+If you are building a site in a language other than English, translation files are available in [`_data/texts.yml`](https://github.com/Cizzuk/Benjeto/blob/main/_data/texts.yml).  
+You can also modify the text for categories and tags.
 
 
 ## License
