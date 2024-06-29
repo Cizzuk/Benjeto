@@ -1,13 +1,13 @@
 ##### Website settings #####
-# Set darkmode | ダークモードを設定
+# Set darkmode.
 darkmode: "allow" #allow, true, false
-# Highlight color to code in the post
+# Highlight color to code in the post.
 highlight: false
 
-# If true, round the icon. | trueの場合、アイコンを丸くします。
+# If true, round the icon.
 round_icon: true
 
-# Copyright notice in footer | フッターに著作権表示をする
+# Copyright notice in footer.
 copyright: 
 
 # If true, the images can be saved by right-clicking, etc.
@@ -62,8 +62,8 @@ post:
   subscribe_button: true
   # Show your profile in footer.
   footer_profile: "article" #true, false, article
-  # Set the font on the article to serif
-  article_serif: false
-  # Show the share button on the post
+  # Set the font on the article to serif.
+  article_serif: true
+  # Show the share button on the post.
   share_button: true
 
