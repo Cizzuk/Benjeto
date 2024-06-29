@@ -113,7 +113,7 @@ YouTube
 {% include youtube.html id="rdwz7QiG0lk" aspect="4/3" title="YouTube on the tube!" %}
 
 Niconico
-{% include nicovideo.html id="sm38213757" aspect="4/3" title="削除動画" %}
+{% include nicovideo.html id="sm38213757" aspect="16/9" title="削除動画" %}
 ```
 
 
