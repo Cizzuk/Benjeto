@@ -58,6 +58,10 @@ Refer to the [sample](https://github.com/Cizzuk/Benjeto/blob/main/category/artic
 If you are building a site in a language other than English, translation files are available in [`_data/texts.yml`](https://github.com/Cizzuk/Benjeto/blob/main/_data/texts.yml).  
 You can also modify the text for categories and tags.
 
+### Custom Head and CSS
+You can configure the head in `_includes/custom_head.html`.  
+You can configure the CSS in `_sass/benjeto/custom.scss`.
+
 
 ## License
 
