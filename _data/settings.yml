@@ -26,9 +26,9 @@ home:
   # Show the RSS subscribe button.
   subscribe_button: true
   # Maximum number of posts to display on the home when paginate is not used.
-  # If blank, unlimited
+  # If blank, unlimited.
   max_posts: 20
-  # Show the share button on the posts list
+  # Show the share button on the posts list.
   share_button: true
   # Tabs at home pages.
   # You need to create a dedicated page with "layout: home".
@@ -65,7 +65,7 @@ post:
   # Show the share button on the post.
   share_button: true
 
-style: # Style settings are applied to the entire website
+style: # Style settings are applied to the entire website.
   # Set darkmode. 
   darkmode: "allow" #allow, true, false
   # Highlight color to code in the post.
