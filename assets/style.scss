@@ -36,7 +36,7 @@
   @import "benjeto/dark.scss";
 {% else %}
   @import "benjeto/light.scss";
-  {% if settings.darkmode == "allow" %}
+  {% if settings.style.darkmode == "allow" %}
 	@media(prefers-color-scheme:dark) {
       @import "benjeto/light.scss";
       @import "benjeto/dark.scss";

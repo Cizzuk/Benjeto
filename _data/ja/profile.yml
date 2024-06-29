@@ -1,0 +1,28 @@
+### プロフィールを作成します。空欄にもできます。 ###
+# ユーザー名
+name: ユーザー
+# 自己紹介
+bio: >-
+  _config.ymlでプロフィールを設定できます。
+# 代名詞
+pronouns: "they/them"
+# 外部リンク (例: SNS).
+links:
+  - name: X
+    url: "https://x.com/x"
+  - name: YouTube
+    url: "https://youtube.com/@YouTube"
+  - name: GitHub
+    url: "https://github.com/github"
+# あなたの連絡先
+message: 
+  - name: メール
+    url: mailto:user@example.com
+  - name: X ダイレクトメッセージ
+    url: https://x.com/messages/compose?recipient_id=xxxxxxxx
+# 寄付
+tip: 
+  - name: GitHub スポンサー
+    url: https://github.com/sponsors/github
+  - name: Bitcoin
+    url: bitcoin:1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa

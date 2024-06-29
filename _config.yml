@@ -18,8 +18,8 @@ feed:
   tags:
     path: "/tags/"
   categories:
-    - articles
-    - clips
+    - Articles
+    - Clips
 
 ## Pagenate v1
 # Maximum number of posts to be displayed on home page.
@@ -35,6 +35,12 @@ pagination:
   permalink: '/pages/:num/'
   sort_reverse: true
 
+# Polyglot
+languages: ["en", "ja", "ar"]
+default_lang: "en"
+exclude_from_localization: ["javascript", "images", "css", "public", "assets"]
+parallel_localization: true
+
 defaults:
   - values:
       title: ""
@@ -46,6 +52,7 @@ plugins:
   - jekyll-feed
   #- jekyll-paginate
   - jekyll-paginate-v2
+  - jekyll-polyglot
 
 exclude:
   - LICENSE.txt

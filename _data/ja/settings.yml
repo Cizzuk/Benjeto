@@ -1,0 +1,25 @@
+##### Webサイトの設定#####
+
+home:
+  tabs:
+    - name: "全て"
+      url: "/"
+      feed: "/feed.xml"
+      description: >-
+        すべての記事とクリップ
+    - name: "記事"
+      description: >-
+        わたしの記事
+      url: "/category/articles/"
+      feed: "/feed/articles.xml"
+    - name: "クリップ"
+      description: >-
+        ちょっとした日記など
+      url: "/category/clips/"
+      feed: "/feed/clips.xml"
+    - name: "お気に入り"
+      description: >-
+        お気に入りの記事やクリップ
+      url: "/tags/favorites/"
+      feed: "/tags/favorites.xml"
+

@@ -1,0 +1,47 @@
+# Set the date format, default is YYYY-MM-DD
+date_format: "%Y-%m-%d" #YYYY-MM-DD
+
+##### 翻訳 #####
+
+# Navigation
+close: "閉じる" #Close
+paginate_back: "前へ" #Back
+paginate_next: "次へ" #Next
+no_posts: "まだポストがないようです。" #It looks like there are no posts yet..
+
+# Article meta
+update: "最終更新" #Last updated
+post_license: "このポストは次でライセンスされています: " #This post is licensed under
+
+# Image meta
+image_license: "この画像は次でライセンスされています: " #This image is licensed under
+
+# Video meta
+video_license: "この動画は次でライセンスされています: " #This video is licensed under
+video_not_support: "このブラウザは動画に対応していません。" #Your browser does not support video.
+
+# Audio meta
+audio_license: "このオーディオは次でライセンスされています: " #This audio is licensed under
+audio_not_support: "このブラウザはオーディオに対応していません。" #Your browser does not support audio.
+
+# Share buttons
+share: "共有" #Share
+copy: "コピー" #Copy
+copied: "コピーしました" #Copied!
+
+# Profile buttons
+message: "メッセージ" #Message
+message_menu: "メッセージを送る" #Send a message
+tip: "寄付" #Tip
+tip_menu: "寄付をする" #Send a tip
+subscribe: "フィードを登録" #Subscribe
+subscribe_menu: "フィードを登録する" #Subscribe a feed
+
+# YouTube
+youtube_title: "YouTube動画プレイヤー" #YouTube video player
+youtube_link: "YouTubeで見る" #Watch on YouTube
+
+# Niconico
+nicovideo_title: "ニコニコ動画プレイヤー" #Niconico video player
+nicovideo_link: "ニコニコで見る" #Watch on Niconico
+

@@ -13,7 +13,7 @@
 {%- endif -%}
 {%- assign settings = site.data.settings -%}
 <!DOCTYPE html>
-<html lang="{{ lang | default: "en" }}"{% if dir == "rtl" %} dir="rtl"{% endif %}>
+<html{% if lang %} lang="{{ lang }}"{% endif %}{% if dir == "rtl" %} dir="rtl"{% endif %}>
 {% include head.html -%}
 <body{% if settings.allow_image_select == true %} class="allow-image-select"{% endif %}>
 {{ content }}

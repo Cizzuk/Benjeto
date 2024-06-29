@@ -47,11 +47,11 @@ home:
         Little notes or diaries
       url: "/category/clips/"
       feed: "/feed/clips.xml"
-    - name: "Favorite"
+    - name: "Favorites"
       description: >-
         My favorite clips and articles
-      url: "/tags/likes/"
-      feed: "/tags/likes.xml"
+      url: "/tags/favorites/"
+      feed: "/tags/favorites.xml"
 
 post:
   # Show RSS subscribe button.
