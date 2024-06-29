@@ -35,7 +35,7 @@ message_menu: "Send a message" #Send a message
 tip: "Tip" #Tip
 tip_menu: "Send a tip" #Send a tip
 subscribe: "Subscribe" #Subscribe
-subscribe_menu: "Subscribe a feed" #Subscribe
+subscribe_menu: "Subscribe a feed" #Subscribe a feed
 
 # YouTube
 youtube_title: "YouTube video player" #YouTube video player

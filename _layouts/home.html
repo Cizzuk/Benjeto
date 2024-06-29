@@ -52,9 +52,43 @@ layout: base
   {%- endif -%}
 {%- endif -%}
 
+{%- if settings.home.tabs %}
+{%- assign tab_found = false %}
+{%- assign current_url = page.url | relative_url | replace: 'index.html', '' | prepend: site.baseurl %}
+<nav class="home-tab">
+  <ul role="tablist">
+    {%- for tab in settings.home.tabs -%}
+    {%- if tab.url and tab.name %}
+    {%- assign tab_url = tab.url | relative_url | replace: 'index.html', '' %}
+    <li role="tab"
+    {%- if tab_url == current_url %}{% assign tab_found = tab %} class="current" aria-selected
+    {%- else %} aria-selected="false"{%- endif -%}>
+      <a href="{{ tab.url | relative_url }}">{{ tab.name }}</a>
+    </li>
+    {%- endif %}
+    {%- endfor %}
+    {%- if tab_found == false %}
+    <li class="current" aria-selected><a href="{{ page.url }}">{{ page.title }}</a></li>
+    {%- endif %}
+  </ul>
+</nav>
+{%- if tab_found != false %}
+{%- if tab_found.description or tab_found.feed %}
+<div class="tab-description">
+  {%- if tab_found.description %}
+  <p>{{ tab_found.description }}</p>
+  {%- endif %}
+  {%- if tab_found.feed %}
+  <a class="menu-btn subscribe" href="{{ tab_found.feed | relative_url }}" title="{{ texts.subscribe_menu }}">{{ texts.subscribe }}</a>
+  {%- endif %}
+</div>
+{%- endif %}
+{%- endif %}
+{%- endif %}
+
 {%- if page.custom_home != true %}
 {%- if posts.size > 0 %}
-<section class="post-list" role="feed">
+<section class="post-list" role="tabpanel">
   {%- for post in posts -%}
   {%- if post.hidden != true %}
   {%- include postbox-feed.html post=post %}

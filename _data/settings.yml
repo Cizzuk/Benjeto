@@ -39,18 +39,20 @@ home:
     - name: "All"
       url: "/"
       feed: "/feed.xml"
+      description: >
+        All articles and clips
     - name: "Articles"
-      discription: >-
+      description: >-
         All articles written by me
       url: "/category/articles/"
       feed: "/feed/articles.xml"
     - name: "Clips"
-      discription: >-
+      description: >-
         Little notes or diaries
       url: "/category/clips/"
       feed: "/feed/clips.xml"
     - name: "Favorite"
-      discription: >-
+      description: >-
         My favorite clips and articles
       url: "/tags/likes/"
       feed: "/tags/likes.xml"

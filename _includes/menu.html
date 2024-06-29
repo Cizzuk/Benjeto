@@ -74,7 +74,7 @@
       </div>
       <ul>
         {%- for entry in settings.home.tabs %}
-        <li><a href="{{ entry.feed | relative_url }}" role="menuitem">{{ entry.name }}{% if entry.discription %} - {{ entry.discription }}{% endif %}</a></li>
+        <li><a href="{{ entry.feed | relative_url }}" role="menuitem">{{ entry.name }}{% if entry.description %} - {{ entry.description }}{% endif %}</a></li>
         {%- endfor -%}
       </ul>
     </div>
