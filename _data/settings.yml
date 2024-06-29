@@ -30,7 +30,9 @@ home:
   max_posts: 20
   # Show the share button on the posts list
   share_button: true
-  # Filter tab in home
+  # Tabs at home pages.
+  # You need to create a dedicated page with "layout: home".
+  # name and url are required, omitting feed will hide the subscribe button.
   tabs:
     - name: "All"
       url: "/"
