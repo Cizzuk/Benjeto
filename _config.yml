@@ -36,7 +36,7 @@ pagination:
   sort_reverse: true
 
 # Polyglot
-languages: ["en", "ja", "ar"]
+languages: ["en", "ja"]
 default_lang: "en"
 exclude_from_localization: ["javascript", "images", "css", "public", "assets"]
 parallel_localization: true
@@ -52,7 +52,7 @@ plugins:
   - jekyll-feed
   #- jekyll-paginate
   - jekyll-paginate-v2
-  - jekyll-polyglot
+  #- jekyll-polyglot
 
 exclude:
   - LICENSE.txt
