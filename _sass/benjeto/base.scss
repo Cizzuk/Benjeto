@@ -520,8 +520,15 @@ strong.no-posts {
 footer {
   margin: 16px;
   p.copy {
+    margin: 16px;
     color: var(--gray);
 	text-align: center;
+  }
+  div.footer-line {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
   }
 }
 
@@ -593,6 +600,23 @@ div.miniprof {
   }
 }
 
+ul.lang-select {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  margin: 16px;
+  padding: 0;
+  li {
+    a {
+      display: block;
+      padding: 4px 8px;
+      border-radius: 4px;
+      color: var(--gray);
+      transition: filter 0.15s;
+    }
+  }
+}
 
 @media only screen and (max-width:750px) {
   body {

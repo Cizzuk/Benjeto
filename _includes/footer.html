@@ -10,7 +10,22 @@
 {%- if show %}
 {%- include miniprof.html type="box" -%}
 {%- endif %}
+<div class="footer-line">
 {%- if settings.copyright %}
 <p class="copy">{{ settings.copyright }}</p>
 {%- endif %}
+{%- if site.languages %}
+<ul class="lang-select">
+  {%- for lang in site.languages %}
+  <li><a {% static_href %}href="
+  {%- if lang == site.default_lang -%}
+  {{ page.url | replace: 'index.html', '' }}
+  {%- else -%}
+  /{{ lang }}{{ page.url | replace: 'index.html', '' }}
+  {%- endif -%}
+  "{% endstatic_href %}>{{ lang | upcase }}</a></li>
+  {%- endfor %}
+</ul>
+{%- endif %}
+</div>
 </footer>
