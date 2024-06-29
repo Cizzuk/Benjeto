@@ -1,5 +1,5 @@
 {% assign rtl_languages = "ar,arc,dv,fa,he,ks,nqo,ps,syr,ur,yi" | split: ',' %}
-{%- assign lang = page.lang | default: site.lang %}
+{%- assign lang = site.active_lang | default: page.lang | default: site.lang %}
 {%- if site.dir == "rtl" -%}
   {%- assign dir = "rtl" %}
 {%- elsif site.dir == "ltr" %}

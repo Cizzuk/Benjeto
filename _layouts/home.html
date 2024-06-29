@@ -54,7 +54,8 @@ layout: base
 
 {%- if settings.home.tabs %}
 {%- assign tab_found = false %}
-{%- assign current_url = page.url | relative_url | replace: 'index.html', '' | split: 'pages/' | first %}
+{%- assign paginate_path = site.pagination.permalink | default: site.paginate_path | split: ':num' | first | remove_first: '/' %}
+{%- assign current_url = page.url | relative_url | replace: 'index.html', '' | split: paginate_path | first %}
 <nav class="home-tab">
   <ul role="tablist">
     {%- for tab in settings.home.tabs -%}
