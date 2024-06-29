@@ -37,7 +37,7 @@ TODO: Write usage instructions here. Describe your available layouts, includes, 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/Benjeto. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](https://www.contributor-covenant.org/) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/Cizzuk/Benjeto. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](https://www.contributor-covenant.org/) code of conduct.
 
 ## Development
 
@@ -51,3 +51,13 @@ To add a custom directory to your theme-gem, please edit the regexp in `Benjeto.
 ## License
 
 The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+
+This project uses the following open source software:
+
+- [Jekyll](https://github.com/jekyll/jekyll) - MIT License
+- [jekyll-feed](https://github.com/jekyll/jekyll-feed) - MIT License
+- [jekyll-paginate](https://github.com/jekyll/jekyll-paginate) - MIT License
+- [jekyll-paginate-v2](https://github.com/sverrirs/jekyll-paginate-v2) - MIT License
+- [jekyll-polyglot](https://github.com/untra/polyglot) - MIT License
+
+Each of these libraries is licensed under the MIT License. Please see the respective LICENSE files for more information.
