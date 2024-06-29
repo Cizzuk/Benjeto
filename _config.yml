@@ -4,7 +4,7 @@ title: User
 description: >-
   Here is a description of website.
 # Language of the website.
-lang: "en"
+lang: "ar"
 # Web site protocol and host name.
 url: https://example.com
 permalink: "/posts/:title/"
