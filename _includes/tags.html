@@ -1,7 +1,8 @@
+{%- assign texts = site.data.texts %}
 {%- if include.tags -%}
 <div class="tags">
 {%- for entry in include.tags -%}
-<span class="tag">{{ entry }}</span>
+<span class="tag">{{ texts.tags[entry] | default: entry }}</span>
 {%- endfor -%}
 </div>
 {%- endif -%}

@@ -1,6 +1,16 @@
 # Set the date format, default is YYYY-MM-DD
 date_format: "%Y/%m/%d" #YYYY/MM/DD
 
+
+##### Categories and tags #####
+categories:
+  articles: "記事" #Articles
+  clips: "クリップ" #Clips
+tags:
+  favorites: "お気に入り" #Favorites
+  the_donut_kingdom: "ドーナツ王国" #The Donut Kingdom
+
+
 ##### 翻訳 #####
 
 # Navigation

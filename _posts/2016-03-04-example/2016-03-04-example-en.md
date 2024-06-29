@@ -4,15 +4,15 @@ title: "The Donut Kingdom: A Sweet Journey"
 category: "Articles"
 lang: "en"
 tag:
-  - Favorites
-  - The Donut Kingdom
+  - favorites
+  - the_donut_kingdom
 category: 
-  - Articles
+  - articles
 author:
   - Cizzuk
   - ChatGPT
 update: "2016-03-05"
-page_id: 2016-03-04-example
+permalink: "/posts/example/"
 ---
 
 The Donut Kingdom is a mystical land where donuts are not just a treat, but a way of life. This kingdom is inhabited by the **Donutarians**, a people who have dedicated their lives to the art and science of donut-making and consumption.

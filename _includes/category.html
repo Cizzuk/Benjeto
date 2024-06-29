@@ -1,7 +1,8 @@
+{%- assign texts = site.data.texts %}
 {%- if include.category -%}
 <span class="category">
 {%- for category in include.category -%}
-{{ category }}
+{{ texts.categories[category] | default: category }}
 {%- if forloop.last == false %}, {% endif -%}
 {%- endfor -%}
 </span>

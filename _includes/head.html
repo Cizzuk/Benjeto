@@ -78,6 +78,20 @@
   {% if page.layout == "home" or page.layout == "post" -%}
   {% feed_meta -%}
   {% endif -%}
+
+  {% if site.languages -%}
+  <link rel="alternate"
+      hreflang="{{ site.default_lang }}"
+      href="{{ site.url }}{{ page.permalink }}">
+  {% for lang in site.languages %}
+  {% if lang == site.default_lang %}
+    {% continue %}
+  {% endif %}
+  <link rel="alternate"
+    hreflang="{{ lang }}"
+    href="{{ site.url }}/{{ lang }}{{ page.permalink }}">
+  {% endfor %}
+  {% endif -%}
   
   {% include custom_head.html %}
 </head>

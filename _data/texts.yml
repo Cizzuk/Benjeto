@@ -1,6 +1,16 @@
 # Set the date format, default is YYYY-MM-DD
 date_format: "%B %d, %Y" #YYYY-MM-DD
 
+
+##### Categories and tags #####
+categories:
+  articles: "Articles" #Articles
+  clips: "Clips" #Clips
+tags:
+  favorites: "Favorites" #Favorites
+  the_donut_kingdom: "The Donut Kingdom" #The Donut Kingdom
+
+
 ##### Translates #####
 
 # Navigation
@@ -44,4 +54,3 @@ youtube_link: "Watch on YouTube" #Watch on YouTube
 # Niconico
 nicovideo_title: "Niconico video player" #Niconico video player
 nicovideo_link: "Watch on Niconico" #Watch on Niconico
-

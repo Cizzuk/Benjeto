@@ -7,7 +7,7 @@ description: >-
 lang: "en"
 # Web site protocol and host name.
 url: https://example.com
-permalink: "/posts/:title/"
+permalink: pretty
 
 
 ##### Build settings #####
@@ -39,7 +39,7 @@ pagination:
 languages: ["en", "ja"]
 default_lang: "en"
 exclude_from_localization: ["javascript", "images", "css", "public", "assets"]
-parallel_localization: true
+parallel_localization: false
 
 defaults:
   - values:
@@ -52,7 +52,7 @@ plugins:
   - jekyll-feed
   #- jekyll-paginate
   - jekyll-paginate-v2
-  #- jekyll-polyglot
+  - jekyll-polyglot
 
 exclude:
   - LICENSE.txt

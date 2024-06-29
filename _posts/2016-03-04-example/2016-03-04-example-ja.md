@@ -4,15 +4,15 @@ title: "ドーナツ王国: 甘い旅路"
 category: "Articles"
 lang: "ja"
 tag:
-  - Favorites
-  - The Donut Kingdom
+  - favorites
+  - the_donut_kingdom
 category: 
-  - Articles
+  - articles
 author:
   - Cizzuk
   - ChatGPT
 update: "2016-03-05"
-page_id: 2016-03-04-example
+permalink: "/posts/example/"
 ---
 
 ドーナツ王国は、ドーナツが単なるおやつではなく、生活に溶け込んでいる神秘的な土地です。この王国には **ドーナタリアン** と呼ばれる人々が住んでおり、ドーナツ作りと消費の技術と科学にその生涯を捧げています。
