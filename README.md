@@ -63,6 +63,60 @@ You can configure the head in `_includes/custom_head.html`.
 You can configure the CSS in `_sass/benjeto/custom.scss`.
 
 
+## Using includes
+
+### `image.html`
+figure image with caption and license.  
+Set `pixel` to `true` to support pixel art.
+```
+{% include image.html
+   src="/assets/sample.png"
+   pixel=false
+   alt="Sample alt"
+   caption="This is a sample image"
+   license="CC BY-SA 4.0"
+   license_url="https://creativecommons.org/licenses/by-sa/4.0/"
+%}
+```
+
+### `video.html`
+Video player with title, caption, thumbnail, and license
+```
+{% include video.html
+   src="/assets/sample.mp4"
+   title="Sample video"
+   poster="/assets/thumbnail.png"
+   caption="This is a sample video"
+   license="CC BY-SA 4.0"
+   license_url="https://creativecommons.org/licenses/by-sa/4.0/"
+%}
+```
+
+### `audio.html`
+Audio player with title, caption, artwork, and license
+```
+{% include audio.html
+   src="/assets/sapmle.mp3"
+   title="Sample music"
+   artwork="/assets/artwork.png"
+   alt="Artwork alt"
+   caption="This is a sample music"
+   license="CC BY-SA 4.0"
+   license_url="https://creativecommons.org/licenses/by-sa/4.0/"
+%}
+```
+
+### `youtube.html` and `nicovideo.html`
+Embedded video player for YouTube and Niconico
+```
+YouTube
+{% include youtube.html id="rdwz7QiG0lk" aspect="4/3" title="YouTube on the tube!" %}
+
+Niconico
+{% include nicovideo.html id="sm38213757" aspect="4/3" title="削除動画" %}
+```
+
+
 ## License
 
 The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
