@@ -1,11 +1,11 @@
-# Website title | Webサイトのタイトル
+# Website title.
 title: User
-# Website description | Webサイトの説明
+# Website description.
 description: >-
   Here is a description of website.
-# Language of the website | Webサイトの言語
+# Language of the website.
 lang: "en"
-# Web site protocol and host name | Webサイトのプロトコルとホスト名
+# Web site protocol and host name.
 url: https://example.com
 permalink: "/posts/:title/"
 
@@ -13,7 +13,7 @@ permalink: "/posts/:title/"
 ##### Build settings #####
 
 feed:
-  # Maximum number of posts in the feed
+  # Maximum number of posts in the feed.
   posts_limit: 20
   tags:
     path: "/tags/"
