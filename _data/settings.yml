@@ -19,6 +19,9 @@ head:
   # Use profile icon if blank.
   favicon: 
   siteicon: 
+  # Add a feed link.
+  feed: true
+  custom_feed: 
 
 home:
   # If true, the titled post's excerpt will be displayed on the home page.

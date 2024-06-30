@@ -1,5 +1,5 @@
-# Set the date format, default is YYYY-MM-DD
-date_format: "%B %d, %Y" #YYYY-MM-DD
+# Set the date format.
+date_format: "%B %d, %Y"
 
 
 ##### Categories and tags #####

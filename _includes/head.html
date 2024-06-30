@@ -14,7 +14,7 @@
 {%- assign title = site.title -%}
 {%- endif -%}
 {%- assign icon = page.icon | default: page.image | default: settings.head.siteicon | default: profile.icon -%}
-{%- assign description = page.description | default: site.description -%}
+{%- assign description = page.description | default: site.description | default: page.excerpt -%}
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -72,7 +72,7 @@
   <link rel="icon" href="{{ settings.head.favicon | relative_url | default: profile.icon | relative_url }}">
   {% endif -%}
 
-  {% if page.noindex == true or settings.head.noindex == true -%}
+  {% if page.noindex == true or settings.head.noindex == true or site.plugins contains "jekyll-polyglot" and page.lang != site.active_lang -%}
   <meta name="robots" content="noindex">
   {% endif -%}
 
@@ -80,8 +80,12 @@
   <meta name="apple-itunes-app" content="app-id={{ page.itunes_app }}">
   {% endif -%}
 
-  {% if page.layout == "home" or page.layout == "post" -%}
+  {% if page.layout == "home" and settings.head.feed == true or page.layout == "post" and settings.head.feed == true -%}
+  {% if settings.head.custom_feed -%}
+  <link rel="alternate" type="application/rss+xml" href="{{ site.head.custom_feed }}">
+  {% else -%}
   {% feed_meta -%}
+  {% endif -%}
   {% endif -%}
 
   {% if site.languages -%}
