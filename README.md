@@ -68,7 +68,7 @@ You can configure the CSS in `_sass/benjeto/custom.scss`.
 ### `image.html`
 figure image with caption and license.  
 Set `pixel` to `true` to support pixel art.
-```
+```liquid
 {% include image.html
    src="/assets/sample.png"
    pixel=false
@@ -81,7 +81,7 @@ Set `pixel` to `true` to support pixel art.
 
 ### `video.html`
 Video player with title, caption, thumbnail, and license
-```
+```liquid
 {% include video.html
    src="/assets/sample.mp4"
    title="Sample video"
@@ -94,7 +94,7 @@ Video player with title, caption, thumbnail, and license
 
 ### `audio.html`
 Audio player with title, caption, artwork, and license
-```
+```liquid
 {% include audio.html
    src="/assets/sapmle.mp3"
    title="Sample music"
@@ -108,7 +108,7 @@ Audio player with title, caption, artwork, and license
 
 ### `youtube.html` and `nicovideo.html`
 Embedded video player for YouTube and Niconico
-```
+```liquid
 YouTube
 {% include youtube.html id="rdwz7QiG0lk" aspect="4/3" title="YouTube on the tube!" %}
 
