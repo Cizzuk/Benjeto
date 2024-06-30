@@ -1,5 +1,4 @@
 * {
-  text-underline-offset: 0.1em;
   line-height: 1.6;
   box-sizing: border-box;
   overflow-wrap: break-word;
@@ -66,8 +65,10 @@ hgroup {
 a {
   color: var(--link);
   transition: color 0.1s;
+  text-decoration: none;
   &:hover, &:focus {
     color: var(--linkhover);
+    text-decoration: underline;
   }
 }
 
@@ -129,8 +130,9 @@ pre, code, code * {
 code {
   background: var(--boxbglight);
   border: 1px solid var(--border);
-  border-radius: 2px;
-  padding: 0 4px;
+  border-radius: 4px;
+  padding: 1px 4px;
+  margin: 0 2px;
 }
 pre code {
   direction: ltr;
@@ -195,7 +197,6 @@ video {
   border: 1px solid var(--border);
   border-radius: 6px;
   transition: filter 0.2s;
-  text-decoration: none;
   .icon {
     width: 24px;
     margin-bottom: 1px;
@@ -205,6 +206,7 @@ video {
   }
   &:hover, &:focus {
     filter: brightness(0.9);
+    text-decoration: none;
   }
   &.subscribe {
     background: var(--link);
@@ -356,7 +358,6 @@ header.home {
         border: 1px solid var(--border);
         border-radius: 4px;
         padding: 4px 6px;
-        text-decoration: none;
         transition: filter 0.15s;
         &:hover, &:focus {
           filter: brightness(0.9);

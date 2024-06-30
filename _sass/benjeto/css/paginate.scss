@@ -13,7 +13,6 @@ section.paginate {
     min-width: 64px;
   }
   a {
-    text-decoration: none;
     transition: color 0.2s, background 0.2s;
     &:hover, &:focus {
       background: var(--boxbglight);
