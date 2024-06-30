@@ -20,9 +20,12 @@ main, article.post {
   width: 100%;
   padding: 0 16px;
 }
+article.post {
+  border: 2px solid var(--page);
+  border-width: 2px 0;
+}
 .pagebox {
   background: var(--page);
-  padding: 2px 20px;
   box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.05);
   * {
     line-height: 1.7;
@@ -30,7 +33,7 @@ main, article.post {
 }
 article.post {
   font-size: 1.05rem;
-  padding: 2px 20px;
+  padding: 0 20px;
 }
 article.serif {
   font-family: serif;
@@ -613,6 +616,21 @@ ul.lang-select {
 @media only screen and (max-width:200px) {
   body {
     width: 200px;
+  }
+}
+
+@media (prefers-contrast: more) {
+  code, pre code {
+    background: var(--bg);
+  }
+  article.post {
+    border-color: var(--boxbg);
+  }
+  article.feed-post, div.custom-feed {
+    border-color: var(--border);
+    &:has(a.post-lighter:hover) {
+      border-color: var(--link);
+    }
   }
 }
 

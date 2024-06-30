@@ -11,6 +11,20 @@
   --boxbglight: #222a38;
   --border: #457;
 }
+@media (prefers-contrast: more) {
+:root {
+  --bg: #000;
+  --page: #101320;
+  --text: #fff;
+  --gray: #b5b5b5;
+  --head: #fff;
+  --link: #30c0ff;
+  --linkhover: #aadaff;
+  --boxbg: #2e3a58;
+  --boxbglight: #282e3c;
+  --border: #679;
+}
+}
 .menu-btn:hover, .menu-btn:focus {
   filter: brightness(0.7);
 }
@@ -23,8 +37,9 @@ header.home ul.exlink li {
   }
 }
 #overlay {
-  background: rgba(127, 127, 127, 0.4);
+  background: rgba(127, 127, 127, 0.5);
 }
 .icon {
   filter: invert(1);
 }
+

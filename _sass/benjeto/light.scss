@@ -10,4 +10,17 @@
   --boxbglight: #f0f5ff;
   --border: #a5caff;
 }
+@media (prefers-contrast: more) {
+:root {
+  --bg: #fafaff;
+  --text: #000;
+  --gray: #555;
+  --head: #000;
+  --link: #0000ff;
+  --linkhover: #000090;
+  --boxbg: #d0e0ff;
+  --boxbglight: #e5f0fa;
+  --border: #50a0ff;
+}
+}
 
