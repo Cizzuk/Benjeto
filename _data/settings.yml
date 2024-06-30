@@ -69,7 +69,7 @@ style: # Style settings are applied to the entire website.
   # Set darkmode. 
   darkmode: "allow" #allow, true, false
   # Highlight color to code in the post.
-  highlight: false
+  highlight: true
   # Advanced settings.
   menu: true
   figure: true
