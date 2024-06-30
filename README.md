@@ -34,7 +34,7 @@ And install the theme and its dependancies:
 ## Settings
 
 ### _config.yml
-Refer to the sample configuration.
+Refer to the [sample configuration](https://github.com/Cizzuk/Benjeto/blob/main/_config.yml).
 Specifically,
 ```yaml
 defaults:
