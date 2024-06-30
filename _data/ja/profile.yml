@@ -5,7 +5,7 @@ name: ユーザー
 bio: >-
   _config.ymlでプロフィールを設定できます。
 # 代名詞
-pronouns: "they/them"
+pronouns: 
 # 外部リンク (例: SNS).
 links:
   - name: X
