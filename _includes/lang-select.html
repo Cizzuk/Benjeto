@@ -1,5 +1,7 @@
+{%- if page.lang-exclusive.size > 1 or page.lang-exclusive == nil %}
 <ul class="lang-select">
   {%- for lang in site.languages %}
+  {%- if page.lang-exclusive contains lang or page.lang-exclusive == nil -%}
   <li><a {% static_href %}href="
   {%- if lang == site.default_lang -%}
   {{ page.url | relative_url | replace: 'index.html', '' }}
@@ -7,5 +9,7 @@
   {{ site.baseurl }}/{{ lang }}{{ page.url | replace: 'index.html', '' }}
   {%- endif -%}
   "{% endstatic_href %}>{{ lang | upcase }}</a></li>
+  {%- endif -%}
   {%- endfor %}
 </ul>
+{%- endif %}
