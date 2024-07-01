@@ -34,7 +34,8 @@ layout: base
     {%- endif %}
   </div>
 </header>
-<article class="post pagebox{% if settings.post.article_serif == true %} serif{% endif %}">
+<article class="post pagebox{% if settings.post.article_serif == true %} serif{% endif %}"
+{%- if page.lang %} lang="{{ page.lang }}"{% endif %}>
 
 {{ content }}
 </article>

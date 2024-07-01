@@ -7,7 +7,7 @@ layout: base
   <h1>{{ page.title }}</h1>
 {%- endif -%}
 </header>
-<main>
+<main{%- if page.lang %} lang="{{ page.lang }}"{% endif %}>
 
 {{ content }}
 </main>
