@@ -54,3 +54,47 @@ youtube_link: "Watch on YouTube" #Watch on YouTube
 # Niconico
 nicovideo_title: "Niconico video player" #Niconico video player
 nicovideo_link: "Watch on Niconico" #Watch on Niconico
+
+
+##### Languages #####
+lang:
+  en: "English" #English
+  ja: "日本語" #Japanese
+  zh: "中文" #Chinese
+  zh-CN: "中文（简体）" #Chinese (Simplified)
+  zh-TW: "中文（繁體）" #Chinese (Traditional)
+  zh-HK: "中文（香港）" #Chinese (Hong Kong)
+  es: "Español" #Spanish
+  es-419: "Español (Latinoamérica)" #Spanish (Latin America)
+  fr: "Français" #French
+  de: "Deutsch" #German
+  ru: "Русский" #Russian
+  pt: "Português" #Portuguese
+  it: "Italiano" #Italian
+  ko: "한국어" #Korean
+  tr: "Türkçe" #Turkish
+  nl: "Nederlands" #Dutch
+  ar: "العربية" #Arabic
+  sv: "Svenska" #Swedish
+  da: "Dansk" #Danish
+  vi: "Tiếng Việt" #Vietnamese
+  no: "Norsk" #Norwegian
+  pl: "Polski" #Polish
+  fi: "Suomi" #Finnish
+  id: "Bahasa Indonesia" #Indonesian
+  he: "עברית" #Hebrew
+  el: "Ελληνικά" #Greek
+  ro: "Română" #Romanian
+  hu: "Magyar" #Hungarian
+  cs: "Čeština" #Czech
+  ca: "Català" #Catalan
+  sk: "Slovenčina" #Slovak
+  uk: "Українська" #Ukrainian
+  hr: "Hrvatski" #Croatian
+  ms: "Bahasa Melayu" #Malay
+  hi: "हिन्दी" #Hindi
+  kk: "Қазақша" #Kazakh
+  bg: "Български" #Bulgarian
+  sl: "Slovenščina" #Slovenian
+  lt: "Lietuvių" #Lithuanian
+
