@@ -42,14 +42,13 @@ nav.home-tab {
 div.tab-description {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   align-items: center;
   margin: 8px 0;
   padding: 0 8px;
   p {
-    margin: 0 4px;
+    margin: 0 8px 0 4px;
   }
   .menu-btn {
-    flex: 0 0 auto;
+    margin-inline-start: auto;
   }
 }
