@@ -1,3 +1,14 @@
+{%- if site.languages.size > 1 and site.plugins contains "jekyll-polyglot" and site.default_lang == "no-default" and site.active_lang == "no-default" -%}
+<script src="{{ "/assets/js/lang-redirect.js" | relative_url }}"></script>
+<meta name="robots" content="noindex">
+<meta name="robots" content="noarchive">
+<link rel="stylesheet" type="text/css" href="{{ "/assets/style.css" | relative_url }}">
+<noscript>
+<meta http-equiv="refresh" content="0;url={{ site.url }}/{{ site.lang | default: site.languages[0] }}{{ page.url | relative_url | replace: 'index.html', '' }}">
+</noscript>
+
+{%- else -%}
+
 {% assign rtl_languages = "ar,arc,dv,fa,he,ks,nqo,ps,syr,ur,yi" | split: ',' %}
 {%- assign lang = site.active_lang | default: page.lang | default: site.lang %}
 {%- if site.dir == "rtl" -%}
@@ -20,3 +31,4 @@
 {%- include footer.html -%}
 </body>
 </html>
+{%- endif -%}
