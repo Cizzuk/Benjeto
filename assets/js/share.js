@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var shareText = {
         {%- for lang in site.languages %}
         {%- if site.data[lang].texts.share and lang != site.default_lang %}
-        {{ lang }}: "{{ site.data[lang].texts.share }}",
+        "{{ lang }}" : "{{ site.data[lang].texts.share }}",
         {%- endif %}
         {%- endfor %}
         {{ site.default_lang }}: "{{ site.data.texts.share }}"
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var copiedText = {
         {%- for lang in site.languages %}
         {%- if site.data[lang].texts.share %}
-        {{ lang }}: "{{ site.data[lang].texts.copied }}",
+        "{{ lang }}" : "{{ site.data[lang].texts.copied }}",
         {%- endif %}
         {%- endfor %}
         {{ site.default_lang }}: "{{ site.data.texts.copied }}"
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
             if (lang in shareText) {
                 img.alt = shareText[(lang)];
             } else {
-                img.alt = shareText[{{ site.default_lang }}];
+                img.alt = shareText["{{ site.default_lang }}"];
             }
             {%- else %}
             img.alt = '{{ texts.share }}';
@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     if (lang in copiedText) {
                         shareMsg.textContent = copiedText[(lang)];
                     } else {
-                        shareMsg.textContent = copiedText[{{ site.default_lang }}];
+                        shareMsg.textContent = copiedText["{{ site.default_lang }}"];
                     }
                     {%- else %}
                     shareMsg.textContent = '{{ texts.copied }}';
