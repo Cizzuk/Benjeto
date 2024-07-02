@@ -1,7 +1,7 @@
 div.app-box {
   display: flex;
   flex-wrap: wrap;
-  margin: 8px 0;
+  margin: 16px 0;
 }
 img.app-icon {
   width: 100px;
@@ -24,3 +24,10 @@ div.app-info {
     padding: 0;
   }
 }
+
+article.feed-post, div.custom-feed {
+ div.app-box {
+  margin: 8px 0;
+ }
+}
+

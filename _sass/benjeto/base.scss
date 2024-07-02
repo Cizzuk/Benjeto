@@ -442,6 +442,9 @@ article.feed-post, div.custom-feed {
     color: var(--text);
     text-decoration: none;
   }
+  ul {
+    margin: 4px 30px;
+  }
 }
 div.post-excerpt {
   p {
