@@ -18,8 +18,8 @@ feed:
   tags:
     path: "/tags/"
   categories:
-    - Articles
-    - Clips
+    - articles
+    - clips
 
 ## Pagenate v1
 # Maximum number of posts to be displayed on home page.
