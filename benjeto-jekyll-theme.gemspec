@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "benjeto-jekyll-theme"
-  spec.version       = "0.0.5"
+  spec.version       = "0.0.6"
   spec.authors       = ["Cizzuk"]
 
   spec.summary       = "Jekyll theme like social media profile."
@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.metadata["plugin_type"] = "theme"
 
-  spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r!^(assets/(icon|js|css)/|_data/texts.yml|_layouts|_includes|_sass|LICENSE|README)!i) }
+  spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r!^(assets/(icon/|js/|style.scss)|_data/texts.yml|_layouts|_includes|_sass|LICENSE|README)!i) }
 
   spec.add_runtime_dependency "jekyll", "~> 4.3"
   spec.add_runtime_dependency "jekyll-feed", "~> 0.17"
