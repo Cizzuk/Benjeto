@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
         "{{ lang }}" : "{{ site.data[lang].texts.share }}",
         {%- endif %}
         {%- endfor %}
-        {{ site.default_lang }}: "{{ site.data.texts.share }}"
+        "{{ site.default_lang }}" : "{{ site.data.texts.share }}"
     };
     var copiedText = {
         {%- for lang in site.languages %}
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
         "{{ lang }}" : "{{ site.data[lang].texts.copied }}",
         {%- endif %}
         {%- endfor %}
-        {{ site.default_lang }}: "{{ site.data.texts.copied }}"
+        "{{ site.default_lang }}" : "{{ site.data.texts.copied }}"
     };
     {%- endif %}
     const shareButtons = document.querySelectorAll('.shareBtn');
