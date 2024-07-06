@@ -1,4 +1,5 @@
 div.section-box {
+  display: inline-block;
   margin: 16px 0;
   border: 1px solid var(--border);
   border-radius: 8px;
@@ -19,7 +20,6 @@ div.section-box {
       padding: 0;
       margin: 0;
       li {
-        flex-grow: 1;
         padding: 0;
         padding-inline-end: 12px;
         border: none;
