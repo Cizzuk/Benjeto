@@ -1,6 +1,3 @@
-> [!CAUTION]
-> This theme is currently under development and not yet available.
-
 # Benjeto
 
 Benjeto is a sleek and modern Jekyll Theme designed to create personal websites that resemble social media profiles.  
