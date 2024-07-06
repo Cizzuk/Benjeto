@@ -39,7 +39,6 @@ pagination:
 languages: ["en", "ja"]
 default_lang: "en"
 exclude_from_localization: ["javascript", "images", "css", "public", "assets"]
-parallel_localization: false
 
 defaults:
   - values:
@@ -47,6 +46,7 @@ defaults:
 
 sass:
   style: compressed
+  sass_dir: _sass
 
 plugins:
   - jekyll-feed
