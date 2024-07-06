@@ -38,7 +38,7 @@ pagination:
 # Polyglot
 languages: ["en", "ja"]
 default_lang: "en"
-exclude_from_localization: ["javascript", "images", "css", "public", "assets"]
+exclude_from_localization: ["javascript", "images", "ico", "css", "public", "assets"]
 
 defaults:
   - values:
