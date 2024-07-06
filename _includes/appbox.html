@@ -1,5 +1,7 @@
 <div class="app-box">
+  {%- if include.icon %}
   <img src="{{ include.icon | relative_url }}" class="app-icon" aria-hidden="true" alt="">
+  {%- endif %}
   <div class="app-info">
     <b>{{ include.title }}</b>
     {{ include.description }}

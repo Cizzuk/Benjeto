@@ -6,7 +6,7 @@
 {%- capture title -%}{{ page.title }} - {{ site.title }}{% endcapture %}
 {%- elsif page.layout == "post" and page.title == "" -%}
 {%- capture title -%}{{ page.excerpt | strip_html }} - {{ site.title }}{% endcapture %}
-{%- elsif page.layout == "home" and page.custom_home == true and page.title -%}
+{%- elsif page.layout == "home" and page.custom_home == true and page.title != "" -%}
 {%- capture title -%}{{ site.title }} | {{ page.title }}{% endcapture %}
 {%- elsif page.layout == "home" and page.pagination.category -%}
 {%- capture title -%}{{ site.title }} | {{ page.title | default: texts.categories[page.pagination.category] }}{% endcapture %}
