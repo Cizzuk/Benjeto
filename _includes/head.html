@@ -14,7 +14,7 @@
 {%- assign title = site.title -%}
 {%- endif -%}
 {%- assign icon = page.icon | default: page.image | default: settings.head.siteicon | default: profile.icon -%}
-{%- assign description = page.description | default: site.description | default: page.excerpt -%}
+{%- assign description = page.description | default: settings.head.description | default: site.description | default: page.excerpt -%}
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
