@@ -25,9 +25,9 @@ document.addEventListener('DOMContentLoaded', function () {
     shareButtons.forEach(button => {
         const img = button.querySelector('img');
         const shareMsg = button.querySelector('.shareMsg');
-        const url = window.location.protocol + window.location.host + button.getAttribute('data-url');
 
         if (navigator.share) {
+            const url = button.getAttribute('data-url');
             button.style.display = 'inline-block';
             img.src = '{{ "/assets/icon/share.svg" | relative_url }}';
 
@@ -58,6 +58,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
             });
         } else {
+            const url = window.location.protocol + "//" + window.location.host + button.getAttribute('data-url');
             button.style.display = 'inline-block';
 
             button.addEventListener('click', function () {
