@@ -117,7 +117,7 @@ caption {
 blockquote:not(.tiktok-embed) {
   margin: 16px 0;
   padding: 16px 24px;
-  background: var(--boxbg);
+  background: var(--boxbglight);
   border-left: 4px solid var(--border);
   p {
     margin: 4px 0;
@@ -128,13 +128,15 @@ pre, code, code * {
   font-family: monospace, system-ui, sans-serif;
 }
 code {
-  background: var(--boxbglight);
-  border: 1px solid var(--border);
+  background: var(--boxbg);
+  border: 1px solid var(--boxbg);
   border-radius: 4px;
   padding: 1px 4px;
   margin: 0 2px;
 }
 pre code {
+  background: var(--boxbglight);
+  border-color: var(--boxbglight);
   direction: ltr;
   display: block;
   border-radius: 6px;
@@ -625,6 +627,7 @@ ul.lang-select {
 @media (prefers-contrast: more) {
   code, pre code {
     background: var(--bg);
+    border-color: var(--border);
   }
   article.post {
     border-color: var(--boxbg);
