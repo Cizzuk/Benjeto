@@ -1,13 +1,13 @@
 ### Create your profile. Each field can be left blank. ###
 # Your display name
-name: User
+name: Benjeto Sample
 # Relative URL of your profile icon
 icon: "/assets/icon.png" 
 # Relative URL of your header image
 header: "/assets/header.png" 
 # Your personal introduction
 bio: >-
-  You can edit your profile in _config.yml.
+  Jekyll theme like social media profile.
 # Your pronouns
 pronouns: 
 # External links (e.g. social media).
