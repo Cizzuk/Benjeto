@@ -6,15 +6,6 @@
 <noscript>
 <meta http-equiv="refresh" content="0;url={{ site.url }}/{{ site.lang | default: site.languages[0] }}{{ page.url | relative_url | replace: 'index.html', '' }}">
 </noscript>
-{% if site.default_lang != "nil" -%}
-<link rel="alternate" hreflang="{{ site.default_lang }}" href="{{ site.url }}{{ page.permalink }}">
-{% endif -%}
-{% for lang in site.languages -%}
-{% if lang == site.default_lang -%}
-{% continue -%}
-{% endif -%}
-<link rel="alternate" hreflang="{{ lang }}" href="{{ site.url }}/{{ lang }}{{ page.permalink }}">
-{% endfor -%}
 {%- else -%}
 
 {% assign rtl_languages = "ar,arc,dv,fa,he,ks,nqo,ps,syr,ur,yi" | split: ',' %}
