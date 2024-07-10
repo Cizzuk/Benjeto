@@ -1,12 +1,12 @@
 # Website title.
-title: User
+title: Benjeto sample
 # Website description.
 description: >-
-  Here is a description of website.
+  Jekyll theme like social media profile.
 # Language of the website.
 lang: "en"
 # Web site protocol and host name.
-url: https://example.com
+url: https://benjeto.pages.dev
 permalink: pretty
 
 
