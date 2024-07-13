@@ -14,7 +14,7 @@
 {%- if settings.copyright %}
 <p class="copy">{{ settings.copyright }}</p>
 {%- endif %}
-{%- if site.languages.size > 1 and site.plugins contains "jekyll-polyglot" %}
+{%- if site.languages.size > 1 and site.plugins contains "jekyll-polyglot" and page.nolangs != true %}
 {%- include lang-select.html -%}
 {%- endif %}
 </div>
