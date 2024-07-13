@@ -27,7 +27,6 @@ document.addEventListener('DOMContentLoaded', function () {
         const shareMsg = button.querySelector('.shareMsg');
 
         if (navigator.share) {
-            const url = button.getAttribute('data-url');
             button.style.display = 'inline-block';
             img.src = '{{ "/assets/icon/share.svg" | relative_url }}';
 
@@ -47,25 +46,37 @@ document.addEventListener('DOMContentLoaded', function () {
                 event.stopPropagation();
 
                 const title = button.getAttribute('data-title');
+                const url = button.getAttribute('data-url');
+                if (url == "$here") {
+                    shareurl = window.location.href;
+                } else {
+                    shareurl = "{{ site.url }}" + url;
+                }
 
                 try {
                     await navigator.share({
                         title: title,
-                        url: url
+                        url: shareurl
                     });
                 } catch (error) {
                     console.error('Error sharing:', error);
                 }
             });
         } else {
-            const url = window.location.protocol + "//" + window.location.host + button.getAttribute('data-url');
             button.style.display = 'inline-block';
 
             button.addEventListener('click', function () {
                 event.preventDefault();
                 event.stopPropagation();
 
-                navigator.clipboard.writeText(url).then(() => {
+                const url = button.getAttribute('data-url');
+                if (url == "$here") {
+                    shareurl = window.location.href;
+                } else {
+                    shareurl = "{{ site.url }}" + url;
+                }
+
+                navigator.clipboard.writeText(shareurl).then(() => {
                     button.classList.add('disabled');
 
                     {%- if site.languages.size > 1 and site.plugins contains "jekyll-polyglot" %}
