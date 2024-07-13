@@ -63,8 +63,6 @@ post:
   subscribe_button: true
   # Show your profile in footer.
   footer_profile: "article" #true, false, article
-  # Set the font on the article to serif.
-  article_serif: false
   # Show the share button on the post.
   share_button: true
 
