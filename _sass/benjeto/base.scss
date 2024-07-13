@@ -61,7 +61,6 @@ hgroup {
 
 a {
   color: var(--link);
-  transition: color 0.1s;
   text-decoration: none;
   &:hover, &:focus {
     color: var(--linkhover);
@@ -197,13 +196,14 @@ video {
   border-radius: 6px;
   transition: filter 0.2s;
   .icon {
-    width: 24px;
+    width: auto;
+    max-height: 24px;
     margin-bottom: 1px;
   }
   &:has(.icon) {
     padding: 4px;
   }
-  &:hover, &:focus {
+  &:hover {
     filter: brightness(0.9);
     text-decoration: none;
   }
@@ -211,9 +211,6 @@ video {
     background: var(--link);
     color: var(--bg);
     border: 1px solid var(--link);
-    &:hover, &:focus {
-      filter: brightness(0.8);
-    }
   }
   &#btn {
     display: none;
@@ -347,19 +344,14 @@ header.home {
     display: flex;
     flex-wrap: wrap;
     list-style: none;
-    margin: 4px 0 0;
+    margin: 8px 0 0;
     padding: 0 4px;
     li {
       margin: 4px;
       a {
-        background: var(--boxbglight);
         border: 1px solid var(--border);
         border-radius: 4px;
         padding: 4px 6px;
-        transition: filter 0.15s;
-        &:hover, &:focus {
-          filter: brightness(0.9);
-        }
       }
     }
   }
@@ -373,6 +365,9 @@ header.home {
     section.sidebutton {
       display: flex;
       flex-wrap: wrap;
+      .nosc {
+        display: flex;
+      }
     }
   }
   a.proficon {

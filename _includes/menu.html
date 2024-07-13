@@ -8,7 +8,7 @@
   {%- if profile.tip %}
     {%- if profile.tip.size > 1 %}
     {%- assign needjs = true %}
-    <noscript>
+    <noscript class="nosc">
       <a class="menu-btn menues" href="{{ profile.tip[0].url }}" title="{{ texts.tip_menu }}">
         <img class="icon" src="{{ "/assets/icon/love.svg" | relative_url }}" alt="{{ texts.tip }}">
       </a>
@@ -38,7 +38,7 @@
   {%- if profile.message %}
     {%- if profile.message.size > 1 %}
     {%- assign needjs = true %}
-    <noscript>
+    <noscript class="nosc">
       <a class="menu-btn menues" href="{{ profile.message[0].url }}" title="{{ texts.message_menu }}">
         <img class="icon" src="{{ "/assets/icon/message.svg" | relative_url }}" alt="{{ texts.message }}">
       </a>
@@ -70,7 +70,7 @@
     {%- assign subscribe_list = profile.subscribe | default: settings.home.tabs %}
     {%- if subscribe_list.size > 1 %}
     {%- assign needjs = true %}
-    <noscript>
+    <noscript class="nosc">
       <a class="menu-btn subscribe menues" href="{{ subscribe_list[0].feed | relative_url }}" title="{{ texts.subscribe_menu }}">{{ texts.subscribe }}</a>
     </noscript>
     <button id="btn" class="menu-btn subscribe menues" data-menu="menu-subscribe" title="{{ texts.subscribe_menu }}" aria-haspopup="menu">{{ texts.subscribe }}</button>
