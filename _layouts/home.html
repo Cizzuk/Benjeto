@@ -20,7 +20,7 @@ layout: base
     </a>
     {%- include menu.html %}
   </div>
-  <h1 itemprop="name">{{ profile.name | default: site.title }}</h1>
+  <h1>{{ profile.name | default: site.title }}</h1>
   {%- if profile.pronouns %}
   <span class="pronouns" itemprop="pronouns">{{ profile.pronouns }}</span>
   {%- endif %}
