@@ -28,14 +28,6 @@
 .menu-btn:hover, .menu-btn:focus {
   filter: brightness(0.7);
 }
-{% if settings.style.menu == true %}
-.menu {
-  box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.6);
-}
-#overlay {
-  background: rgba(64, 64, 64, 0.5);
-}
-{% endif %}
 header.home ul.exlink li {
   a:hover, a:focus {
     filter: brightness(0.75);
