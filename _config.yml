@@ -24,21 +24,21 @@ feed:
 ## Pagenate v1
 # Maximum number of posts to be displayed on home page.
 # If blank, disable paginate.
-#paginate: 10
-#paginate_path: "/pages/:num/"
+paginate: 10
+paginate_path: "/pages/:num/"
 
 ## Pagenate-v2
-pagination:
-  enabled: true
+#pagination:
+#  enabled: true
   # Maximum number of posts to be displayed on home page.
-  per_page: 10
-  permalink: '/pages/:num/'
-  sort_reverse: true
+#  per_page: 10
+#  permalink: '/pages/:num/'
+#  sort_reverse: true
 
 # Polyglot
-languages: ["en", "ja"]
-default_lang: "en"
-exclude_from_localization: ["javascript", "images", "ico", "css", "public", "assets"]
+#languages: ["en", "ja"]
+#default_lang: "en"
+#exclude_from_localization: ["javascript", "images", "ico", "css", "public", "assets"]
 
 defaults:
   - values:
@@ -50,9 +50,9 @@ sass:
 
 plugins:
   - jekyll-feed
-  #- jekyll-paginate
-  - jekyll-paginate-v2
-  - jekyll-polyglot
+  - jekyll-paginate
+  #- jekyll-paginate-v2
+  #- jekyll-polyglot
 
 exclude:
   - LICENSE.txt
