@@ -12,6 +12,8 @@ allow_image_select: true
 head:
   # Prevents search engines from indexing your website.
   noindex: false
+  # Set the canonical URL.
+  canonical: 
   # If true, website previews will be displayed on social media, etc.
   ogp: true
   # If ogp is true, you can set your X account ID starting with @.

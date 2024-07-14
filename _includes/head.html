@@ -78,6 +78,10 @@
   <meta name="robots" content="noindex">
   {% endif -%}
 
+  {% if settings.head.canonical -%}
+  <link rel="canonical" href="{{ settings.head.canonical }}{{ page.url }}">
+  {% endif -%}
+
   {% if page.itunes_app -%}
   <meta name="apple-itunes-app" content="app-id={{ page.itunes_app }}">
   {% endif -%}
