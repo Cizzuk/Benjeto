@@ -131,14 +131,19 @@ code {
   margin: 0 2px;
 }
 pre code {
-  background: var(--boxbglight);
-  border-color: var(--boxbglight);
+  background: var(--page);
+  border-color: var(--page);
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.03);
   direction: ltr;
   display: block;
   border-radius: 6px;
   padding: 8px 12px;
   overflow-x: auto;
   border-width: 1.5px;
+}
+.pagebox pre code {
+  background: var(--boxbglight);
+  border-color: var(--boxbglight);
 }
 
 details {
