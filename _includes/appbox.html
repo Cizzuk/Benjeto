@@ -3,7 +3,11 @@
   <img src="{{ include.icon | relative_url }}" class="app-icon" aria-hidden="true" alt="">
   {%- endif %}
   <div class="app-info">
+    {%- if include.type == "title" %}
+    <h1>{{ include.title }}</h1>
+    {%- else %}
     <b>{{ include.title }}</b>
+    {%- endif %}
     {{ include.description }}
   </div>
 </div>
