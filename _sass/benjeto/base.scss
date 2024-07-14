@@ -624,7 +624,7 @@ ul.lang-select {
 }
 
 @media (prefers-contrast: more) {
-  code, pre code {
+  code, pre code, .pagebox pre code {
     background: var(--bg);
     border-color: var(--border);
   }
