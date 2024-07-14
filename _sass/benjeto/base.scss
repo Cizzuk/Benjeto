@@ -38,7 +38,7 @@ article.post {
 h1, h2, h3 {
   margin: 20px 0 16px;
   color: var(--head);
-  line-height: 1.2;
+  line-height: 1.5;
   font-weight: 600;
 }
 h2 {
@@ -397,6 +397,7 @@ header.home {
   h1 {
     display: inline-block;
     font-size: 1.8em;
+    line-height: 1.2;
     margin: 0;
   }
   p.bio {
