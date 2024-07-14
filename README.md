@@ -8,7 +8,7 @@ This theme is perfect for sharing short posts or updates as well as long article
 - Supports multilingual functionality with [jekyll-polyglot](https://github.com/untra/polyglot), including RTL.
 - Compatible with [jekyll-paginate](https://github.com/jekyll/jekyll-paginate) and [jekyll-paginate-v2](https://github.com/sverrirs/jekyll-paginate-v2).
 
-[Sample website is here](https://benjeto.pages.dev).
+[Sample website is here](https://benjeto.tsg0o0.com).
 
 ## Installation
 
