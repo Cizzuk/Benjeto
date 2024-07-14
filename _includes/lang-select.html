@@ -1,9 +1,10 @@
 {%- assign texts = site.data.texts %}
 {% assign rtl_languages = "ar,arc,dv,fa,he,ks,nqo,ps,syr,ur,yi" | split: ',' %}
-{%- if page.lang-exclusive.size > 1 or page.lang-exclusive == nil %}
+{% assign languages = page.lang-exclusive | default: site.languages %}
+{%- if languages.size > 1 or page.lang-exclusive == nil %}
 <ul class="lang-select">
-  {%- for lang in site.languages %}
-  {%- if page.lang-exclusive contains lang or page.lang-exclusive == nil %}
+  {%- for lang in languages %}
+  {%- if languages contains lang or languages == nil %}
   <li><a {% static_href %}href="
   {%- if lang == site.default_lang -%}
   {{ page.url | relative_url | replace: 'index.html', '' }}
