@@ -8,8 +8,9 @@ img.app-icon {
   height: 100px;
   vertical-align: top;
   margin-inline-end: 16px;
-  border-radius: 16px;
+  border-radius: 20px;
   flex-grow:0;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.1);
 }
 div.app-info {
   flex-grow:1;
