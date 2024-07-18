@@ -15,6 +15,7 @@ nav.home-tab {
     li {
       margin-bottom: -2px;
       border-bottom: 2px solid var(--boxbg);
+      white-space: nowrap;
       a {
         display: block;
         padding: 8px 12px;
