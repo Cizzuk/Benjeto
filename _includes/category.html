@@ -1,8 +1,13 @@
 {%- assign texts = site.data.texts %}
+{%- assign settings = site.data.settings %}
 {%- if include.category -%}
 <span class="category">
 {%- for category in include.category -%}
+{%- if settings.categories[category] and include.link == true -%}
+<a class="category" href="{{ settings.categories[category].url | relative_url }}">{{ settings.categories[category].name | default: texts.categories[category] | default: category }}</a>
+{%- else -%}
 {{ texts.categories[category] | default: category }}
+{%- endif -%}
 {%- if forloop.last == false %}, {% endif -%}
 {%- endfor -%}
 </span>

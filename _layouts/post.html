@@ -9,8 +9,8 @@ layout: base
   <h1>{{ page.title }}</h1>
   {%- endif -%}
   <div class="meta">
-    {%- include category.html category=page.category %}
-    {%- include tags.html tags=page.tag %}
+    {%- include category.html category=page.category link=true %}
+    {%- include tags.html tags=page.tag link=true %}
     {%- if page.date or page.update %}
     <div class="time">
       {%- assign date_format = page.date_format | default: texts.date_format | default: "%Y-%m-%d" -%}

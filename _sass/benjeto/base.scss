@@ -249,7 +249,7 @@ button.shareBtn {
 }
 
 
-span.tag {
+.tag {
   display: inline-block;
   color: var(--gray);
   font-size: 0.9em;
@@ -258,8 +258,11 @@ span.tag {
   border: 1px solid var(--border);
   border-radius: 16px;
 }
+a.tag {
+  color: var(--link);
+}
 
-span.category {
+.category {
   display: inline-block;
   font-weight: 500;
   margin: 0;
@@ -300,9 +303,12 @@ header.post {
     div.tags {
       display: inline-block;
       margin: 0 4px;
-      span.tag {
+      .tag {
         margin: 0 4px;
       }
+    }
+    .category a {
+      margin-bottom: 0;
     }
     div.time {
       display: flex;
@@ -482,7 +488,7 @@ div.post-custom {
   }
   div.tags {
     display: inline-block;
-    span.tag {
+    .tag {
       margin-inline-end: 6px;
     }
   }

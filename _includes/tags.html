@@ -1,8 +1,13 @@
 {%- assign texts = site.data.texts %}
+{%- assign settings = site.data.settings %}
 {%- if include.tags -%}
 <div class="tags">
 {%- for entry in include.tags -%}
+{%- if settings.tags[entry] and include.link == true -%}
+<a class="tag" href="{{ settings.tags[entry].url | relative_url }}">{{ settings.tags[entry].name | default: texts.tags[entry] | default: entry }}</a>
+{%- else -%}
 <span class="tag">{{ texts.tags[entry] | default: entry }}</span>
+{%- endif -%}
 {%- endfor -%}
 </div>
 {%- endif -%}
