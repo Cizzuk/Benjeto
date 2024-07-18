@@ -81,3 +81,13 @@ style: # Style settings are applied to the entire website.
   app_box: false
   section_box: false
 
+categories:
+  articles:
+    url: "/category/articles/"
+  clips:
+    url: "/category/clips/"
+
+tags:
+  favorites:
+    url: "/tags/favorites/"
+
