@@ -74,7 +74,7 @@
   <link rel="icon" href="{{ settings.head.favicon | relative_url | default: profile.icon | relative_url }}">
   {% endif -%}
 
-  {% if page.noindex == true or settings.head.noindex == true or site.plugins contains "jekyll-polyglot" and page.lang != site.active_lang and page.layout != "home" -%}
+  {% if page.noindex == true or page.hidden == true or settings.head.noindex == true or site.plugins contains "jekyll-polyglot" and page.lang != site.active_lang and page.layout != "home" -%}
   <meta name="robots" content="noindex">
   {% endif -%}
 
