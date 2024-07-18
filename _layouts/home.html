@@ -10,20 +10,24 @@ layout: base
 
 <main>
 <header class="home">
-  <div class="headline">
-    <a class="proficon{% if settings.round_icon == true %} round{% endif %}{% if profile.header == nil %} no-header{% endif %}" href="{{ "/" | relative_url }}">
-      {%- if profile.icon %}
-      <img src="{{ profile.icon | relative_url }}" alt="{{ profile.name }}">
-      {%- else %}
-      <div class="dummy"></div>
+  <div class="header-top">
+    <div class="nameline">
+      <h1>{{ profile.name | default: site.title }}</h1>
+      {%- if profile.pronouns %}
+      <span class="pronouns" itemprop="pronouns">{{ profile.pronouns }}</span>
       {%- endif %}
-    </a>
-    {%- include menu.html %}
+    </div>
+    <div class="headline">
+      <a class="proficon{% if settings.round_icon == true %} round{% endif %}{% if profile.header == nil %} no-header{% endif %}" href="{{ "/" | relative_url }}" aria-hidden="true">
+        {%- if profile.icon %}
+        <img src="{{ profile.icon | relative_url }}" alt="">
+        {%- else %}
+        <div class="dummy"></div>
+        {%- endif %}
+      </a>
+      {%- include menu.html %}
+    </div>
   </div>
-  <h1>{{ profile.name | default: site.title }}</h1>
-  {%- if profile.pronouns %}
-  <span class="pronouns" itemprop="pronouns">{{ profile.pronouns }}</span>
-  {%- endif %}
   {%- if profile.bio %}
   <p class="bio">{{ profile.bio }}</p>
   {%- endif %}
