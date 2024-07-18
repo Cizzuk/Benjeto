@@ -69,21 +69,25 @@ layout: base
     {%- endif %}
     {%- endfor %}
     {%- if tab_found == false %}
-    <li class="current" aria-selected><a href="{{ page.url }}">{{ page.title }}</a></li>
+    <li class="current" aria-selected><a href="{{ page.tab.url | default: page.url | relative_url }}">
+    {{- page.tab.title | default: page.title }}</a></li>
     {%- endif %}
   </ul>
 </nav>
 {%- if tab_found != false %}
-{%- if tab_found.description or tab_found.feed %}
+{%- assign tab_info = tab_found %}
+{%- else %}
+{%- assign tab_info = page.tab %}
+{%- endif %}
+{%- if tab_info.description or tab_info.feed %}
 <div class="tab-description">
-  {%- if tab_found.description %}
-  <p>{{ tab_found.description }}</p>
+  {%- if tab_info.description or page.description %}
+  <p>{{ tab_info.description | default: page.description }}</p>
   {%- endif %}
-  {%- if tab_found.feed %}
-  <a class="menu-btn subscribe" href="{{ tab_found.feed | relative_url }}" title="{{ texts.subscribe_menu }}">{{ texts.subscribe }}</a>
+  {%- if tab_info.feed %}
+  <a class="menu-btn subscribe" href="{{ tab_info.feed | relative_url }}" title="{{ texts.subscribe_menu }}">{{ texts.subscribe }}</a>
   {%- endif %}
 </div>
-{%- endif %}
 {%- endif %}
 {%- endif %}
 
