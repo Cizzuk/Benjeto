@@ -148,8 +148,8 @@ pre code {
 details {
   margin: 16px 0;
   padding: 8px 16px;
-  background: var(--boxbglight);
-  border: 1px solid var(--border);
+  background: var(--boxbg);
+  border: 1px solid var(--boxbg);
   border-radius: 8px;
   summary {
     font-weight: 600;
@@ -648,6 +648,10 @@ ul.lang-select {
     &:has(a.post-lighter:hover) {
       border-color: var(--link);
     }
+  }
+  details {
+    background: var(--page);
+    border-color: var(--border);
   }
 }
 
