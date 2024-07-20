@@ -95,7 +95,7 @@ table {
     background: var(--boxbg);
   }
   tbody tr {
-    background: var(--page);
+    background: var(--bglight);
   }
   tbody th {
     background: var(--boxbglight);
@@ -124,15 +124,15 @@ pre, code, code * {
   font-family: monospace, system-ui, sans-serif;
 }
 code {
-  background: var(--boxbg);
-  border: 1px solid var(--boxbg);
+  background: var(--boxbglight);
+  border: 1px solid var(--boxbglight);
   border-radius: 4px;
   padding: 1px 4px;
   margin: 0 2px;
 }
 pre code {
-  background: var(--page);
-  border-color: var(--page);
+  background: var(--bglight);
+  border-color: var(--bglight);
   direction: ltr;
   display: block;
   border-radius: 6px;
@@ -140,16 +140,12 @@ pre code {
   overflow-x: auto;
   border-width: 1.5px;
 }
-.pagebox pre code {
-  background: var(--bg);
-  border-color: var(--bg);
-}
 
 details {
   margin: 16px 0;
   padding: 8px 16px;
-  background: var(--boxbg);
-  border: 1px solid var(--boxbg);
+  background: var(--boxbglight);
+  border: 1px solid var(--border);
   border-radius: 8px;
   summary {
     font-weight: 600;
@@ -192,29 +188,31 @@ video {
   background: var(--boxbg);
   color: var(--text);
   text-align: center;
-  padding: 4px 8px;
+  padding: 5px 9px;
   margin: 2px 4px;
   min-width: 36px;
   min-height: 36px;
-  border: 1px solid var(--border);
+  border: none;
   border-radius: 6px;
-  transition: filter 0.2s;
+  transition: background 0.2s;
   .icon {
     width: auto;
     max-height: 24px;
     margin-bottom: 1px;
   }
   &:has(.icon) {
-    padding: 4px;
+    padding: 5px;
   }
   &:hover {
-    filter: brightness(0.9);
+    background: var(--boxbglight);
     text-decoration: none;
   }
   &.subscribe {
     background: var(--link);
     color: var(--bg);
-    border: 1px solid var(--link);
+    &:hover {
+      background: var(--linkhover);
+    }
   }
   &#btn {
     display: none;
@@ -251,15 +249,14 @@ button.shareBtn {
 
 .tag {
   display: inline-block;
-  color: var(--gray);
   font-size: 0.9em;
   line-height: 1.4;
   padding: 1px 8px;
   border: 1px solid var(--border);
   border-radius: 16px;
 }
-a.tag {
-  color: var(--link);
+.tag:not(a) {
+  color: var(--gray);
 }
 
 .category {
@@ -367,9 +364,15 @@ header.home {
     li {
       margin: 4px;
       a {
-        border: 1px solid var(--border);
+        color: var(--linkhover);
+        background: var(--boxbg);
         border-radius: 4px;
-        padding: 4px 6px;
+        padding: 5px 8px;
+        transition: background 0.2s;
+        &:hover {
+          background: var(--boxbglight);
+          text-decoration: none;
+        }
       }
     }
   }
@@ -439,7 +442,8 @@ article.feed-post, div.custom-feed {
   display: block;
   margin: 16px 0;
   padding: 0;
-  border: 2px solid var(--page);
+  background: var(--bglight);
+  border: 2px solid var(--bglight);
   border-radius: 16px;
   transition: border-color 0.2s;
   &:has(a.post-lighter:hover) {
@@ -638,20 +642,10 @@ ul.lang-select {
 @media (prefers-contrast: more) {
   code, pre code, .pagebox pre code {
     background: var(--bg);
-    border-color: var(--border);
-  }
-  article.post {
     border-color: var(--boxbg);
   }
-  article.feed-post, div.custom-feed {
-    border-color: var(--border);
-    &:has(a.post-lighter:hover) {
-      border-color: var(--link);
-    }
-  }
-  details {
-    background: var(--page);
-    border-color: var(--border);
+  article.post {
+    border-color: var(--bglight);
   }
 }
 
