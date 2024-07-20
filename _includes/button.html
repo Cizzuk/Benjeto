@@ -1,0 +1,10 @@
+{%- if include.type == "button" -%}
+  <button class="cstm-btn btn-{{ include.style }}"
+  {%- if include.id %} id="{{ include.id }}"{% endif %}>{{ include.text }}</button>
+{%- else -%}
+  <a href="{{ include.url }}" 
+  class="cstm-btn{% if include.style %} btn-{{ include.style }}{% endif %}"
+  {%- if include.type == "download" %} download{% endif %}
+  {%- if include.type == "external" %} target="_blank"{% endif -%}
+  >{{ include.text }}</a>
+{%- endif -%}

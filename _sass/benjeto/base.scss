@@ -182,6 +182,46 @@ video {
   vertical-align: bottom;
 }
 
+.cstm-btn {
+  display: inline-block;
+  border-radius: 6px;
+  padding: 8px 16px;
+  margin: 8px 4px;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid var(--border);
+  color: var(--link);
+  background: none;
+  transition: background 0.2s, color 0.2s;
+  &.btn-filled {
+    background: var(--link);
+    color: var(--bg);
+    border: none;
+    padding: 9px 17px;
+    cursor: pointer;
+    &:hover {
+      background: var(--linkhover);
+      color: var(--bg);
+    }
+  }
+  &.btn-light {
+    background: var(--boxbg);
+    color: var(--text);
+    border: none;
+    padding: 9px 17px;
+    &:hover {
+      background: var(--boxbglight);
+      color: var(--link);
+    }
+  }
+  &:hover {
+    background: var(--boxbglight);
+    color: var(--linkhover);
+    text-decoration: none;
+  }
+}
+
 .menu-btn {
   font-weight: bold;
   font-size: 1em;
