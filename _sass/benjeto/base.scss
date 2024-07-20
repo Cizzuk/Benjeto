@@ -124,8 +124,8 @@ pre, code, code * {
   font-family: monospace, system-ui, sans-serif;
 }
 code {
-  background: var(--boxbglight);
-  border: 1px solid var(--boxbglight);
+  background: var(--boxbg);
+  border: 1px solid var(--boxbg);
   border-radius: 4px;
   padding: 1px 4px;
   margin: 0 2px;
@@ -228,6 +228,7 @@ button.shareBtn {
   height: 34px;
   padding: 0 6px;
   text-align: end;
+  cursor: pointer;
   transition: background 0.2s;
   &:hover, &.disabled {
     background: var(--boxbg);
@@ -367,7 +368,7 @@ header.home {
         color: var(--linkhover);
         background: var(--boxbg);
         border-radius: 4px;
-        padding: 5px 8px;
+        padding: 5px 7px;
         transition: background 0.2s;
         &:hover {
           background: var(--boxbglight);
