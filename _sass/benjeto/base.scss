@@ -132,7 +132,7 @@ code {
 }
 pre code {
   background: var(--bglight);
-  border-color: var(--bglight);
+  border-color: var(--boxbg);
   direction: ltr;
   display: block;
   border-radius: 6px;
@@ -640,10 +640,6 @@ ul.lang-select {
 }
 
 @media (prefers-contrast: more) {
-  code, pre code, .pagebox pre code {
-    background: var(--bg);
-    border-color: var(--boxbg);
-  }
   article.post {
     border-color: var(--bglight);
   }
