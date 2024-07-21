@@ -8,12 +8,8 @@ bio: >-
 pronouns: 
 # 外部リンク (例: SNS).
 links:
-  - name: X
-    url: "https://x.com/x"
-  - name: YouTube
-    url: "https://youtube.com/@YouTube"
   - name: GitHub
-    url: "https://github.com/github"
+    url: "https://github.com/Cizzuk/Benjeto"
 # あなたの連絡先
 message: 
   - name: メール
