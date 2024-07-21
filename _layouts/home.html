@@ -132,6 +132,14 @@ layout: base
 {%- endif -%}
 
 {%- else -%}
+<div class="tab-description">
+  {%- if page.tab.description %}
+  <p>{{ page.tab.description }}</p>
+  {%- endif %}
+  {%- if page.tab.feed %}
+  <a class="menu-btn subscribe" href="{{ page.tab.feed | relative_url }}" title="{{ texts.subscribe_menu }}">{{ texts.subscribe }}</a>
+  {%- endif %}
+</div>
 <div class="custom-home">
 {{ content }}
 </div>
