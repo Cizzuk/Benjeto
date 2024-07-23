@@ -3,14 +3,6 @@
 {%- assign texts = site.data.texts -%}
 document.addEventListener('DOMContentLoaded', function () {
     {%- if site.languages.size > 1 and site.plugins contains "jekyll-polyglot" %}
-    var shareText = {
-        {%- for lang in site.languages %}
-        {%- if site.data[lang].texts.share and lang != site.default_lang %}
-        "{{ lang }}" : "{{ site.data[lang].texts.share }}",
-        {%- endif %}
-        {%- endfor %}
-        "{{ site.default_lang }}" : "{{ site.data.texts.share }}"
-    };
     var copiedText = {
         {%- for lang in site.languages %}
         {%- if site.data[lang].texts.share %}
@@ -23,23 +15,10 @@ document.addEventListener('DOMContentLoaded', function () {
     const shareButtons = document.querySelectorAll('.shareBtn');
 
     shareButtons.forEach(button => {
-        const img = button.querySelector('img');
         const shareMsg = button.querySelector('.shareMsg');
 
         if (navigator.share) {
             button.style.display = 'inline-block';
-            img.src = '{{ "/assets/icon/share.svg" | relative_url }}';
-
-            {%- if site.languages.size > 1 and site.plugins contains "jekyll-polyglot" %}
-            const lang = document.documentElement.lang;
-            if (lang in shareText) {
-                img.alt = shareText[(lang)];
-            } else {
-                img.alt = shareText["{{ site.default_lang }}"];
-            }
-            {%- else %}
-            img.alt = '{{ texts.share }}';
-            {%- endif %}
 
             button.addEventListener('click', async function () {
                 event.preventDefault();

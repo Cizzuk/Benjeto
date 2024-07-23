@@ -14,7 +14,7 @@
 {%- if page.layout == "post" and type == "nav" and settings.post.share_button == true %}
 <button class="shareBtn" id="shareButton" data-title="{{ page.title | default: page.excerpt | strip_html }}" data-url="$here" role="button" title="{{ texts.share }}">
   <span class="shareMsg"></span>
-  <img class="icon" src="{{ "/assets/icon/clip.svg" | relative_url }}" alt="{{ texts.copy }}">
+  {% include icon/share.svg alt=texts.share %}
 </button>
 <script src="{{ "/assets/js/share.js" | relative_url }}"></script>
 {%- endif %}

@@ -10,16 +10,16 @@
     {%- assign needjs = true %}
     <noscript class="nosc">
       <a class="menu-btn menues" href="{{ profile.tip[0].url }}" title="{{ texts.tip_menu }}">
-        <img class="icon" src="{{ "/assets/icon/love.svg" | relative_url }}" alt="{{ texts.tip }}">
+        {% include icon/love.svg alt=texts.tip %}
       </a>
     </noscript>
     <button id="btn" class="menu-btn menues" data-menu="menu-tip" title="{{ texts.tip_menu }}" aria-haspopup="menu" aria-label="{{ texts.tip }}">
-      <img class="icon" src="{{ "/assets/icon/love.svg" | relative_url }}" alt="{{ texts.tip }}">
+      {% include icon/love.svg alt=texts.tip %}
     </button>
     <div class="menu" id="menu-tip" role="menu">
       <div class="menuline">
         <button class="close-btn" aria-label="{{ texts.close }}">
-          <img class="icon" src="{{ "/assets/icon/close.svg" | relative_url }}" alt="{{ texts.close }}">
+          {% include icon/close.svg alt=texts.close %}
         </button>
         <b>{{ texts.tip_menu }}</b>
       </div>
@@ -31,7 +31,7 @@
     </div>
     {%- else %}
     <a class="menu-btn" href="{{ profile.tip[0].url }}" title="{{ texts.tip_menu }}">
-      <img class="icon" src="{{ "/assets/icon/love.svg" | relative_url }}" alt="{{ texts.tip }}">
+      {% include icon/love.svg alt=texts.tip %}
     </a>
     {%- endif -%}
   {%- endif -%}
@@ -40,16 +40,16 @@
     {%- assign needjs = true %}
     <noscript class="nosc">
       <a class="menu-btn menues" href="{{ profile.message[0].url }}" title="{{ texts.message_menu }}">
-        <img class="icon" src="{{ "/assets/icon/message.svg" | relative_url }}" alt="{{ texts.message }}">
+        {% include icon/message.svg alt=texts.message %}
       </a>
     </noscript>
     <button id="btn" class="menu-btn menues" data-menu="menu-message" title="{{ texts.message_menu }}" aria-haspopup="menu" aria-label="{{ texts.message }}">
-      <img class="icon" src="{{ "/assets/icon/message.svg" | relative_url }}" alt="{{ texts.message }}">
+      {% include icon/message.svg alt=texts.message %}
     </button> 
     <div class="menu" id="menu-message" role="menu">
       <div class="menuline">
         <button class="close-btn" aria-label="{{ texts.close }}">
-          <img class="icon" src="{{ "/assets/icon/close.svg" | relative_url }}" alt="{{ texts.close }}">
+          {% include icon/close.svg alt=texts.close %}
         </button>
         <b>{{ texts.message_menu }}</b>
       </div>
@@ -61,7 +61,7 @@
     </div>
     {%- else %}
     <a class="menu-btn" href="{{ profile.message[0].url }}" title="{{ texts.message_menu }}">
-      <img class="icon" src="{{ "/assets/icon/message.svg" | relative_url }}" alt="{{ texts.message }}">
+      {% include icon/message.svg alt=texts.message %}
     </a>
     {%- endif -%}
   {%- endif -%}
@@ -77,7 +77,7 @@
     <div class="menu" id="menu-subscribe" role="menu">
       <div class="menuline">
         <button class="close-btn" aria-label="{{ texts.close }}">
-          <img class="icon" src="{{ "/assets/icon/close.svg" | relative_url }}" alt="{{ texts.close }}">
+          {% include icon/close.svg alt=texts.close %}
         </button>
         <b>{{ texts.subscribe_menu }}</b>
       </div>

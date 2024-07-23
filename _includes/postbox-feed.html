@@ -24,7 +24,7 @@
       {%- if settings.home.share_button == true %}
       <button class="shareBtn" id="shareButton" data-title="{{ post.title | default: post.excerpt | strip_html }}" data-url="{{ post.url | relative_url }}" role="button" title="{{ texts.share }}">
         <span class="shareMsg"></span>
-        <img class="icon" src="{{ "/assets/icon/clip.svg" | relative_url }}" alt="{{ texts.copy }}">
+        {% include icon/share.svg alt=texts.share %}
       </button>
       {%- endif %}
     </div>

@@ -178,7 +178,7 @@ video {
 .icon {
   display: inline-block;
   width: 1em;
-  margin: 0;
+  color: var(--text);
   vertical-align: bottom;
 }
 
@@ -190,7 +190,7 @@ video {
   font-size: 1em;
   font-weight: 600;
   cursor: pointer;
-  border: 1px solid var(--border);
+  border: 1.5px solid var(--border);
   color: var(--link);
   background: none;
   transition: background 0.2s, color 0.2s;
@@ -548,13 +548,13 @@ div.post-custom {
     flex: 0 0 auto;
     margin-inline-end: 8px;
     .icon {
-      opacity: 0.5;
       transition: opacity 0.2s;
+      color: var(--gray);
     }
     &:hover, &:focus, &.disabled {
       background: var(--boxbg);
       .icon {
-        opacity: 1;
+        color: var(--text);
       }
     }
   }

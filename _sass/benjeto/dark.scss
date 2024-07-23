@@ -27,9 +27,6 @@
   --border: #6078a0;
 }
 }
-.icon {
-  filter: invert(1);
-}
 @media (prefers-contrast: more) {
   code, pre code, .pagebox pre code {
     background: var(--bg);
