@@ -684,5 +684,12 @@ ul.lang-select {
   article.post {
     border-color: var(--bglight);
   }
+  header.home ul.exlink li a {
+    color: var(--text);
+    text-decoration: underline;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 

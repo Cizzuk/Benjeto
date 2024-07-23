@@ -71,3 +71,14 @@
     background: rgba(64, 64, 64, 0.5);
   }
 }
+@media (prefers-contrast: more) {
+  #overlay {
+    background: rgba(64, 64, 64, 0.7);
+    backdrop-filter: blur(12px);
+  }
+  @media (prefers-color-scheme: dark) {
+    #overlay {
+      background: rgba(64, 64, 64, 0.8);
+    }
+  }
+}
