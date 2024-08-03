@@ -9,7 +9,7 @@
         <h2>{{ post.title | escape }}</h2>
         {%- endif %}
         {%- if post.title == "" or settings.home.show_excerpts == true %}
-        {{ post.excerpt }}
+        {{ post.excerpt | replace: "<a ", "<span " | replace: "</a>", "</span>" }}
         {%- endif %}
       </a>
     </div>
