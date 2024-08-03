@@ -2,7 +2,7 @@
 {%- assign title = include.title -%}
 {%- assign aspect = include.aspect | default: "16 / 9" -%}
 {%- if id -%}
-<iframe class="youtube" style="aspect-ratio: {{ aspect }}" src="https://www.youtube-nocookie.com/embed/{{ id }}" title="{{ texts.youtube_title }}" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+<iframe class="youtube" style="aspect-ratio: {{ aspect }}" src="https://www.youtube-nocookie.com/embed/{{ id }}" title="{{ texts.youtube_title }}" allow="clipboard-write; encrypted-media; picture-in-picture; web-share" referrerpolicy="no-referrer" allowfullscreen sandbox="allow-scripts allow-same-origin">
 <a href="https://www.youtube.com/watch?v={{ id }}" target="_blank" rel="noopener noreferrer">{{ title | default: texts.youtube_link }}</a>
 </iframe>
 {%- endif -%}
