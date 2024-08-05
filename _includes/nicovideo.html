@@ -2,7 +2,7 @@
 {%- assign title = include.title -%}
 {%- assign aspect = include.aspect | default: "16 / 9" -%}
 {%- if id -%}
-<iframe class="nicovideo" style="aspect-ratio: {{ aspect }}" src="https://embed.nicovideo.jp/watch/{{ id }}" title="{{ texts.nicovideo_title }}" allow="clipboard-write; encrypted-media; picture-in-picture; web-share" referrerpolicy="no-referrer" allowfullscreen sandbox="allow-scripts">
+<iframe class="nicovideo" style="aspect-ratio: {{ aspect }}" src="https://embed.nicovideo.jp/watch/{{ id }}" title="{{ texts.nicovideo_title }}" allow="clipboard-write; encrypted-media; picture-in-picture; web-share" referrerpolicy="no-referrer" allowfullscreen sandbox="allow-scripts allow-same-origin">
 <a href="https://www.nicovideo.jp/watch/{{ id }}" target="_blank" rel="noopener noreferrer">{{ title | default: texts.nicovideo_link }}</a>
 </iframe>
 {%- endif -%}
