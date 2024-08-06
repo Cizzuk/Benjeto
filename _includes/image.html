@@ -3,14 +3,20 @@
   <img src="{{ include.src | relative_url }}" 
   {% if include.pixel == true %}class="pixel"{% endif %}
   {% if include.alt %}alt="{{ include.alt }}"{% endif %}>
+  {%- if include.caption or include.license %}
   <figcaption>
     {{ include.caption }}
-    {% if include.license %}
+    {%- if include.license %}
       <br>
       <span class="license">
         {{ texts.image_license }}
-        <a href="{{ include.license_url }}" target="_blank">{{ include.license }}</a>
+        {%- if include.license_url %}
+          <a href="{{ include.license_url }}" target="_blank">{{ include.license }}</a>
+        {%- else %}
+          {{ include.license }}
+        {%- endif %}
       </span>
-    {% endif %}
+    {%- endif %}
   </figcaption>
+  {%- endif %}
 </figure>
