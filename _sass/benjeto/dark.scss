@@ -1,7 +1,7 @@
 :root {
   color-scheme:dark;
   --bg: #000;
-  --bglight: #181a26;
+  --bglight: #1c202e;
   --page: #10121a;
   --text: #eee;
   --gray: #a3a3a3;
@@ -15,10 +15,10 @@
 @media (prefers-contrast: more) {
 :root {
   --bg: #000;
-  --bglight: #1c202e;
+  --bglight: #20253a;
   --page: #131520;
   --text: #fff;
-  --gray: #b5b5b5;
+  --gray: #ccc;
   --head: #fff;
   --link: #40c5ff;
   --linkhover: #aadaff;
