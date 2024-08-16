@@ -76,7 +76,7 @@ ul, ol {
   margin: 16px 32px 16px;
   padding: 0;
 }
-li ul, li ol {
+li ul, li ol, ul ul {
   margin: 0px 24px 4px;
 }
 
@@ -94,14 +94,10 @@ table {
   thead, tfoot {
     background: var(--boxbg);
   }
-  tbody tr {
-    background: var(--bglight);
-  }
   tbody th {
     background: var(--boxbglight);
-  }
-  tbody:not(:has(th)) tr:nth-child(even) {
-    background: var(--boxbglight);
+    text-align: initial;
+    font-weight: 600;
   }
 }
 
@@ -125,18 +121,18 @@ pre, code, code * {
 }
 code {
   background: var(--boxbg);
-  border: 1px solid var(--boxbg);
   border-radius: 4px;
   padding: 1px 4px;
   margin: 0 2px;
+  font-size: 0.95em;
 }
 pre code {
-  background: var(--bglight);
-  border-color: var(--boxbg);
+  background: var(--page);
+  border: 1px solid var(--boxbg);
+  border-radius: 6px;
   direction: ltr;
   display: block;
-  border-radius: 6px;
-  padding: 8px 12px;
+  padding: 6px 14px;
   overflow-x: auto;
   border-width: 1.5px;
 }
@@ -292,7 +288,7 @@ button.shareBtn {
   display: inline-block;
   font-size: 0.9em;
   line-height: 1.4;
-  padding: 1px 8px;
+  padding: 0 8px;
   border: 1px solid var(--border);
   border-radius: 16px;
 }
@@ -408,7 +404,7 @@ header.home {
         color: var(--linkhover);
         background: var(--boxbg);
         border-radius: 4px;
-        padding: 4px 6px;
+        padding: 4px 7px;
         transition: background 0.2s;
         font-size: 0.9em;
         &:hover {
@@ -685,6 +681,9 @@ ul.lang-select {
 @media (prefers-contrast: more) {
   article.post {
     border-color: var(--bglight);
+  }
+  pre code {
+    border-color: var(--border);
   }
   header.home ul.exlink li a {
     color: var(--text);
