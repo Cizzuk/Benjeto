@@ -1,29 +1,31 @@
 :root {
-  --bg: #f5f5fa;
+  --bg: #f6f6fc;
   --bglight: #fff;
   --page: #fafafc;
-  --text: #222;
+  --text: #2a2a2a;
   --gray: #666;
   --head: #0a0a0a;
   --link: #0050ea;
   --linkhover: #0020a0;
-  --boxbg: #d0defc;
-  --boxbglight: #e5ecff;
+  --boxbg: #c5daff;
+  --boxbglight: #e0e8fa;
+  --boxbgtext: #eaf0ff;
   --border: #75a5ff;
 }
 @media (prefers-contrast: more) {
 :root {
-  --bg: #ececf5;
+  --bg: #f0f0f5;
   --bglight: #fff;
-  --page: #fff;
+  --bgfill: #e0e8fa;
+  --page: #fafafc;
   --text: #000;
   --gray: #4a4a4a;
   --head: #000;
-  --link: #0000ff;
-  --linkhover: #000090;
-  --boxbg: #c0d3f3;
-  --boxbglight: #d5e3fc;
-  --border: #4a9afa;
+  --link: #0020c0;
+  --linkhover: #000070;
+  --boxbg: #b3ccfa;
+  --boxbglight: #d0defc;
+  --boxbgtext: #e0e8f8;
+  --border: #4898f8;
 }
 }
-

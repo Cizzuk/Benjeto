@@ -9,13 +9,13 @@ img.app-icon {
   vertical-align: top;
   margin-inline-end: 16px;
   border-radius: 20px;
-  flex-grow:0;
+  flex-grow: 0;
   box-shadow: 0 2px 8px 0 rgba(0,0,0,0.1);
 }
 div.app-info {
-  flex-grow:1;
-  width:calc(100% - 116px);
-  min-width:166px;
+  flex-grow: 1;
+  width: calc(100% - 116px);
+  min-width: 124px;
   line-height: 1.2;
   margin-bottom: 4px;
   h1, h2, h3, b {

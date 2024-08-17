@@ -25,10 +25,7 @@ article.post {
 }
 .pagebox {
   background: var(--page);
-  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.05);
-  * {
-    line-height: 1.7;
-  }
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.08);
 }
 article.post {
   font-size: 1.05rem;
@@ -43,14 +40,14 @@ h1, h2, h3 {
 }
 h2 {
   padding-bottom: 2px;
-  border-bottom: 1.5px solid var(--border);
+  border-bottom: 2px solid var(--border);
 }
 
 hgroup {
   margin: 20px 0 16px;
   padding-bottom: 8px;
   &:has(h2) {
-    border-bottom: 1.5px solid var(--border);
+    border-bottom: 2px solid var(--border);
   }
   p, h2, h3, h4, h5, h6 {
     padding: 0;
@@ -95,7 +92,7 @@ table {
     background: var(--boxbg);
   }
   tbody th {
-    background: var(--boxbglight);
+    background: var(--boxbgtext);
     text-align: initial;
     font-weight: 600;
   }
@@ -120,7 +117,7 @@ pre, code, code * {
   font-family: monospace, system-ui, sans-serif;
 }
 code {
-  background: var(--boxbg);
+  background: var(--boxbglight);
   border-radius: 4px;
   padding: 1px 4px;
   margin: 0 2px;
@@ -128,19 +125,19 @@ code {
 }
 pre code {
   background: var(--page);
-  border: 1px solid var(--boxbg);
+  border: 1px solid var(--border);
   border-radius: 6px;
   direction: ltr;
+  margin: 16px 0;
   display: block;
   padding: 6px 14px;
   overflow-x: auto;
-  border-width: 1.5px;
 }
 
 details {
   margin: 16px 0;
   padding: 8px 16px;
-  background: var(--boxbglight);
+  background: var(--boxbgtext);
   border: 1px solid var(--border);
   border-radius: 8px;
   summary {
@@ -151,9 +148,9 @@ details {
 } 
 
 hr {
-  margin:32px auto;
-  width:100%;
-  border:1px solid var(--border);
+  margin: 32px auto;
+  width: 100%;
+  border: 1px solid var(--border);
 }
 
 img {
@@ -286,7 +283,7 @@ button.shareBtn {
 
 .tag {
   display: inline-block;
-  background: var(--boxbg);
+  background: var(--boxbglight);
   font-size: 0.9em;
   line-height: 1.4;
   padding: 1px 8px;
@@ -402,13 +399,13 @@ header.home {
       margin: 4px;
       a {
         color: var(--linkhover);
-        background: var(--boxbg);
+        background: var(--boxbglight);
         border-radius: 4px;
         padding: 4px 7px;
         transition: background 0.2s;
         font-size: 0.9em;
         &:hover {
-          background: var(--boxbglight);
+          background: var(--boxbg);
           text-decoration: none;
         }
       }
@@ -503,6 +500,9 @@ article.feed-post, div.custom-feed {
   }
 }
 div.post-excerpt {
+  * {
+    line-height: 1.6;
+  }
   p {
     margin: 2px 0;
   }
@@ -679,9 +679,6 @@ ul.lang-select {
 }
 
 @media (prefers-contrast: more) {
-  pre code {
-    border-color: var(--border);
-  }
   header.home ul.exlink li a {
     color: var(--text);
     text-decoration: underline;
