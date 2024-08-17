@@ -106,7 +106,7 @@ caption {
 blockquote:not(.tiktok-embed) {
   margin: 16px 0;
   padding: 16px 24px;
-  background: var(--boxbglight);
+  background: var(--boxbgtext);
   border-left: 4px solid var(--border);
   p {
     margin: 4px 0;
@@ -124,8 +124,7 @@ code {
   font-size: 0.95em;
 }
 pre code {
-  background: var(--page);
-  border: 1px solid var(--border);
+  background: var(--boxbgtext);
   border-radius: 6px;
   direction: ltr;
   margin: 16px 0;
@@ -138,7 +137,6 @@ details {
   margin: 16px 0;
   padding: 8px 16px;
   background: var(--boxbgtext);
-  border: 1px solid var(--border);
   border-radius: 8px;
   summary {
     font-weight: 600;
