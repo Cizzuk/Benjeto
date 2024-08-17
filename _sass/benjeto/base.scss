@@ -202,12 +202,12 @@ video {
     border: none;
     padding: 9px 17px;
     &:hover {
-      background: var(--boxbglight);
+      background: var(--boxbgtext);
       color: var(--link);
     }
   }
   &:hover {
-    background: var(--boxbglight);
+    background: var(--boxbgtext);
     color: var(--linkhover);
     text-decoration: none;
   }
@@ -235,7 +235,7 @@ video {
     padding: 5px;
   }
   &:hover {
-    background: var(--boxbglight);
+    background: var(--boxbgtext);
     text-decoration: none;
   }
   &.subscribe {
