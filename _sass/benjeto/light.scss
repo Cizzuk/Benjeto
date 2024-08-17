@@ -8,21 +8,21 @@
   --link: #0050ea;
   --linkhover: #0020a0;
   --boxbg: #d0defc;
-  --boxbglight: #e5f0ff;
+  --boxbglight: #e5ecff;
   --border: #75a5ff;
 }
 @media (prefers-contrast: more) {
 :root {
   --bg: #ececf5;
   --bglight: #fff;
-  --page: #fafafc;
+  --page: #fff;
   --text: #000;
   --gray: #4a4a4a;
   --head: #000;
   --link: #0000ff;
   --linkhover: #000090;
   --boxbg: #c0d3f3;
-  --boxbglight: #d5e5fc;
+  --boxbglight: #d5e3fc;
   --border: #4a9afa;
 }
 }

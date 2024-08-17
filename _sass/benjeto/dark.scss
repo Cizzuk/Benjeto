@@ -1,8 +1,8 @@
 :root {
   color-scheme:dark;
   --bg: #000;
-  --bglight: #1c202e;
-  --page: #10121a;
+  --bglight: #1a1c2a;
+  --page: #12151c;
   --text: #eee;
   --gray: #a3a3a3;
   --head: #f5f5f5;
@@ -15,8 +15,8 @@
 @media (prefers-contrast: more) {
 :root {
   --bg: #000;
-  --bglight: #20253a;
-  --page: #131520;
+  --bglight: #202535;
+  --page: #101218;
   --text: #fff;
   --gray: #ccc;
   --head: #fff;
@@ -28,6 +28,9 @@
 }
 }
 @media (prefers-contrast: more) {
+  article.post {
+    border-color: var(--bglight);
+  }
   pre code {
     background: var(--bg);
   }

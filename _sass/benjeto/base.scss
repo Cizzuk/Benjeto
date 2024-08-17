@@ -679,9 +679,6 @@ ul.lang-select {
 }
 
 @media (prefers-contrast: more) {
-  article.post {
-    border-color: var(--bglight);
-  }
   pre code {
     border-color: var(--border);
   }
