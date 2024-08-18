@@ -383,9 +383,6 @@ header.home {
   div.header-top {
     display: flex;
     flex-wrap: wrap-reverse;
-    div.nameline, div.headline {
-      width: 100%;
-    }
   }
   ul.exlink {
     display: flex;
@@ -414,6 +411,7 @@ header.home {
     flex-wrap: wrap;
     align-items: flex-end;
     justify-content: space-between;
+    width: 100%;
     margin: 10px 0 4px;
     min-height: 44px;
     section.sidebutton {
@@ -423,6 +421,10 @@ header.home {
         display: flex;
       }
     }
+  }
+  div.nameline {
+    width: 100%;
+    padding: 0 8px;
   }
   a.proficon {
     display: block;
@@ -452,12 +454,13 @@ header.home {
     font-size: 1.8em;
     line-height: 1.2;
     margin: 0;
+    padding-inline-end: 8px;
   }
   p.bio {
     margin: 6px 0 0;
     line-height: 1.4;
   }
-  h1, p.bio{
+  p.bio{
     padding: 0 8px;
   }
   span.pronouns {
