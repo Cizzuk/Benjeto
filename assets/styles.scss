@@ -39,7 +39,6 @@ styles: true
   @import "benjeto/light.scss";
   {% if settings.style.darkmode == "allow" %}
 	@media(prefers-color-scheme:dark) {
-      @import "benjeto/light.scss";
       @import "benjeto/dark.scss";
 	}
   {% endif %}
