@@ -1,16 +1,16 @@
 :root {
   color-scheme:dark;
   --bg: #000;
-  --bglight: #1a1c2a;
+  --bglight: #1c1e2e;
   --page: #10111a;
   --text: #eaeaea;
   --gray: #aaa;
   --head: #f5f5f5;
   --link: #00b2ff;
   --linkhover: #a0d0ff;
-  --boxbg: #233055;
-  --boxbglight: #252843;
-  --boxbgtext: #1a1e30;
+  --boxbg: #2a385c;
+  --boxbglight: #2a2c48;
+  --boxbgtext: #202338;
   --border: #405890;
 }
 @media (prefers-contrast: more) {
@@ -23,9 +23,9 @@
   --head: #fff;
   --link: #5acaff;
   --linkhover: #aadaff;
-  --boxbg: #303a60;
-  --boxbglight: #2a2c48;
-  --boxbgtext: #202335;
+  --boxbg: #333c60;
+  --boxbglight: #30334c;
+  --boxbgtext: #25283a;
   --border: #6078a0;
 }
 }
