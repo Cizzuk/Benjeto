@@ -2,8 +2,8 @@
 {%- assign texts = site.texts | default: site.text | default: site.data.texts -%}
 {%- assign settings = site.settings | default: site.data.settings -%}
 
-<article class="feed-post pagebox"{% if post.lang %} lang="{{ post.lang }}"{% endif %}>
-    <div class="post-excerpt">
+<article class="feed-post pagebox">
+    <div class="post-excerpt" {% if post.lang %} lang="{{ post.lang }}"{% endif %}>
       <a href="{{ post.url | relative_url }}" class="post-link post-lighter">
         {%- if post.title != "" and post.hide_title != true %}
         <h2>{{ post.title | escape }}</h2>
