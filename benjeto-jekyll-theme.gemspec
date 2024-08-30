@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "benjeto-jekyll-theme"
-  spec.version       = "0.3.9"
+  spec.version       = "0.4.0"
   spec.authors       = ["Cizzuk"]
 
   spec.summary       = "Jekyll theme like social media profile."
