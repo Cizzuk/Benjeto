@@ -2,7 +2,7 @@
   color-scheme:dark;
   --bg: #000;
   --bglight: #1c1e2e;
-  --page: #10111a;
+  --page: #181820;
   --text: #eaeaea;
   --gray: #aaa;
   --head: #f5f5f5;
@@ -17,7 +17,7 @@
 :root {
   --bg: #000;
   --bglight: #202333;
-  --page: #10121a;
+  --page: #13131a;
   --text: #fff;
   --gray: #ccc;
   --head: #fff;
@@ -28,8 +28,8 @@
   --boxbgtext: #25283a;
   --border: #6078a0;
 }
-}
 article.post {
   border-color: var(--bglight);
+}
 }
 
