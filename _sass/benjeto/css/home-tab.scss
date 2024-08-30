@@ -54,3 +54,13 @@ div.tab-description {
     margin-inline-start: auto;
   }
 }
+
+@media only screen and (max-width:200px) {
+  nav.home-tab {
+    width: calc(100% + 8px);
+    margin-inline-start: -4px;
+    ul {
+      margin: 0 4px;
+    }
+  }
+}

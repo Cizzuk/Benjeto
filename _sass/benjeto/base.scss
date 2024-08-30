@@ -319,7 +319,7 @@ iframe.youtube, iframe.nicovideo, iframe.mastodon-embed {
 }
 
 header.post {
-  margin: 32px 16px 16px;
+  margin: 24px 16px 16px;
   h1 {
     font-size: 1.8em;
     margin-bottom: 8px;
@@ -519,6 +519,7 @@ div.post-custom {
 }
 .post-foot {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   .meta {
     flex: 1 auto;
@@ -673,11 +674,22 @@ ul.lang-select {
   }
 }
 
-@media only screen and (max-width:200px) {
-  body {
-    width: 200px;
+@media only screen and (max-width:240px) {
+  main, article.post {
+    width: 100%;
+    padding: 4px;
+  }
+  header.post {
+    margin: 16px 4px 16px;
   }
 }
+
+@media only screen and (max-width:120px) {
+  body {
+    width: 120px;
+  }
+}
+
 
 @media (prefers-contrast: more) {
   header.home ul.exlink li a {
