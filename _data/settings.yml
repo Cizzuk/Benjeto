@@ -35,6 +35,12 @@ home:
   max_posts: 20
   # Show the share button on the posts list.
   share_button: true
+  # Show date on the posts list.
+  show_date: true
+  # Show categories on the posts list.
+  show_categories: true
+  # Show tags on the posts list.
+  show_tags: true
   # Tabs at home pages.
   # You need to create a dedicated page with "layout: home".
   # name and url are required, omitting feed will hide the subscribe button.

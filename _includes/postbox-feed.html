@@ -16,9 +16,15 @@
     <div class="post-foot">
       <div class="meta">
         <a href="{{ post.url | relative_url }}" class="post-lighter">
-          <time datetime="{{ post.date | date_to_xmlschema }}">{{- post.date | date: texts.date_format -}}</time>
-          {%- include category.html category=post.category -%}
-          {%- include tags.html tags=post.tag -%}
+          {%- if settings.home.show_date == true %}
+            <time datetime="{{ post.date | date_to_xmlschema }}">{{- post.date | date: texts.date_format -}}</time>
+          {%- endif %}
+          {%- if settings.home.show_categories == true %}
+            {%- include category.html category=post.category -%}
+          {%- endif %}
+          {%- if settings.home.show_tags == true %}
+            {%- include tags.html tags=post.tag -%}
+          {%- endif %}
         </a>
       </div>
       {%- if settings.home.share_button == true %}
