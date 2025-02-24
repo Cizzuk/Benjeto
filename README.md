@@ -13,7 +13,9 @@ This theme is perfect for sharing short posts or updates as well as long article
 Add this line to your Jekyll site's `Gemfile`:
 
 ```ruby
-gem "benjeto-jekyll-theme"
+source "https://rubygems.pkg.github.com/cizzuk" do
+  gem "benjeto-jekyll-theme"
+end
 ```
 
 And add this line to your Jekyll site's `_config.yml`:
