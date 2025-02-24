@@ -5,38 +5,36 @@ styles: true
 {%- assign settings = site.data.settings -%}
 
 {% if settings.style.highlight == true %}
-  @import "benjeto/css/highlight.scss";
+  @use "benjeto/css/highlight.scss";
 {% endif %}
 
 // System styles
-@import
-  "benjeto/base.scss",
+  @use "benjeto/base.scss";
   {% if settings.style.menu == true %}
-    "benjeto/css/menu.scss",
+  @use "benjeto/css/menu.scss";
   {% endif %}
   {% if settings.style.figure == true %}
-    "benjeto/css/figure.scss",
+  @use "benjeto/css/figure.scss";
   {% endif %}
   {% if settings.style.home_tab == true %}
-    "benjeto/css/home-tab.scss",
+  @use "benjeto/css/home-tab.scss";
   {% endif %}
   {% if settings.style.paginate == true %}
-    "benjeto/css/paginate.scss",
+  @use "benjeto/css/paginate.scss";
   {% endif %}
   {% if settings.style.app_box == true %}
-    "benjeto/css/app-box.scss",
+  @use "benjeto/css/app-box.scss";
   {% endif %}
   {% if settings.style.section_box == true %}
-    "benjeto/css/section-box.scss",
+  @use "benjeto/css/section-box.scss";
   {% endif %}
-  "benjeto/custom.scss"
-;
+  @use "benjeto/custom.scss";
 
 // Dark mode
 {% if settings.style.darkmode == "true" %}
-  @import "benjeto/dark.scss";
+  @use "benjeto/dark.scss";
 {% else %}
-  @import "benjeto/light.scss";
+  @use "benjeto/light.scss";
   {% if settings.style.darkmode == "allow" %}
 	@media(prefers-color-scheme:dark) {
       @import "benjeto/dark.scss";
